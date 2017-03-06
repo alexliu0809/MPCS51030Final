@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.4.0)
+  - CSStickyHeaderFlowLayout (0.2.11)
+  - FoldingCell (2.0.3)
+  - MMCardView (0.3.2)
+  - PNChartSwift (0.0.2)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - CSStickyHeaderFlowLayout
+  - FoldingCell
+  - MMCardView
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: 693aad52fa8122458b72501de642e4c8583a0db3
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
+  FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
+  MMCardView: 81470780ffa5fd6501ffadfc67d47e9ef446a9c0
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 4d548ede74b6f91d733b9ad24cac1b84608dd400
+
+COCOAPODS: 1.2.0

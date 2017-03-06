@@ -1,0 +1,68 @@
+//for Extra credit: comment or un-comment the USING_UNORDERED_MAP
+
+//for my cases, unordered_map costs roughly half as map do: 1.9s -> 4s
+//undoubtly there is performance difference between then since unordered_map uses
+//hash which takes O(1) time to store, while map takes O(log(n))
+
+//It does depend on the size of the input, but it is not so significant as 1 to logN when N is huge because 
+//the number of frequently used words is rather small, also they have some patterns within,
+//so it's difficult to reach the worst case of map. Also my example is not big enough or generic enough
+//to derive the general conclusion.
+
+#include <boost/filesystem.hpp>
+#include <boost/progress.hpp>	
+#include <iostream>
+#include <string>
+#include <map>
+#include <unordered_map>
+#include <fstream>
+#include <vector>
+#define MAX_LINE_LEN 1024
+// #define USING_UNORDERED_MAP 1
+
+using namespace std;
+using namespace boost::filesystem;
+
+int main()
+{
+	boost::progress_timer howlong;
+	std::vector<string> filenames;
+	path p = current_path();
+	p /= "books";
+
+	std::vector<string> v;
+	directory_iterator end_it;
+
+	//using map or unordered_map
+	#ifdef USING_UNORDERED_MAP
+	unordered_map<string,int> m;
+	#else
+	map<string,int> m;
+	#endif
+
+	//get file names
+	for (directory_iterator it(p); it != end_it; it++){
+		if (is_regular(it->status()))
+			v.push_back(it->path().string());
+	}
+
+	
+	for (auto i : v){
+		std::ifstream in_file;
+		in_file.open(i);
+		char buffer[MAX_LINE_LEN+2];
+
+		string s;
+		while(in_file >> s)
+		{
+			//remove leading and tailing signs
+			if (!isalpha(s[0]))
+				s = s.substr(1);
+			if (!isalpha(s.back()))
+				s.pop_back();
+			//set entry
+			m[s]++;
+		}
+	}
+	std::cout << m.size() << endl;
+}
