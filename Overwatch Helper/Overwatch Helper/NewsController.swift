@@ -13,6 +13,9 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var newsTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //newsTable.delegate = self
+        self.newsTable.delegate = self
+        self.newsTable.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -22,7 +25,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,6 +39,6 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 }
