@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE631990D2EF6D1DFD612AB0 /* Pods_Overwatch_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */; };
 		C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F531E6C630300B0F67E /* AppDelegate.swift */; };
 		C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F551E6C630300B0F67E /* HeroIntroController.swift */; };
 		C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10C4F571E6C630300B0F67E /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */; };
 		C10C4F981E6C810000B0F67E /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F971E6C810000B0F67E /* PlayerData.swift */; };
 		C10C4F9A1E6C811A00B0F67E /* NewsDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F991E6C811A00B0F67E /* NewsDigest.swift */; };
+		C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A86B71E6D197000310B9A /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.release.xcconfig"; sourceTree = "<group>"; };
+		3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		C10C4F501E6C630300B0F67E /* Overwatch Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overwatch Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10C4F531E6C630300B0F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C10C4F551E6C630300B0F67E /* HeroIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroIntroController.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroInfo.swift; sourceTree = "<group>"; };
 		C10C4F971E6C810000B0F67E /* PlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
 		C10C4F991E6C811A00B0F67E /* NewsDigest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDigest.swift; sourceTree = "<group>"; };
+		C17A86B71E6D197000310B9A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE631990D2EF6D1DFD612AB0 /* Pods_Overwatch_Helper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +110,8 @@
 				C10C4F671E6C630300B0F67E /* Overwatch HelperTests */,
 				C10C4F721E6C630300B0F67E /* Overwatch HelperUITests */,
 				C10C4F511E6C630300B0F67E /* Products */,
+				D7A51FDE3F330F86667E7855 /* Pods */,
+				D6367844EF138859D5098598 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +128,7 @@
 		C10C4F521E6C630300B0F67E /* Overwatch Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C10C4F9B1E6C83BE00B0F67E /* Service */,
 				C10C4F831E6C6F3500B0F67E /* model */,
 				C10C4F821E6C6F3100B0F67E /* view */,
 				C10C4F811E6C6F2700B0F67E /* controller */,
@@ -182,6 +192,31 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		C10C4F9B1E6C83BE00B0F67E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C17A86B71E6D197000310B9A /* NetworkService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		D6367844EF138859D5098598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7A51FDE3F330F86667E7855 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */,
+				3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C10C4F781E6C630300B0F67E /* Build configuration list for PBXNativeTarget "Overwatch Helper" */;
 			buildPhases = (
+				D104E3B227B49863CAAC70F5 /* [CP] Check Pods Manifest.lock */,
 				C10C4F4C1E6C630300B0F67E /* Sources */,
 				C10C4F4D1E6C630300B0F67E /* Frameworks */,
 				C10C4F4E1E6C630300B0F67E /* Resources */,
+				777667BD1B3DAFD7C0EF5C68 /* [CP] Embed Pods Frameworks */,
+				F837520A10350A17EF7238C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +352,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		777667BD1B3DAFD7C0EF5C68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D104E3B227B49863CAAC70F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F837520A10350A17EF7238C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C10C4F4C1E6C630300B0F67E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -325,6 +411,7 @@
 				C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */,
 				C10C4F901E6C761400B0F67E /* HeroDetailController.swift in Sources */,
 				C10C4F871E6C70AB00B0F67E /* MapDetailController.swift in Sources */,
+				C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */,
 				C10C4F941E6C80C400B0F67E /* MapInfo.swift in Sources */,
 				C10C4F981E6C810000B0F67E /* PlayerData.swift in Sources */,
 				C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */,
@@ -481,6 +568,7 @@
 		};
 		C10C4F791E6C630300B0F67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96U7R8R2Z2;
@@ -494,6 +582,7 @@
 		};
 		C10C4F7A1E6C630300B0F67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 96U7R8R2Z2;
@@ -582,6 +671,7 @@
 				C10C4F7A1E6C630300B0F67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C10C4F7B1E6C630300B0F67E /* Build configuration list for PBXNativeTarget "Overwatch HelperTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +680,7 @@
 				C10C4F7D1E6C630300B0F67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C10C4F7E1E6C630300B0F67E /* Build configuration list for PBXNativeTarget "Overwatch HelperUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +689,7 @@
 				C10C4F801E6C630300B0F67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
