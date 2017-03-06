@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlayerStatController: UITableViewController{
+class PlayerStatController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="md9-6N-XEo">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="md9-6N-XEo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News-->
+        <!--News Controller-->
         <scene sceneID="FSs-IS-4tF">
             <objects>
                 <viewController id="pIh-IC-5C1" customClass="NewsController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,35 +21,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Nu-nGZ">
-                                <rect key="frame" x="0.0" y="51" width="375" height="567"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CuA-GH-dA8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6YD-Dx-NG9">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsCell" rowHeight="100" id="oHk-60-Ytb" customClass="NewsTableViewCell" customModule="Overwatch_Helper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6YD-Dx-NG9" id="FZl-dL-j4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oHk-60-Ytb" id="mfz-2a-xtU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hoZ-sD-s5e">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pan-Ms-AI9">
+                                                    <rect key="frame" x="100" y="0.0" width="275" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="FD6-AS-cOy" kind="show" id="0Rt-Vq-7qI"/>
+                                            <outlet property="newsContent" destination="pan-Ms-AI9" id="KHH-nz-Vn5"/>
+                                            <outlet property="newsImage" destination="hoZ-sD-s5e" id="Yw5-ZZ-xae"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CuA-GH-dA8" secondAttribute="trailing" id="0Mq-Ep-h1n"/>
+                            <constraint firstItem="CuA-GH-dA8" firstAttribute="top" secondItem="4JA-zo-0JU" secondAttribute="bottom" id="BCu-ly-wuI"/>
+                            <constraint firstItem="CuA-GH-dA8" firstAttribute="leading" secondItem="Qrp-2h-hlh" secondAttribute="leading" id="OmL-4x-DFZ"/>
+                            <constraint firstItem="ogH-LE-B7o" firstAttribute="top" secondItem="CuA-GH-dA8" secondAttribute="bottom" id="mWJ-9k-dbO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="HD5-SZ-3d7"/>
+                    <navigationItem key="navigationItem" id="ngg-2C-b4r"/>
                     <connections>
-                        <outlet property="newsTable" destination="mQJ-Nu-nGZ" id="yI3-OO-Vuz"/>
+                        <outlet property="newsTable" destination="CuA-GH-dA8" id="W8R-HL-TOj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRq-67-k4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165.59999999999999" y="292.80359820089956"/>
+            <point key="canvasLocation" x="1104.8" y="292.80359820089956"/>
         </scene>
         <!--News Detail Controller-->
         <scene sceneID="Geq-9R-NrU">
@@ -77,12 +97,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAK-a2-ZZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="293"/>
+            <point key="canvasLocation" x="1951.2" y="292.80359820089956"/>
         </scene>
-        <!--My Data-->
+        <!--Career-->
+        <scene sceneID="K4a-be-1Yf">
+            <objects>
+                <viewController id="f8p-zQ-pte" customClass="CareerViewController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2LD-Do-7sZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uHR-oO-jsV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dto-Qk-REA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-D4-K4I">
+                                <rect key="frame" x="139" y="268" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-OQ-mxg">
+                                <rect key="frame" x="139" y="324" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="careerSubmitBtnPressed:" destination="f8p-zQ-pte" eventType="touchUpInside" id="46H-FH-ldA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Career" id="rn1-UL-lJA"/>
+                    <connections>
+                        <outlet property="careerBtn" destination="JOF-OQ-mxg" id="vRD-Yd-gyL"/>
+                        <outlet property="careerUsername" destination="gfw-D4-K4I" id="9YK-nW-Kq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5C-H6-Z6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922.39999999999998" y="863.1184407796103"/>
+        </scene>
+        <!--Discover-->
         <scene sceneID="HIq-EY-WMY">
             <objects>
-                <viewController id="rw7-i8-gmq" customClass="PlayerStatController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rw7-i8-gmq" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jwz-uo-j3V"/>
                         <viewControllerLayoutGuide type="bottom" id="ecS-bq-GMs"/>
@@ -92,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Data" id="Jkd-CZ-YjT"/>
+                    <tabBarItem key="tabBarItem" title="Discover" id="Jkd-CZ-YjT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +197,7 @@
         <scene sceneID="65f-EU-IDL">
             <objects>
                 <collectionViewController id="TkH-O4-Yp6" customClass="MapIntroController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="9fL-Hf-D0k">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9fL-Hf-D0k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,7 +270,7 @@
         <scene sceneID="GqC-8p-Nea">
             <objects>
                 <collectionViewController id="knb-Bh-mqj" customClass="HeroIntroController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="qw4-lT-fug">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="qw4-lT-fug">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,25 +322,50 @@
             </objects>
             <point key="canvasLocation" x="1825" y="-1032"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="3Xd-D1-7kx">
             <objects>
-                <tabBarController id="md9-6N-XEo" sceneMemberID="viewController">
+                <tabBarController id="md9-6N-XEo" customClass="BaseTabBarController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="39U-NG-ifz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="pIh-IC-5C1" kind="relationship" relationship="viewControllers" id="RJD-Jh-o9X"/>
-                        <segue destination="rw7-i8-gmq" kind="relationship" relationship="viewControllers" id="RsO-5C-TOp"/>
+                        <segue destination="TiH-dO-230" kind="relationship" relationship="viewControllers" id="RJD-Jh-o9X"/>
                         <segue destination="fZa-8c-igr" kind="relationship" relationship="viewControllers" id="esm-tc-BK0"/>
+                        <segue destination="f8p-zQ-pte" kind="relationship" relationship="viewControllers" id="7Ga-mI-MOb"/>
                         <segue destination="z1h-bQ-nau" kind="relationship" relationship="viewControllers" id="e8i-6S-kUV"/>
+                        <segue destination="rw7-i8-gmq" kind="relationship" relationship="viewControllers" id="RsO-5C-TOp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ds2-BI-MCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-788" y="-36"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="3Dv-Sd-L8q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TiH-dO-230" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" id="HD5-SZ-3d7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIJ-UU-RoS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pIh-IC-5C1" kind="relationship" relationship="rootViewController" id="j8U-3r-7QJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPx-NI-iAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="292.80359820089956"/>
         </scene>
     </scenes>
 </document>

@@ -26,6 +26,16 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
+        // Configure the cell...
+        //set labels and images
+        cell.newsContent.text = "123"
+        cell.imageView?.backgroundColor = UIColor.red
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
 }
