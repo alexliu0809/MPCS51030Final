@@ -19,5 +19,114 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Overwatch Helper/HeroCell.swift"
+            timestampString = "510532813.750072"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "HeroCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroCell.__ivar_destroyer"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Enze/Dropbox/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroCell.swift"
+                  timestampString = "510534745.148037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Overwatch_Helper.HeroCell"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Enze/Dropbox/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroCell.swift"
+                  timestampString = "510534745.150562"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroCell.__allocating_init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Overwatch_Helper.HeroCell"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Enze/Dropbox/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroCell.swift"
+                  timestampString = "510534745.153452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroCell.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.HeroCell&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Enze/Dropbox/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroCell.swift"
+                  timestampString = "510534745.155712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.HeroCell&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Enze/Dropbox/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroCell.swift"
+                  timestampString = "510534745.158392"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Overwatch Helper/HeroIntroController.swift"
+            timestampString = "510535074.349788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

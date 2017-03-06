@@ -35,7 +35,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Configure the cell...
         //set labels and images
         cell.newsContent.text = "123"
-        cell.imageView?.backgroundColor = UIColor.red
+        
         return cell
     }
     
