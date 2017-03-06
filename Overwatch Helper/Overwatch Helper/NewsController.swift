@@ -16,6 +16,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //newsTable.delegate = self
         self.newsTable.delegate = self
         self.newsTable.dataSource = self
+        self.navigationItem.title = "News"
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -40,5 +42,12 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SegueNewsDetail")
+        {
+            
+        }
     }
 }

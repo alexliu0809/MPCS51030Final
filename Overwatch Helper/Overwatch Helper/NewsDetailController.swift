@@ -13,6 +13,7 @@ class NewsDetailController: UIViewController{
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "NewsDetail"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
