@@ -12,16 +12,19 @@ import FoldingCell
 class HeroIntroController: UITableViewController {
 
     var CELLCOUNT = 1
+    
+    //------when make change on your cell size, also modify these------
     fileprivate struct C {
         struct CellHeight {
-            static let close: CGFloat = 75
-            static let open: CGFloat = 160
+            static let close: CGFloat = 165
+            static let open: CGFloat = 530
             
         }
     }
     
-    let kCloseCellHeight:CGFloat = 75
-    let kOpenCellHeight:CGFloat = 160
+    let kCloseCellHeight:CGFloat = 165
+    let kOpenCellHeight:CGFloat = 530
+    //------------------------------------------------------------------
     
     //cell count may vary
     var cellHeights = (0..<2).map { _ in C.CellHeight.close }
@@ -45,7 +48,7 @@ class HeroIntroController: UITableViewController {
         return CELLCOUNT
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell", for: indexPath) as! HeroCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath) as! HeroCell
         // Configure the cell...
         //set labels and images
 //        cell.heroDetailContent.text = "123455"

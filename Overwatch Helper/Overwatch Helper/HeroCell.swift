@@ -10,19 +10,12 @@ import UIKit
 import FoldingCell
 class HeroCell: FoldingCell {
 
-    @IBOutlet weak var cellView: RotatedView!
-    
-    @IBOutlet weak var myContainerView: UIView!
-    
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.foregroundView = cellView
-        self.containerView = myContainerView
-        self.containerViewTop = topConstraint
-        
+        foregroundView.layer.cornerRadius = 10
+        foregroundView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

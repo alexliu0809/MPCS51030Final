@@ -31,7 +31,6 @@
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
 		C33BB4DF1E6E17E80051E292 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33BB4DE1E6E17E80051E292 /* HeroCell.swift */; };
-		C33BB4E11E6E18760051E292 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33BB4E01E6E18760051E292 /* HeroCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C33BB4DE1E6E17E80051E292 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
-		C33BB4E01E6E18760051E292 /* HeroCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +187,6 @@
 		C10C4F821E6C6F3100B0F67E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				C33BB4E01E6E18760051E292 /* HeroCellView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -425,7 +422,6 @@
 				C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */,
 				C10C4F891E6C748E00B0F67E /* NewsDetailController.swift in Sources */,
 				C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */,
-				C33BB4E11E6E18760051E292 /* HeroCellView.swift in Sources */,
 				C10C4F901E6C761400B0F67E /* HeroDetailController.swift in Sources */,
 				C10C4F871E6C70AB00B0F67E /* MapDetailController.swift in Sources */,
 				C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */,

@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PNChartSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Overwatch Helper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3E4334B180173B53B703E7D8A590A127</key>
+		<key>261F52C299E752AE50799D0DCE900540</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A856DEA7B6935A932C57AE1290117AE3</key>
+		<key>B1F20DF526085A7D818A513823F825A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B626E472969D6F87698AF0041EAAFC38</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE36A64295895DD032598A0F2CBD30CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
