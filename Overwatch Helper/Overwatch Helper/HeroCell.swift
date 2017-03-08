@@ -10,7 +10,8 @@ import UIKit
 import FoldingCell
 class HeroCell: FoldingCell {
 
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,4 +32,5 @@ class HeroCell: FoldingCell {
         return durations[itemIndex]
     }
 
+    
 }

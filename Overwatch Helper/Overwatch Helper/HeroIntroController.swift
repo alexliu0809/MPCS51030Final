@@ -23,17 +23,33 @@ class HeroIntroController: UITableViewController {
     }
     
     let kCloseCellHeight:CGFloat = 165
-    let kOpenCellHeight:CGFloat = 530
+    let kOpenCellHeight:CGFloat = 430
     //------------------------------------------------------------------
+    
     
     //cell count may vary
     var cellHeights = (0..<2).map { _ in C.CellHeight.close }
     
+    //Views
+    //@IBOutlet weak var moreView: UIView!
+    @IBOutlet var recognizer: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, 
 //        typically from a nib.
+        //recognizer.addTarget(self, action: #selector(handleMoreInfoButtonTapped))
+        //recognizer.numberOfTapsRequired = 1;
+        //moreView.addGestureRecognizer(recognizer)
+        //moreView.isUserInteractionEnabled = true;
+        
+    }
+    
+    func handleMoreInfoButtonTapped(recognizer: UITapGestureRecognizer){
+        print("tapped!")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let secondViewController = storyBoard.instantiateViewController(withIdentifier: "HeroDetailView") as! HeroDetailController
+        self.present(secondViewController, animated:true, completion:nil)
     }
 
     override func didReceiveMemoryWarning() {
