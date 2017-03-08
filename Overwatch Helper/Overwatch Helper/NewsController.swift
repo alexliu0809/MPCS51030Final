@@ -53,12 +53,15 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             self.newsArray = tempData
+            //print(self.newsArray[0].newsTitle)
+            //print(self.newsArray[1].newsTitle)
+            //print(self.newsArray[2].newsTitle)
             self.newsTable.reloadData()
         })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return newsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,6 +69,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Configure the cell...
         //set labels and images
         cell.newsContent.text = newsArray[indexPath.row].newsTitle
+        //print(cell.newsContent.text)
+        //print(indexPath.row)
         cell.backgroundColor = UIColor.clear
         cell.newsImage.image = UIImage(named:"News-Cell")
         return cell
@@ -73,7 +78,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return newsArray.count
+        return 1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
