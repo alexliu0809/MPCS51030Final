@@ -11,6 +11,8 @@ import FoldingCell
 
 class HeroIntroController: UITableViewController {
 
+    var heroArray:[HeroIntroInfo] = []
+    
     var CELLCOUNT = 1
     
     //------when make change on your cell size, also modify these------
@@ -28,11 +30,11 @@ class HeroIntroController: UITableViewController {
     
     
     //cell count may vary
-    var cellHeights = (0..<2).map { _ in C.CellHeight.close }
+    var cellHeights = (0..<4).map { _ in C.CellHeight.close }
     
     //Views
     //@IBOutlet weak var moreView: UIView!
-    @IBOutlet var recognizer: UITapGestureRecognizer!
+    //@IBOutlet var recognizer: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +44,38 @@ class HeroIntroController: UITableViewController {
         //recognizer.numberOfTapsRequired = 1;
         //moreView.addGestureRecognizer(recognizer)
         //moreView.isUserInteractionEnabled = true;
-        
+        initializeHeros()
     }
     
-    func handleMoreInfoButtonTapped(recognizer: UITapGestureRecognizer){
-        print("tapped!")
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let secondViewController = storyBoard.instantiateViewController(withIdentifier: "HeroDetailView") as! HeroDetailController
-        self.present(secondViewController, animated:true, completion:nil)
+    /** **/
+    func initializeHeros()
+    {
+        var tempArray:[HeroIntroInfo] = []
+        
+        let lucio = HeroIntroInfo.init(name: "Lucio", image: UIImage.init(named: "Hero-Lucio")!, diff: 2, type: HeroType.Support)
+        let Sodier76 = HeroIntroInfo.init(name: "Sodier76", image: UIImage.init(named: "Hero-76")!, diff: 1, type: HeroType.Offense)
+        let Genji = HeroIntroInfo.init(name: "Genji", image: UIImage.init(named: "Hero-Genji")!, diff: 3, type: HeroType.Offense)
+        let Mcree = HeroIntroInfo.init(name: "Mcree", image: UIImage.init(named: "Hero-Mcree")!, diff: 3, type: HeroType.Offense)
+        
+        
+        tempArray.append(lucio)
+        tempArray.append(Sodier76)
+        tempArray.append(Genji)
+        tempArray.append(Mcree)
+        
+        heroArray = tempArray
+        
+        CELLCOUNT = heroArray.count
+        self.tableView.reloadData()
     }
-
+    
+    /*
+    @IBAction func handleMoreInfoButtonTapped(_ sender: Any){
+        print("tapped!")
+        //performSegue(withIdentifier: "SegueHeroDetail", sender: sender)
+    }
+    */
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,6 +90,21 @@ class HeroIntroController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath) as! HeroCell
         // Configure the cell...
+        let foreImage = cell.foregroundView.subviews[0] as! UIImageView
+        foreImage.image = heroArray[indexPath.row].topImage
+        //print(cell.containerView.subviews.count)
+        //print(cell.containerView.subviews[0].subviews.count)
+        let backImage = cell.containerView.subviews[0].subviews[0] as! UIImageView
+        backImage.image = heroArray[indexPath.row].topImage
+        //backImage.image = heroArray[indexPath.row].topImage
+        //let btnView = cell.contentView.viewWithTag(1)?.subviews[0] as! UIButton
+        //let recognizer = UITapGestureRecognizer()
+        //recognizer.addTarget(self, action: #selector(handleMoreInfoButtonTapped))
+        //recognizer.numberOfTapsRequired = 1;
+        //btnView.addGestureRecognizer(recognizer)
+        //btnView.addTarget(self, action: #selector(self.handleMoreInfoButtonTapped(_:)), for: .touchDown)
+        //btnView.isUserInteractionEnabled = true;
+        
         //set labels and images
 //        cell.heroDetailContent.text = "123455"
 //        cell
@@ -106,6 +145,20 @@ class HeroIntroController: UITableViewController {
                 cell.selectedAnimation(false, animated: false, completion:nil)
             } else {
                 cell.selectedAnimation(true, animated: false, completion: nil)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //print(segue.identifier)
+        if segue.identifier == "SegueHeroDetail"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let hero = heroArray[indexPath.row]
+                let controller = segue.destination as! HeroDetailController
+                controller.detailItem = hero
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

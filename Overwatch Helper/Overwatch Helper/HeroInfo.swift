@@ -12,6 +12,13 @@ import UIKit
 struct HeroInfo {
     
 }
+enum HeroType{
+    case Tank
+    case Offense
+    case Support
+    case Defense
+}
+
 class HeroDetailHeroIcon : UITableViewCell
 {
     @IBOutlet weak var iconImage: UIImageView!
@@ -27,4 +34,17 @@ class HeroDetailDetailInfo : UITableViewCell
 {
     @IBOutlet weak var detailInfo: UILabel!
     
+}
+class HeroIntroInfo
+{
+    var topImage : UIImage
+    var difficulty : Int
+    var heroType : HeroType
+    var heroName : String
+    init(name:String, image:UIImage, diff:Int, type:HeroType) {
+        self.topImage = image
+        self.heroName = name
+        self.heroType = type
+        self.difficulty = diff
+    }
 }

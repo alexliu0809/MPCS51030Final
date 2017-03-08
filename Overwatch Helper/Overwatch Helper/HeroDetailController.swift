@@ -10,6 +10,18 @@ import Foundation
 import UIKit
 
 class HeroDetailController:UITableViewController{
+    
+    var detailItem: HeroIntroInfo? {
+        didSet {
+            // Update the view.
+            print("Did Set")
+            self.tableView.reloadData()
+        }
+        
+    }
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,9 +30,14 @@ class HeroDetailController:UITableViewController{
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //print(detailItem)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        print("Warning")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,7 +53,9 @@ class HeroDetailController:UITableViewController{
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroIconCell", for: indexPath) as! HeroDetailHeroIcon
             print("1")
-            cell.backgroundColor = UIColor.red
+            //cell.backgroundColor = UIColor.red
+            print(detailItem)
+            cell.iconImage.image = detailItem?.topImage
             return cell
         }
         else if (indexPath.row == 1)

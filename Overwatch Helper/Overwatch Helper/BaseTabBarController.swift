@@ -30,7 +30,7 @@ class BaseTabBarController: UITabBarController {
     // MARK: - Setups
     
     func setupMiddleButton() {
-        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 52, height: 52))
         
         var menuButtonFrame = menuButton.frame
         menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
@@ -41,7 +41,7 @@ class BaseTabBarController: UITabBarController {
         menuButton.layer.cornerRadius = menuButtonFrame.height/2
         view.addSubview(menuButton)
         
-        //menuButton.setImage(UIImage(named: "example"), for: .normal)
+        menuButton.setImage(UIImage(named: "Main-Icon"), for: .normal)
         menuButton.addTarget(self, action: #selector(menuButtonAction(sender:)), for: .touchUpInside)
         
         view.layoutIfNeeded()

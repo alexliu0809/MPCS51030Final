@@ -18,6 +18,7 @@ class HeroCell: FoldingCell {
         // Initialization code
         foregroundView.layer.cornerRadius = 10
         foregroundView.layer.masksToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

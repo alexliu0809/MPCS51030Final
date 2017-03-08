@@ -281,9 +281,18 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cef-nw-trS" customClass="RotatedView" customModule="FoldingCell">
                                             <rect key="frame" x="16" y="16" width="343" height="165"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="theImageView" translatesAutoresizingMaskIntoConstraints="NO" id="ss3-Ql-FRx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="165"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" red="1" green="0.49673722370000001" blue="0.097460048009999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="ss3-Ql-FRx" firstAttribute="top" secondItem="cef-nw-trS" secondAttribute="top" id="62e-7V-Zb9"/>
                                                 <constraint firstAttribute="height" constant="165" id="Icx-cw-6HI"/>
+                                                <constraint firstAttribute="trailing" secondItem="ss3-Ql-FRx" secondAttribute="trailing" id="Lhj-Qg-Dty"/>
+                                                <constraint firstAttribute="bottom" secondItem="ss3-Ql-FRx" secondAttribute="bottom" id="gUV-aF-4gi"/>
+                                                <constraint firstItem="ss3-Ql-FRx" firstAttribute="leading" secondItem="cef-nw-trS" secondAttribute="leading" id="yHz-1v-9l2"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNc-93-wZY">
@@ -291,28 +300,47 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Od1-TH-5sH">
                                                     <rect key="frame" x="8" y="0.0" width="343" height="165"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nnr-jJ-J8l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="165"/>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="1" green="0.38546457179999999" blue="0.4497877844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Nnr-jJ-J8l" firstAttribute="leading" secondItem="Od1-TH-5sH" secondAttribute="leading" id="3Rh-Bw-HWP"/>
+                                                        <constraint firstItem="Nnr-jJ-J8l" firstAttribute="top" secondItem="Od1-TH-5sH" secondAttribute="top" id="CSj-uJ-Mke"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Nnr-jJ-J8l" secondAttribute="bottom" id="XiW-xG-iHe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Nnr-jJ-J8l" secondAttribute="trailing" id="dMv-dT-l80"/>
                                                         <constraint firstAttribute="height" constant="165" id="uSf-YK-RoZ"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-WC-RBG">
+                                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-WC-RBG">
                                                     <rect key="frame" x="8" y="165" width="343" height="165"/>
                                                     <color key="backgroundColor" red="0.19921875" green="0.19921875" blue="0.19921875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="165" id="QYa-tm-4hh"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-Rl-3PC">
+                                                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGX-Rl-3PC">
                                                     <rect key="frame" x="8" y="330" width="343" height="100"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJY-v6-RP0">
+                                                            <rect key="frame" x="8" y="8" width="327" height="84"/>
+                                                            <state key="normal" title="Learn More"/>
+                                                            <connections>
+                                                                <segue destination="LPn-v1-fgX" kind="show" identifier="SegueHeroDetail" id="BXB-Yw-bIW"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.52023761160000004" green="0.75424860719999998" blue="0.97949477789999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
+                                                        <constraint firstItem="eJY-v6-RP0" firstAttribute="leading" secondItem="vGX-Rl-3PC" secondAttribute="leadingMargin" id="Aan-z7-wS1"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="eJY-v6-RP0" secondAttribute="bottom" id="Sgt-gS-z16"/>
                                                         <constraint firstAttribute="height" constant="100" id="T9z-ag-Toa"/>
+                                                        <constraint firstItem="eJY-v6-RP0" firstAttribute="top" secondItem="vGX-Rl-3PC" secondAttribute="topMargin" id="UjZ-Bh-IKo"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="eJY-v6-RP0" secondAttribute="trailing" id="tD6-OB-7fq"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="eQ8-L6-5Hx" appends="YES" id="N7e-m9-avb"/>
-                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97729438540000002" green="0.95485192539999997" blue="0.83365136380000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -359,16 +387,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7uM-sq-Sdk"/>
-                    <connections>
-                        <outlet property="recognizer" destination="eQ8-L6-5Hx" id="IWK-08-rNc"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGZ-US-TIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="eQ8-L6-5Hx">
-                    <connections>
-                        <segue destination="LPn-v1-fgX" kind="show" identifier="SegueHeroDetail" id="0rI-OT-cN2"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="952.79999999999995" y="-388.15592203898052"/>
         </scene>
