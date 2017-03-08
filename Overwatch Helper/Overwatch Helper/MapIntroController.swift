@@ -75,16 +75,17 @@ class MapIntroController: UIViewController{
         for i in 0...13 {
             if i % 2 == 0 {
                 UIView.animate(withDuration: 0.7, animations: {
-                    self.mapList[i].center.x = -300
+                    self.mapList[i].center.x = -738
                 })
             }else{
                 UIView.animate(withDuration: 0.7, animations: {
-                    self.mapList[i].center.x = 675
+                    self.mapList[i].center.x = 1113
                 })
             }
         }
         
-        let dispatchTime = DispatchTime.now() + .seconds(1)
+        let dispatchTime = DispatchTime.now() + .milliseconds(300)
+        
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
             self.performSelector(onMainThread: #selector(self.goDetail), with: nil, waitUntilDone: false)
         })
