@@ -52,9 +52,9 @@ class HeroDetailController:UITableViewController{
         if (indexPath.row == 0)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroIconCell", for: indexPath) as! HeroDetailHeroIcon
-            print("1")
+            //print("1")
             //cell.backgroundColor = UIColor.red
-            print(detailItem)
+            //print(detailItem)
             cell.iconImage.image = detailItem?.topImage
             return cell
         }
@@ -62,14 +62,14 @@ class HeroDetailController:UITableViewController{
         {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroBasicCell", for: indexPath) as! HeroDetailBasicInfo
-            print("2")
+            //print("2")
             cell.backgroundColor = UIColor.gray
             return cell
         }
         else
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroDetailCell", for: indexPath) as! HeroDetailDetailInfo
-            print("3+")
+            //print("3+")
             cell.backgroundColor = UIColor.green
             return cell
         }

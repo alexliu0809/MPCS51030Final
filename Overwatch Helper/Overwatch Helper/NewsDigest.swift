@@ -10,3 +10,11 @@ import Foundation
 struct NewsDigest {
     
 }
+class NewsData {
+    var newsTitle:String
+    var url:String
+    init(title:String,url:String) {
+        self.newsTitle = title
+        self.url = url
+    }
+}

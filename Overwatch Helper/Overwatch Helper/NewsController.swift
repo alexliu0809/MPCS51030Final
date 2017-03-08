@@ -11,6 +11,9 @@ import UIKit
 
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var newsTable: UITableView!
+    
+    var newsArray:[NewsData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //newsTable.delegate = self
@@ -36,15 +39,33 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json
+        SharedNetworking.Shared.fetchJSON(URLString: "https://rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json", completion: { (data) in
+            //print(data)
+            let json = data as! [[String:AnyObject]]
+            //print(json.count)
+            
+            var tempData:[NewsData] = []
+            for i in 0..<json.count
+            {
+                tempData.append(NewsData.init(title: json[i]["title"] as! String, url: json[i]["url"] as! String))
+            }
+            
+            self.newsArray = tempData
+            self.newsTable.reloadData()
+        })
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         // Configure the cell...
         //set labels and images
-        cell.newsContent.text = "123"
+        cell.newsContent.text = newsArray[indexPath.row].newsTitle
         cell.backgroundColor = UIColor.clear
         cell.newsImage.image = UIImage(named:"News-Cell")
         return cell
@@ -52,13 +73,19 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return newsArray.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SegueNewsDetail")
         {
-            
+            if let indexPath = self.newsTable.indexPathForSelectedRow {
+                let info = newsArray[indexPath.row]
+                let controller = segue.destination as! NewsDetailController
+                controller.detailItem = info
+                //controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                //controller.navigationItem.leftItemsSupplementBackButton = true
+            }
         }
     }
 }
