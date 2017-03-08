@@ -18,6 +18,16 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.newsTable.dataSource = self
         self.navigationItem.title = "News"
         
+        let tempImageView = UIImageView(image: UIImage(named: "News-Bg"))
+        tempImageView.frame = self.newsTable.frame
+        tempImageView.contentMode = .scaleToFill
+        self.newsTable.backgroundView = tempImageView;
+
+        self.newsTable.separatorColor = UIColor.orange
+        self.newsTable.layer.borderWidth = 1.2
+        self.newsTable.layer.borderColor = UIColor.orange.cgColor
+        
+        //self.newsTable.
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -35,7 +45,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Configure the cell...
         //set labels and images
         cell.newsContent.text = "123"
-        
+        cell.backgroundColor = UIColor.clear
+        cell.newsImage.image = UIImage(named:"News-Cell")
         return cell
     }
     

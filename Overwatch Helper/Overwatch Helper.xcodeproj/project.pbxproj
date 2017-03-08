@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE631990D2EF6D1DFD612AB0 /* Pods_Overwatch_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */; };
+		BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */; };
 		C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F531E6C630300B0F67E /* AppDelegate.swift */; };
 		C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F551E6C630300B0F67E /* HeroIntroController.swift */; };
 		C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10C4F571E6C630300B0F67E /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.release.xcconfig"; sourceTree = "<group>"; };
 		3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		C10C4F501E6C630300B0F67E /* Overwatch Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overwatch Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10C4F531E6C630300B0F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				C17A86B71E6D197000310B9A /* NetworkService.swift */,
+				BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				TargetAttributes = {
 					C10C4F4F1E6C630300B0F67E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3YC2S6FW69;
 						ProvisioningStyle = Automatic;
 					};
 					C10C4F631E6C630300B0F67E = {
@@ -432,6 +436,7 @@
 				C10C4F8B1E6C74EE00B0F67E /* PlayerStatController.swift in Sources */,
 				C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */,
 				C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */,
+				BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */,
 				C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */,
 				C10C4F851E6C6FAB00B0F67E /* MapIntroController.swift in Sources */,
 			);
@@ -586,7 +591,7 @@
 			baseConfigurationReference = C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3YC2S6FW69;
 				INFOPLIST_FILE = "Overwatch Helper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Overwatch-Helper";
@@ -600,7 +605,7 @@
 			baseConfigurationReference = 3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3YC2S6FW69;
 				INFOPLIST_FILE = "Overwatch Helper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Overwatch-Helper";

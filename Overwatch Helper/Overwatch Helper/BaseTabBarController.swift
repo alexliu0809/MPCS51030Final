@@ -18,6 +18,9 @@ class BaseTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
     
         setupMiddleButton()
+        
+        ThemeManager.Shared.setNavigationBar(bgColor: UIColor.black, tintColor: UIColor.orange, titleColor: UIColor.white)
+        ThemeManager.Shared.setToolBar(bgColor: UIColor.black, tintColor: UIColor.white)
     }
 
     override func didReceiveMemoryWarning() {
