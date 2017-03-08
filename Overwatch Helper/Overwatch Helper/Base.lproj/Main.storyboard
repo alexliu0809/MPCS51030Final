@@ -513,11 +513,40 @@
                     <navigationItem key="navigationItem" id="K2k-tf-ftE"/>
                     <connections>
                         <outlet property="scrollView" destination="4cH-DD-cgJ" id="I12-of-Jf7"/>
+                        <segue destination="0WQ-6o-SdM" kind="show" identifier="showMapDetail" id="CCQ-qt-JuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYk-Dy-ABD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953" y="-1048"/>
+        </scene>
+        <!--Map Detail Controller-->
+        <scene sceneID="KqA-Cp-evS">
+            <objects>
+                <tableViewController id="0WQ-6o-SdM" customClass="MapDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YST-cJ-xEK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zbV-W7-JBW">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbV-W7-JBW" id="UAh-Ex-JNX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0WQ-6o-SdM" id="YJq-lw-znr"/>
+                            <outlet property="delegate" destination="0WQ-6o-SdM" id="BA6-mV-cJU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97q-Vj-J5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="-1055"/>
         </scene>
         <!--Hero-->
         <scene sceneID="wuk-J7-vEL">

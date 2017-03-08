@@ -12,9 +12,11 @@ class MapCell: UIView {
 
     var img: UIImageView
     var lbl: UILabel
+    var name: String
     
     
-    init(frame: CGRect, image: UIImage, label: String, _ left: Bool) {
+    init(frame: CGRect, image: UIImage, label: String,_ left: Bool) {
+        self.name = label
         img = UIImageView(frame: CGRect(x: left ? 50 : 0, y: 0, width: frame.width - 50, height: frame.height))
         img.image = image
         
