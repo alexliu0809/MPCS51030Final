@@ -16,14 +16,40 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         selectedIndex = defaultIndex
         // Do any additional setup after loading the view.
+    
+        setupMiddleButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
     
-
+    // MARK: - Setups
+    
+    func setupMiddleButton() {
+        let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+        
+        var menuButtonFrame = menuButton.frame
+        menuButtonFrame.origin.y = view.bounds.height - menuButtonFrame.height
+        menuButtonFrame.origin.x = view.bounds.width/2 - menuButtonFrame.size.width/2
+        menuButton.frame = menuButtonFrame
+        
+        menuButton.backgroundColor = UIColor.red
+        menuButton.layer.cornerRadius = menuButtonFrame.height/2
+        view.addSubview(menuButton)
+        
+        //menuButton.setImage(UIImage(named: "example"), for: .normal)
+        menuButton.addTarget(self, action: #selector(menuButtonAction(sender:)), for: .touchUpInside)
+        
+        view.layoutIfNeeded()
+    }
+    
+    @objc private func menuButtonAction(sender: UIButton) {
+        selectedIndex = 2
+    }
     /*
     // MARK: - Navigation
 
