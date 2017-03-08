@@ -7,6 +7,24 @@
 //
 
 import Foundation
+import UIKit
+
 struct HeroInfo {
+    
+}
+class HeroDetailHeroIcon : UITableViewCell
+{
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var iconLabel: UILabel!
+    
+}
+class HeroDetailBasicInfo : UITableViewCell
+{
+    @IBOutlet weak var basicInfo: UILabel!
+    
+}
+class HeroDetailDetailInfo : UITableViewCell
+{
+    @IBOutlet weak var detailInfo: UILabel!
     
 }

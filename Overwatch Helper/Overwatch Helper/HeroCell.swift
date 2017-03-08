@@ -8,6 +8,7 @@
 
 import UIKit
 import FoldingCell
+
 class HeroCell: FoldingCell {
 
     

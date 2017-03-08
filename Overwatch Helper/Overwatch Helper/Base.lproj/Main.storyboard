@@ -366,29 +366,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGZ-US-TIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="eQ8-L6-5Hx">
                     <connections>
-                        <segue destination="WXb-kq-BMN" kind="show" identifier="SegueHeroDetail" id="WZJ-8F-L6P"/>
+                        <segue destination="LPn-v1-fgX" kind="show" identifier="SegueHeroDetail" id="0rI-OT-cN2"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="952.79999999999995" y="-388.15592203898052"/>
         </scene>
-        <!--HeroDetail-->
-        <scene sceneID="a26-cP-Vrj">
+        <!--Hero Detail Controller-->
+        <scene sceneID="fzf-Qj-NYp">
             <objects>
-                <viewController storyboardIdentifier="HeroDetailView" title="HeroDetail" id="WXb-kq-BMN" customClass="HeroDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RQo-nb-IZG"/>
-                        <viewControllerLayoutGuide type="bottom" id="7nC-W5-5Yb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vWq-2f-Spy">
+                <tableViewController id="LPn-v1-fgX" customClass="HeroDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qyD-Xv-QWT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="786-UP-0AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroIconCell" rowHeight="165" id="Joj-cm-vpz" customClass="HeroDetailHeroIcon" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Joj-cm-vpz" id="NEH-HK-NNL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HeroImage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-qS-hdA">
+                                            <rect key="frame" x="99" y="135" width="207" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-7q-NrB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="164.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Lj4-7q-NrB" firstAttribute="leading" secondItem="NEH-HK-NNL" secondAttribute="leading" id="D6P-AL-jp4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Lj4-7q-NrB" secondAttribute="bottom" id="GUX-oo-MNQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lj4-7q-NrB" secondAttribute="trailing" id="Q3N-Hd-Yey"/>
+                                        <constraint firstItem="Lj4-7q-NrB" firstAttribute="top" secondItem="NEH-HK-NNL" secondAttribute="top" id="YIf-L1-KuM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImage" destination="Lj4-7q-NrB" id="Wct-C9-Dg0"/>
+                                    <outlet property="iconLabel" destination="X2g-qS-hdA" id="nV5-Pu-VF5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroBasicCell" rowHeight="165" id="gDu-gm-dAn" customClass="HeroDetailBasicInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="193" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gDu-gm-dAn" id="aBN-u2-5k6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BasicInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-be-RwB">
+                                            <rect key="frame" x="118" y="72" width="100" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="basicInfo" destination="mSR-be-RwB" id="5t5-Da-0hK"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroDetailCell" rowHeight="100" id="NSs-Hg-OMi" customClass="HeroDetailDetailInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="358" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NSs-Hg-OMi" id="xaz-bc-8QV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DetailInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkp-aV-fSV">
+                                            <rect key="frame" x="113" y="39" width="105" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailInfo" destination="Bkp-aV-fSV" id="fnM-xx-Hid"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LPn-v1-fgX" id="1Uw-nS-129"/>
+                            <outlet property="delegate" destination="LPn-v1-fgX" id="kIG-sH-ULA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3D-ii-K2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2032.8" y="-388.15592203898052"/>
+            <point key="canvasLocation" x="1976.8" y="-397.15142428785612"/>
         </scene>
         <!--News-->
         <scene sceneID="3Dv-Sd-L8q">
