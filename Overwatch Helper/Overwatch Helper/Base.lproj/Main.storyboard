@@ -577,29 +577,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zbV-W7-JBW">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="165" id="zbV-W7-JBW" customClass="MapDetailMapIcon" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbV-W7-JBW" id="UAh-Ex-JNX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-SO-qZp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="164.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KPh-SO-qZp" firstAttribute="top" secondItem="UAh-Ex-JNX" secondAttribute="top" id="1Hi-eP-mve"/>
+                                        <constraint firstAttribute="trailing" secondItem="KPh-SO-qZp" secondAttribute="trailing" id="Ja9-Xb-oT5"/>
+                                        <constraint firstAttribute="bottom" secondItem="KPh-SO-qZp" secondAttribute="bottom" id="cIt-77-RyU"/>
+                                        <constraint firstItem="KPh-SO-qZp" firstAttribute="leading" secondItem="UAh-Ex-JNX" secondAttribute="leading" id="svP-xL-Txb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mapImage" destination="KPh-SO-qZp" id="PqZ-DR-mWB"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FAa-q0-Isr">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="FAa-q0-Isr" customClass="MapDetailBasicInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="193" width="375" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAa-q0-Isr" id="Vpw-E2-DwS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klQ-kp-fQz">
+                                            <rect key="frame" x="21" y="20" width="76" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfV-YP-jPi">
+                                            <rect key="frame" x="140" y="20" width="168" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="reB-i4-KRc">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="165" id="reB-i4-KRc" customClass="MapDetailDetailInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="363" width="375" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="reB-i4-KRc" id="6wx-tc-rxr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4SK-HS-Srk">
+                                            <rect key="frame" x="11" y="18" width="353" height="128"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4SK-HS-Srk" secondAttribute="bottom" constant="10" id="OeM-ab-YIP"/>
+                                        <constraint firstItem="4SK-HS-Srk" firstAttribute="leading" secondItem="6wx-tc-rxr" secondAttribute="leadingMargin" constant="3" id="YSV-tx-DQj"/>
+                                        <constraint firstItem="4SK-HS-Srk" firstAttribute="top" secondItem="6wx-tc-rxr" secondAttribute="topMargin" constant="10" id="cCx-90-yBI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4SK-HS-Srk" secondAttribute="trailing" constant="3" id="tUF-kf-MPp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mapBrief" destination="4SK-HS-Srk" id="4XH-eF-qpQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -610,7 +655,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97q-Vj-J5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="-1055"/>
+            <point key="canvasLocation" x="1864.8" y="-1055.6221889055473"/>
         </scene>
         <!--Hero-->
         <scene sceneID="wuk-J7-vEL">

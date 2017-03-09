@@ -20,8 +20,9 @@ enum MapType{
     case Arena
 }
 
-class MapDetailHeroIcon : UITableViewCell
+class MapDetailMapIcon : UITableViewCell
 {
+    @IBOutlet weak var mapImage: UIImageView!
 //    @IBOutlet weak var iconImage: UIImageView!
 //    @IBOutlet weak var iconLabel: UILabel!
     
@@ -34,6 +35,7 @@ class MapDetailBasicInfo : UITableViewCell
 class MapDetailDetailInfo : UITableViewCell
 {
 //    @IBOutlet weak var detailInfo: UILabel!
+    @IBOutlet weak var mapBrief: UITextView!
     
 }
 class MapIntroInfo
