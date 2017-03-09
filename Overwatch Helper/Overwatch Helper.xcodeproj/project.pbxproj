@@ -27,12 +27,12 @@
 		C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */; };
 		C10C4F981E6C810000B0F67E /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F971E6C810000B0F67E /* PlayerData.swift */; };
 		C10C4F9A1E6C811A00B0F67E /* NewsDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F991E6C811A00B0F67E /* NewsDigest.swift */; };
+		C17A5D2B1E7212ED005A40C7 /* HeroRecommendationSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */; };
+		C17A5D2D1E7212F9005A40C7 /* HeroList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D2C1E7212F9005A40C7 /* HeroList.swift */; };
 		C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A86B71E6D197000310B9A /* NetworkService.swift */; };
 		C17CB6F61E71AD120009E090 /* MapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F51E71AD120009E090 /* MapList.swift */; };
 		C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F71E71ECD50009E090 /* DiscoverController.swift */; };
 		C17CB6FA1E71FD6B0009E090 /* DiscoverFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */; };
-		C17CB6FC1E7208C30009E090 /* HeroRecommendationSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6FB1E7208C30009E090 /* HeroRecommendationSurvey.swift */; };
-		C17CB6FE1E720A1B0009E090 /* HeroList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6FD1E720A1B0009E090 /* HeroList.swift */; };
 		C1873CA81E709481008F6130 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1873CA71E709481008F6130 /* MapCell.swift */; };
 		C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E01E6DFB6000181A7C /* CareerViewController.swift */; };
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
@@ -88,12 +88,12 @@
 		C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroInfo.swift; sourceTree = "<group>"; };
 		C10C4F971E6C810000B0F67E /* PlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
 		C10C4F991E6C811A00B0F67E /* NewsDigest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDigest.swift; sourceTree = "<group>"; };
+		C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRecommendationSurvey.swift; sourceTree = "<group>"; };
+		C17A5D2C1E7212F9005A40C7 /* HeroList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroList.swift; sourceTree = "<group>"; };
 		C17A86B71E6D197000310B9A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C17CB6F51E71AD120009E090 /* MapList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapList.swift; sourceTree = "<group>"; };
 		C17CB6F71E71ECD50009E090 /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverFunctionController.swift; sourceTree = "<group>"; };
-		C17CB6FB1E7208C30009E090 /* HeroRecommendationSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroRecommendationSurvey.swift; sourceTree = "<group>"; };
-		C17CB6FD1E720A1B0009E090 /* HeroList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroList.swift; sourceTree = "<group>"; };
 		C1873CA71E709481008F6130 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		C33508E01E6DFB6000181A7C /* CareerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -216,6 +216,7 @@
 		C10C4F831E6C6F3500B0F67E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */,
 				C10C4F931E6C80C400B0F67E /* MapInfo.swift */,
 				C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */,
 				C10C4F971E6C810000B0F67E /* PlayerData.swift */,
@@ -223,12 +224,8 @@
 				C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */,
 				C33BB4DE1E6E17E80051E292 /* HeroCell.swift */,
 				C17CB6F51E71AD120009E090 /* MapList.swift */,
-<<<<<<< HEAD
-				C17CB6FB1E7208C30009E090 /* HeroRecommendationSurvey.swift */,
-				C17CB6FD1E720A1B0009E090 /* HeroList.swift */,
-=======
+				C17A5D2C1E7212F9005A40C7 /* HeroList.swift */,
 				C3FC77601E71F35F0027484D /* PlayerStats.swift */,
->>>>>>> refs/remotes/origin/Dev
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -452,7 +449,7 @@
 				C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */,
 				C10C4F891E6C748E00B0F67E /* NewsDetailController.swift in Sources */,
 				C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */,
-				C17CB6FC1E7208C30009E090 /* HeroRecommendationSurvey.swift in Sources */,
+				C17A5D2B1E7212ED005A40C7 /* HeroRecommendationSurvey.swift in Sources */,
 				C10C4F901E6C761400B0F67E /* HeroDetailController.swift in Sources */,
 				C10C4F871E6C70AB00B0F67E /* MapDetailController.swift in Sources */,
 				C17CB6FA1E71FD6B0009E090 /* DiscoverFunctionController.swift in Sources */,
@@ -469,8 +466,8 @@
 				C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */,
 				C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */,
 				C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */,
+				C17A5D2D1E7212F9005A40C7 /* HeroList.swift in Sources */,
 				BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */,
-				C17CB6FE1E720A1B0009E090 /* HeroList.swift in Sources */,
 				C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */,
 				C10C4F851E6C6FAB00B0F67E /* MapIntroController.swift in Sources */,
 			);
