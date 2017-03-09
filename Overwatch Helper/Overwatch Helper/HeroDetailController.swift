@@ -35,7 +35,10 @@ class HeroDetailController:UITableViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //print(detailItem)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

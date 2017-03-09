@@ -106,6 +106,8 @@ class HeroIntroController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    
+
     /*
     @IBAction func handleMoreInfoButtonTapped(_ sender: Any){
         print("tapped!")
@@ -191,10 +193,11 @@ class HeroIntroController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //print(segue.identifier)
         if segue.identifier == "SegueHeroDetail"
         {
+//            print(self.tableView.)
             if let indexPath = self.tableView.indexPathForSelectedRow {
+                
                 let hero = heroArray[indexPath.row]
                 let controller = segue.destination as! HeroDetailController
                 controller.detailItem = hero

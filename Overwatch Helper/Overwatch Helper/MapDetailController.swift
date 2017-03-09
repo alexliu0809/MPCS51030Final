@@ -21,7 +21,8 @@ class MapDetailController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,9 +67,12 @@ class MapDetailController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapBasicInfo", for: indexPath) as! MapDetailBasicInfo
             //print("2")
             cell.location.text = MapList.country[currentMapName]
+//            cell.location.transform = CGAffineTransform(a: 1, b: -0.3, c: -0.3, d: 1, tx: <#T##CGFloat#>, ty: <#T##CGFloat#>)
             cell.terrain.text = terrain
             cell.type.text = type
             cell.flag.image = UIImage(named: MapList.country[currentMapName]!)
+            cell.flag.backgroundColor = UIColor.clear
+            cell.flag.contentMode = .scaleAspectFit
             return cell
         }
         else
@@ -76,7 +80,7 @@ class MapDetailController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapDetailInfo", for: indexPath) as! MapDetailDetailInfo
             //print("3+")
 //            cell.backgroundColor = UIColor.green
-            cell.mapBrief.text = detail
+            cell.mapBrief.text = MapList.description[currentMapName]
             return cell
         }
     }

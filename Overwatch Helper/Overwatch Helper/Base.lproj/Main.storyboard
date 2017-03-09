@@ -670,7 +670,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.21033653846153844" green="0.21033653846153844" blue="0.21033653846153844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="flag" destination="klQ-kp-fQz" id="QUH-Af-blJ"/>
                                     <outlet property="location" destination="Bbt-oH-p1a" id="voW-Y4-Y0c"/>

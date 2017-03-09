@@ -98,13 +98,14 @@ class MapIntroController: UIViewController{
 
             let segueAnimationView = segue.destination.view as UIView
             
-            segueAnimationView.frame = CGRect(x: 187, y: 333, width: 1, height: 1)
+            segueAnimationView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+            segueAnimationView.alpha = 0
             
             let window = UIApplication.shared.keyWindow
 
             window?.insertSubview(segueAnimationView, aboveSubview: self.view)
-            UIView.animate(withDuration: 0.5, animations: {
-                segueAnimationView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+            UIView.animate(withDuration: 1, animations: {
+                segueAnimationView.alpha = 1
             }, completion: {
                 finish in
             })
