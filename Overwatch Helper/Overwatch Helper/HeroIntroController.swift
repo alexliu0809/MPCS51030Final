@@ -56,22 +56,24 @@ class HeroIntroController: UITableViewController {
         var tempArray:[HeroIntroInfo] = []
         
         let lucio = HeroIntroInfo.init(name: "Lucio", image: UIImage.init(named: "Hero-Lucio")!, diff: 2, type: HeroType.Support,id: 7)
+        
+        lucio.setHeroAblity(des: "Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.", name: "Sonic Amplifier",img:UIImage(named: "Lucio-SA")!)
+        lucio.setHeroAblity(des: "Lúcio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.", name: "Crossfade",img:UIImage(named: "Lucio-C")!)
+        lucio.setHeroAblity(des: "Lúcio increases the volume on his speakers, boosting the effects of his songs.", name: "Amp It Up",img:UIImage(named: "Lucio-AIU")!)
+        
+        lucio.setHeroAblity(des: "Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.", name: "Sound Barrier",img:UIImage(named: "Lucio-SB")!)
+ 
         /*
-        lucio.setHeroAblity(des: "Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.", name: "Sonic Amplifier")
-        lucio.setHeroAblity(des: "Lúcio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.", name: "Crossfade")
-        lucio.setHeroAblity(des: "Lúcio increases the volume on his speakers, boosting the effects of his songs.", name: "Amp It Up")
-        lucio.setHeroAblity(des: "Lúcio rides along a wall. This has a slight upwards angle, allowing him to ascend the wall.", name: "Wall Ride")
-        lucio.setHeroAblity(des: "Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.", name: "Sound Barrier")
-        */
+        lucio.setHeroAblity(des: "Lúcio rides along a wall. This has a slight upwards angle, allowing him to ascend the wall.", name: "Wall Ride") */
         
         let Sodier76 = HeroIntroInfo.init(name: "Sodier76", image: UIImage.init(named: "Hero-76")!, diff: 1, type: HeroType.Offense,id: 15)
-        /*
-        Sodier76.setHeroAblity(des: "Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.", name: "Heavy Pulse Rifle")
-        Sodier76.setHeroAblity(des: "Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.", name: "Helix Rockets")
-        Sodier76.setHeroAblity(des: "Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.",name: "Sprint")
-        Sodier76.setHeroAblity(des: "Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.", name: "Biotic Field")
-        Sodier76.setHeroAblity(des: "Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.", name: "Tactical Visor")
-        */
+        
+        Sodier76.setHeroAblity(des: "Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.", name: "Heavy Pulse Rifle",img:UIImage(named: "76-HPR")!)
+        Sodier76.setHeroAblity(des: "Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.", name: "Helix Rockets",img:UIImage(named: "76-HR")!)
+        Sodier76.setHeroAblity(des: "Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.",name: "Sprint",img:UIImage(named: "76-S")!)
+        Sodier76.setHeroAblity(des: "Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.", name: "Biotic Field",img:UIImage(named: "76-BF")!)
+        Sodier76.setHeroAblity(des: "Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.", name: "Tactical Visor",img:UIImage(named: "76-TV")!)
+ 
         
         let Genji = HeroIntroInfo.init(name: "Genji", image: UIImage.init(named: "Hero-Genji")!, diff: 3, type: HeroType.Offense,id: 4)
         Genji.setHeroAblity(des: "Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.", name: "Shuriken", img:UIImage(named: "Genji-Shuriken")!)
@@ -83,12 +85,12 @@ class HeroIntroController: UITableViewController {
         
         
         let Mcree = HeroIntroInfo.init(name: "Mcree", image: UIImage.init(named: "Hero-Mcree")!, diff: 3, type: HeroType.Offense,id: 8)
-        /*
-        Mcree.setHeroAblity(des: "McCree fires off a round from his trusty six-shooter. He can fan the Peacekeeper’s hammer to swiftly unload the entire cylinder.", name: "Peacekeeper")
-        Mcree.setHeroAblity(des: "McCree dives in the direction he's moving, effortlessly reloading his Peacekeeper in the process.", name: "Combat Roll")
-        Mcree.setHeroAblity(des: "McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.", name: "Flashbang")
-        Mcree.setHeroAblity(des: "Focus. Mark. Draw. McCree takes a few precious moments to aim; when he's ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he'll line up a killshot.", name: "Deadeye")
-        */
+        
+        Mcree.setHeroAblity(des: "McCree fires off a round from his trusty six-shooter.", name: "Peacekeeper",img: UIImage(named: "Mcree-P")!)
+        Mcree.setHeroAblity(des: "McCree dives in the direction he's moving, effortlessly reloading his Peacekeeper in the process.", name: "Combat Roll",img: UIImage(named: "Mcree-CR")!)
+        Mcree.setHeroAblity(des: "McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.", name: "Flashbang",img: UIImage(named: "Mcree-F")!)
+        Mcree.setHeroAblity(des: "Focus. Mark. Draw. McCree takes a few precious moments to aim; when he's ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he'll line up a killshot.", name: "Deadeye",img:UIImage(named: "Mcree-D")!)
+        
         
         
         
