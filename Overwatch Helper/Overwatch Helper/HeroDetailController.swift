@@ -51,7 +51,13 @@ class HeroDetailController:UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        guard let detailItem = detailItem
+        else
+        {
+            return 1
+        }
+        
+        return 2 + detailItem.heroAbilityDescription.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,7 +83,9 @@ class HeroDetailController:UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroDetailCell", for: indexPath) as! HeroDetailDetailInfo
             //print("3+")
             cell.backgroundColor = UIColor.green
-            cell.detailInfo.text = ""
+            cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-2]
+            cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-2]
+            cell.detailInfoImage.image = detailItem?.heroAbilityImage[indexPath.row-2]
             return cell
         }
     }

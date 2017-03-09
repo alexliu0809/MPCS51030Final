@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct HeroInfo {
-    
+
 }
 enum HeroType{
     case Tank
@@ -32,7 +32,9 @@ class HeroDetailBasicInfo : UITableViewCell
 }
 class HeroDetailDetailInfo : UITableViewCell
 {
+    @IBOutlet weak var detailInfoTitle: UILabel!
     @IBOutlet weak var detailInfo: UILabel!
+    @IBOutlet weak var detailInfoImage: UIImageView!
     
 }
 class HeroIntroInfo
@@ -42,11 +44,22 @@ class HeroIntroInfo
     var heroType : HeroType
     var heroName : String
     var heroID : Int
+    var heroAbilityName:[String] = []
+    var heroAbilityDescription:[String] = []
+    var heroAbilityImage:[UIImage] = []
+    
     init(name:String, image:UIImage, diff:Int, type:HeroType, id:Int) {
         self.topImage = image
         self.heroName = name
         self.heroType = type
         self.difficulty = diff
         self.heroID = id
+    }
+    
+    func setHeroAblity(des:String,name:String,img:UIImage)
+    {
+        self.heroAbilityName.append(name)
+        self.heroAbilityDescription.append(des)
+        self.heroAbilityImage.append(img)
     }
 }
