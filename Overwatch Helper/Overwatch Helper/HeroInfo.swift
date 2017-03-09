@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import YouTubePlayer_Swift
 
 struct HeroInfo {
 
@@ -25,11 +26,15 @@ class HeroDetailHeroIcon : UITableViewCell
     @IBOutlet weak var iconLabel: UILabel!
     
 }
+
+
 class HeroDetailBasicInfo : UITableViewCell
 {
-    @IBOutlet weak var basicInfo: UILabel!
+    @IBOutlet weak var youtubePlayer: YouTubePlayerView!
+    
     
 }
+ 
 class HeroDetailDetailInfo : UITableViewCell
 {
     @IBOutlet weak var detailInfoTitle: UILabel!
@@ -47,13 +52,15 @@ class HeroIntroInfo
     var heroAbilityName:[String] = []
     var heroAbilityDescription:[String] = []
     var heroAbilityImage:[UIImage] = []
+    var videoUrl:String
     
-    init(name:String, image:UIImage, diff:Int, type:HeroType, id:Int) {
+    init(name:String, image:UIImage, diff:Int, type:HeroType, id:Int, url:String) {
         self.topImage = image
         self.heroName = name
         self.heroType = type
         self.difficulty = diff
         self.heroID = id
+        self.videoUrl = url
     }
     
     func setHeroAblity(des:String,name:String,img:UIImage)

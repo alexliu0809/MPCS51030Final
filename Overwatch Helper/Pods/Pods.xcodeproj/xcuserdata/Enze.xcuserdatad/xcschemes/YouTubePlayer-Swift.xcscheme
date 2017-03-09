@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0722A03BB84388358FC274FEFEDB8740"
-               BuildableName = "Pods_Overwatch_Helper.framework"
-               BlueprintName = "Pods-Overwatch Helper"
+               BlueprintIdentifier = "AEB8FF609FB4239FA636536ACB1AAB6E"
+               BuildableName = "YouTubePlayer_Swift.framework"
+               BlueprintName = "YouTubePlayer-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0722A03BB84388358FC274FEFEDB8740"
-            BuildableName = "Pods_Overwatch_Helper.framework"
-            BlueprintName = "Pods-Overwatch Helper"
+            BlueprintIdentifier = "AEB8FF609FB4239FA636536ACB1AAB6E"
+            BuildableName = "YouTubePlayer_Swift.framework"
+            BlueprintName = "YouTubePlayer-Swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

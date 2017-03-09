@@ -4,7 +4,7 @@ use_frameworks!
 target 'Overwatch Helper' do
     pod 'SwiftyJSON'
     pod 'Alamofire'
-    
+    pod 'YouTubePlayer-Swift'
     pod "CSStickyHeaderFlowLayout"
     pod 'FoldingCell'
     pod 'MMCardView'

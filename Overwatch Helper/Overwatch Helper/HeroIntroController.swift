@@ -8,6 +8,7 @@
 
 import UIKit
 import FoldingCell
+import YouTubePlayer_Swift
 
 var heroArray:[HeroIntroInfo] = []
 
@@ -55,7 +56,7 @@ class HeroIntroController: UITableViewController {
     {
         var tempArray:[HeroIntroInfo] = []
         
-        let lucio = HeroIntroInfo.init(name: "Lucio", image: UIImage.init(named: "Hero-Lucio")!, diff: 2, type: HeroType.Support,id: 7)
+        let lucio = HeroIntroInfo.init(name: "Lucio", image: UIImage.init(named: "Hero-Lucio")!, diff: 2, type: HeroType.Support,id: 7, url:"ywTNgR3ldFc")
         
         lucio.setHeroAblity(des: "Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.", name: "Sonic Amplifier",img:UIImage(named: "Lucio-SA")!)
         lucio.setHeroAblity(des: "Lúcio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.", name: "Crossfade",img:UIImage(named: "Lucio-C")!)
@@ -66,7 +67,7 @@ class HeroIntroController: UITableViewController {
         /*
         lucio.setHeroAblity(des: "Lúcio rides along a wall. This has a slight upwards angle, allowing him to ascend the wall.", name: "Wall Ride") */
         
-        let Sodier76 = HeroIntroInfo.init(name: "Sodier76", image: UIImage.init(named: "Hero-76")!, diff: 1, type: HeroType.Offense,id: 15)
+        let Sodier76 = HeroIntroInfo.init(name: "Sodier76", image: UIImage.init(named: "Hero-76")!, diff: 1, type: HeroType.Offense,id: 15, url:"V_0eqEbG7yA")
         
         Sodier76.setHeroAblity(des: "Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.", name: "Heavy Pulse Rifle",img:UIImage(named: "76-HPR")!)
         Sodier76.setHeroAblity(des: "Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.", name: "Helix Rockets",img:UIImage(named: "76-HR")!)
@@ -75,7 +76,7 @@ class HeroIntroController: UITableViewController {
         Sodier76.setHeroAblity(des: "Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.", name: "Tactical Visor",img:UIImage(named: "76-TV")!)
  
         
-        let Genji = HeroIntroInfo.init(name: "Genji", image: UIImage.init(named: "Hero-Genji")!, diff: 3, type: HeroType.Offense,id: 4)
+        let Genji = HeroIntroInfo.init(name: "Genji", image: UIImage.init(named: "Hero-Genji")!, diff: 3, type: HeroType.Offense,id: 4,url:"lYOjIDhJIG0")
         Genji.setHeroAblity(des: "Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.", name: "Shuriken", img:UIImage(named: "Genji-Shuriken")!)
         Genji.setHeroAblity(des: "Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.", name: "Swift Strike",img:UIImage(named: "Genji-SS")!)
         Genji.setHeroAblity(des: "With lightning-quick swipes of his sword, Genji reflects any oncoming projectiles and can send them rebounding towards his enemies.",name: "Deflect",img:UIImage(named: "Genji-Deflect")!)
@@ -84,7 +85,7 @@ class HeroIntroController: UITableViewController {
         
         
         
-        let Mcree = HeroIntroInfo.init(name: "Mcree", image: UIImage.init(named: "Hero-Mcree")!, diff: 3, type: HeroType.Offense,id: 8)
+        let Mcree = HeroIntroInfo.init(name: "Mcree", image: UIImage.init(named: "Hero-Mcree")!, diff: 3, type: HeroType.Offense,id: 8,url:"kq4OlEDiCi8")
         
         Mcree.setHeroAblity(des: "McCree fires off a round from his trusty six-shooter.", name: "Peacekeeper",img: UIImage(named: "Mcree-P")!)
         Mcree.setHeroAblity(des: "McCree dives in the direction he's moving, effortlessly reloading his Peacekeeper in the process.", name: "Combat Roll",img: UIImage(named: "Mcree-CR")!)
@@ -140,7 +141,8 @@ class HeroIntroController: UITableViewController {
         //btnView.addGestureRecognizer(recognizer)
         //btnView.addTarget(self, action: #selector(self.handleMoreInfoButtonTapped(_:)), for: .touchDown)
         //btnView.isUserInteractionEnabled = true;
-        
+        let heroTpye = cell.containerView.subviews[1].subviews[1] as! UILabel
+        heroTpye.text = "\(heroArray[indexPath.row].heroType)"
         //set labels and images
 //        cell.heroDetailContent.text = "123455"
 //        cell
