@@ -34,6 +34,7 @@
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
 		C33BB4DF1E6E17E80051E292 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33BB4DE1E6E17E80051E292 /* HeroCell.swift */; };
+		C376A5AE1E71C2E200764617 /* PlayerStatsCellProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C33BB4DE1E6E17E80051E292 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatsCellProto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				C1873CA71E709481008F6130 /* MapCell.swift */,
+				C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				C10C4F981E6C810000B0F67E /* PlayerData.swift in Sources */,
 				C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */,
 				C10C4F8B1E6C74EE00B0F67E /* PlayerStatController.swift in Sources */,
+				C376A5AE1E71C2E200764617 /* PlayerStatsCellProto.swift in Sources */,
 				C1873CA81E709481008F6130 /* MapCell.swift in Sources */,
 				C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */,
 				C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */,

@@ -13,16 +13,17 @@ class CareerViewController: UIViewController {
     @IBOutlet weak var careerUsername: UITextField!
     @IBOutlet weak var careerBtn: UIButton!
     
-    @IBAction func careerSubmitBtnPressed(_ sender: Any) {
-    
+    @IBAction func careerSubmitBtnPressed(_ sender: Any){
+        performSegue(withIdentifier: "SeguePlayerStats", sender: sender)
     }
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Career-Bg")!)
     }
 
     override func didReceiveMemoryWarning() {
