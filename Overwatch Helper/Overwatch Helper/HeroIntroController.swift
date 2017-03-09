@@ -48,7 +48,10 @@ class HeroIntroController: UITableViewController {
         //recognizer.numberOfTapsRequired = 1;
         //moreView.addGestureRecognizer(recognizer)
         //moreView.isUserInteractionEnabled = true;
+        
         initializeHeros()
+        
+        self.clearsSelectionOnViewWillAppear = false
     }
     
     /** **/
