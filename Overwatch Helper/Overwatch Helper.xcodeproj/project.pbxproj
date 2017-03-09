@@ -309,7 +309,7 @@
 				TargetAttributes = {
 					C10C4F4F1E6C630300B0F67E = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C10C4F631E6C630300B0F67E = {
 						CreatedOnToolsVersion = 8.2.1;

@@ -8,4 +8,5 @@ target 'Overwatch Helper' do
     pod "CSStickyHeaderFlowLayout"
     pod 'FoldingCell'
     pod 'MMCardView'
+    pod 'Kingfisher', '~> 3.0’
 end
