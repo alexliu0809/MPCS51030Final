@@ -1,14 +1,17 @@
 [
   {
     "url": "https://www.uchicago.edu",
-    "title": "News3"
+    "title": "News3",
+    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
   },
   {
     "url": "https://www.baidu.com",
-    "title": "News2"
+    "title": "News2",
+    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
   },
   {
     "url": "https://www.google.com",
-    "title": "News1"
+    "title": "News1",
+    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
   }
 ]

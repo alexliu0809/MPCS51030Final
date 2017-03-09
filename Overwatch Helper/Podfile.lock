@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - CSStickyHeaderFlowLayout (0.2.11)
   - FoldingCell (2.0.3)
+  - Kingfisher (3.5.1)
   - MMCardView (0.3.2)
   - SwiftyJSON (3.1.4)
   - YouTubePlayer-Swift (1.0)
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - Alamofire
   - CSStickyHeaderFlowLayout
   - FoldingCell
+  - Kingfisher (~> 3.0)
   - MMCardView
   - SwiftyJSON
   - YouTubePlayer-Swift
@@ -18,10 +20,11 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CSStickyHeaderFlowLayout: e9bcb1762413f49d7d09e5bd0ae5efd1100116b7
   FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
+  Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
   MMCardView: 81470780ffa5fd6501ffadfc67d47e9ef446a9c0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: 1b9afb1af09067127f474f88f0f198c5e2767126
+PODFILE CHECKSUM: fe3166b7942e59a659b6ea3631de9ddf8fefb13a
 
 COCOAPODS: 1.2.0

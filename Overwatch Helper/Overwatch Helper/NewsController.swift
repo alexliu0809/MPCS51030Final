@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var newsTable: UITableView!
@@ -41,15 +42,15 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         //https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json
-        SharedNetworking.Shared.fetchJSON(URLString: "https://rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json", completion: { (data) in
-            //print(data)
+        SharedNetworking.Shared.fetchJSON(URLString: "https://cdn.rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json", completion: { (data) in
+            print(data)
             let json = data as! [[String:AnyObject]]
             //print(json.count)
             
             var tempData:[NewsData] = []
             for i in 0..<json.count
             {
-                tempData.append(NewsData.init(title: json[i]["title"] as! String, url: json[i]["url"] as! String))
+                tempData.append(NewsData.init(title: json[i]["title"] as! String, url: json[i]["url"] as! String, imageUrl: json[i]["image"] as! String))
             }
             
             self.newsArray = tempData
@@ -72,7 +73,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //print(cell.newsContent.text)
         //print(indexPath.row)
         cell.backgroundColor = UIColor.clear
-        cell.newsImage.image = UIImage(named:"News-Cell")
+        let url = URL(string:newsArray[indexPath.row].imageUrl)
+        cell.newsImage.kf.setImage(with: url)
         return cell
     }
     
