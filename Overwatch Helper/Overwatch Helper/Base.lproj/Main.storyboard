@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="md9-6N-XEo">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="md9-6N-XEo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -561,7 +561,7 @@
                     <navigationItem key="navigationItem" id="K2k-tf-ftE"/>
                     <connections>
                         <outlet property="scrollView" destination="4cH-DD-cgJ" id="I12-of-Jf7"/>
-                        <segue destination="0WQ-6o-SdM" kind="show" identifier="showMapDetail" id="CCQ-qt-JuV"/>
+                        <segue destination="0WQ-6o-SdM" kind="show" identifier="showMapDetail" animates="NO" id="CCQ-qt-JuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYk-Dy-ABD" userLabel="First Responder" sceneMemberID="firstResponder"/>

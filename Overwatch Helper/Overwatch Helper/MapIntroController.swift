@@ -71,7 +71,6 @@ class MapIntroController: UIViewController{
         }else{
             return
         }
-        
         for i in 0...13 {
             if i % 2 == 0 {
                 UIView.animate(withDuration: 0.7, animations: {
@@ -83,10 +82,9 @@ class MapIntroController: UIViewController{
                 })
             }
         }
-        
-        let dispatchTime = DispatchTime.now() + .milliseconds(300)
-        
+        var dispatchTime = DispatchTime.now() + .milliseconds(300)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
+        
             self.performSelector(onMainThread: #selector(self.goDetail), with: nil, waitUntilDone: false)
         })
     }
@@ -95,7 +93,25 @@ class MapIntroController: UIViewController{
         if segue.identifier == "showMapDetail" {
             let dest = (segue.destination as! MapDetailController)
             dest.currentMapName = seletedMap!
+            
+            
+
+            let segueAnimationView = segue.destination.view as UIView
+            
+            segueAnimationView.frame = CGRect(x: 187, y: 333, width: 1, height: 1)
+            
+            let window = UIApplication.shared.keyWindow
+
+            window?.insertSubview(segueAnimationView, aboveSubview: self.view)
+            UIView.animate(withDuration: 1, animations: {
+                segueAnimationView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+            }, completion: {
+                finish in
+            })
+
+            
         }
+        
     }
     
     func goDetail(){
