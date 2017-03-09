@@ -36,6 +36,11 @@ class MapDetailBasicInfo : UITableViewCell
     
     @IBOutlet weak var flag: UIImageView!
     
+    @IBOutlet weak var locTag: UILabel!
+    
+    @IBOutlet weak var terrainTag: UILabel!
+    
+    @IBOutlet weak var typeTag: UILabel!
     
 }
 class MapDetailDetailInfo : UITableViewCell

@@ -21,8 +21,9 @@ class MapDetailController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView.estimatedRowHeight = 300
+        self.tableView.estimatedRowHeight = 500
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +37,19 @@ class MapDetailController: UITableViewController{
         loc = "China"
         terrain = "City"
         type = "Escort"
+        for i in self.tableView.subviews{
+            i.alpha = 0
+        }
+        DispatchQueue.main.async {
+            
+            for i in self.tableView.subviews{
+                UIView.animate(withDuration: 0.5, animations: {
+                    i.alpha = 1
+                }, completion: {
+                    finish in
+                })
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,12 +81,21 @@ class MapDetailController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapBasicInfo", for: indexPath) as! MapDetailBasicInfo
             //print("2")
             cell.location.text = MapList.country[currentMapName]
-//            cell.location.transform = CGAffineTransform(a: 1, b: -0.3, c: -0.3, d: 1, tx: <#T##CGFloat#>, ty: <#T##CGFloat#>)
             cell.terrain.text = terrain
             cell.type.text = type
             cell.flag.image = UIImage(named: MapList.country[currentMapName]!)
             cell.flag.backgroundColor = UIColor.clear
             cell.flag.contentMode = .scaleAspectFit
+            cell.locTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
+            cell.terrainTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
+            cell.typeTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
+            cell.locTag.layer.cornerRadius = 5
+            cell.locTag.layer.masksToBounds = true
+            cell.typeTag.layer.cornerRadius = 5
+            cell.terrainTag.layer.masksToBounds = true
+            cell.terrainTag.layer.cornerRadius = 5
+            cell.typeTag.layer.masksToBounds = true
+
             return cell
         }
         else
@@ -85,7 +108,11 @@ class MapDetailController: UITableViewController{
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 165
+        if indexPath.item < 2 {
+            return 165
+        }else{
+            return UITableViewAutomaticDimension
+        }
     }
 
 }

@@ -96,19 +96,20 @@ class MapIntroController: UIViewController{
             
             
 
-            let segueAnimationView = segue.destination.view as UIView
-            
-            segueAnimationView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
-            segueAnimationView.alpha = 0
-            
-            let window = UIApplication.shared.keyWindow
+//            let segueAnimationView = segue.destination.view as UIView
+//            
+//            segueAnimationView.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+//            segueAnimationView.backgroundColor = UIColor(red: 54, green: 54, blue: 54, alpha: 1)
+////            segueAnimationView.alpha = 0
+//            
+//            let window = UIApplication.shared.keyWindow
 
-            window?.insertSubview(segueAnimationView, aboveSubview: self.view)
-            UIView.animate(withDuration: 1, animations: {
-                segueAnimationView.alpha = 1
-            }, completion: {
-                finish in
-            })
+//            window?.insertSubview(segueAnimationView, aboveSubview: self.view)
+//            UIView.animate(withDuration: 1, animations: {
+//                segueAnimationView.alpha = 1
+//            }, completion: {
+//                finish in
+//            })
 
             
         }
