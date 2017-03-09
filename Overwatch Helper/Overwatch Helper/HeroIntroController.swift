@@ -16,7 +16,7 @@ var heroArray:[HeroIntroInfo] = []
 class HeroIntroController: UITableViewController {
 
     
-    
+    var lastSelected:Int?
     var CELLCOUNT = 1
     
     //------when make change on your cell size, also modify these------
@@ -52,6 +52,7 @@ class HeroIntroController: UITableViewController {
         initializeHeros()
         
         self.clearsSelectionOnViewWillAppear = false
+        //self.tableView.selected
     }
     
     /** **/
@@ -167,6 +168,53 @@ class HeroIntroController: UITableViewController {
             return
         }
         
+        if let lastSelected = lastSelected
+        {
+            let lastIndexPath = IndexPath(row: lastSelected, section: 0)
+            guard case let lastCell as FoldingCell = tableView.cellForRow(at: lastIndexPath) else {
+                return
+            }
+            
+            cellHeights[lastIndexPath.row] = kCloseCellHeight
+            lastCell.selectedAnimation(false, animated: true, completion: nil)
+            let duration = 0.5
+            
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+                tableView.beginUpdates()
+                tableView.endUpdates()
+            }, completion: {
+                (response) in
+                if (lastIndexPath == indexPath)
+                {
+                    return
+                }
+                
+                var duration = 0.0
+                if self.cellHeights[indexPath.row] == self.kCloseCellHeight { // open cell
+                    self.cellHeights[indexPath.row] = self.kOpenCellHeight
+                    cell.selectedAnimation(true, animated: true, completion: nil)
+                    duration = 0.5
+                } else {// close cell
+                    self.cellHeights[indexPath.row] = self.kCloseCellHeight
+                    cell.selectedAnimation(false, animated: true, completion: nil)
+                    duration = 1.1
+                }
+                
+                UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+                    tableView.beginUpdates()
+                    tableView.endUpdates()
+                }, completion: {
+                    (Result) in
+                    self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                    self.lastSelected = indexPath.row
+                })
+
+                
+            })
+            return
+        }
+        
+        
         var duration = 0.0
         if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
             cellHeights[indexPath.row] = kOpenCellHeight
@@ -181,10 +229,14 @@ class HeroIntroController: UITableViewController {
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
             tableView.beginUpdates()
             tableView.endUpdates()
-        }, completion: nil)
+        }, completion: {
+            (Result) in
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        self.lastSelected = indexPath.row
+        })
     }
     
-    
+    /*
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         print("Deselect:\(indexPath.row)")
         guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
@@ -201,7 +253,7 @@ class HeroIntroController: UITableViewController {
         }, completion: nil)
 
     }
-    
+    */
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
