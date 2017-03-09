@@ -41,10 +41,12 @@ class HeroIntroInfo
     var difficulty : Int
     var heroType : HeroType
     var heroName : String
-    init(name:String, image:UIImage, diff:Int, type:HeroType) {
+    var heroID : Int
+    init(name:String, image:UIImage, diff:Int, type:HeroType, id:Int) {
         self.topImage = image
         self.heroName = name
         self.heroType = type
         self.difficulty = diff
+        self.heroID = id
     }
 }

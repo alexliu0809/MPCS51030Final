@@ -28,6 +28,9 @@ class HeroDetailController:UITableViewController{
         self.tableView.delegate = self
         self.tableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 165
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +42,9 @@ class HeroDetailController:UITableViewController{
         // Dispose of any resources that can be recreated.
         print("Warning")
     }
+    
+    
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -71,6 +77,7 @@ class HeroDetailController:UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroDetailCell", for: indexPath) as! HeroDetailDetailInfo
             //print("3+")
             cell.backgroundColor = UIColor.green
+            cell.detailInfo.text = ""
             return cell
         }
     }
@@ -85,7 +92,7 @@ class HeroDetailController:UITableViewController{
         }
         else
         {
-            return 100
+            return UITableViewAutomaticDimension
         }
     }
 }
