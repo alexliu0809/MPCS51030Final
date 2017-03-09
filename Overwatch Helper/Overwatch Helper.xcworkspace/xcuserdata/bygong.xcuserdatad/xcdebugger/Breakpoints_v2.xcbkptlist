@@ -427,7 +427,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "heroRecommend()"
+            landmarkName = "whatsToday()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
