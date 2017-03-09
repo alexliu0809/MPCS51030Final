@@ -26,6 +26,19 @@ class SharedNetworking{
         })
     }
     
+    func fetchData(URLString :String, completion: @escaping (Data?) -> ()){
+        
+        let headers = ["Accept" : "application/json"]
+        Alamofire.request(URLString, headers: headers).responseJSON(completionHandler: {
+            response in
+            
+            guard let JSON = response.data, response.result.error == nil else {
+                return
+            }
+            completion(JSON)
+        })
+    }
+    
     func fetchImage(URLString :String, completion: @escaping (UIImage?) -> ()){
         
         Alamofire.request(URLString).responseData(completionHandler: {

@@ -42,6 +42,7 @@ class HeroDetailDetailInfo : UITableViewCell
     @IBOutlet weak var detailInfoImage: UIImageView!
     
 }
+
 class HeroIntroInfo
 {
     var topImage : UIImage
