@@ -182,6 +182,25 @@ class HeroIntroController: UITableViewController {
         }, completion: nil)
     }
     
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        print("Deselect:\(indexPath.row)")
+        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        
+        cellHeights[indexPath.row] = kCloseCellHeight
+        cell.selectedAnimation(false, animated: true, completion: nil)
+        var duration = 1.1
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }, completion: nil)
+
+    }
+    
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if case let cell as FoldingCell = cell {
