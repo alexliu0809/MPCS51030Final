@@ -319,7 +319,7 @@
         <!--Discover-->
         <scene sceneID="HIq-EY-WMY">
             <objects>
-                <viewController id="rw7-i8-gmq" sceneMemberID="viewController">
+                <viewController id="rw7-i8-gmq" customClass="DiscoverController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jwz-uo-j3V"/>
                         <viewControllerLayoutGuide type="bottom" id="ecS-bq-GMs"/>
@@ -327,13 +327,70 @@
                     <view key="view" contentMode="scaleToFill" id="DUn-Xg-xvE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag3-h6-2cw">
+                                <rect key="frame" x="66" y="330" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.78153705600000001" blue="0.047274060549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kfj-dX-edK" kind="popoverPresentation" identifier="heroRecommend" popoverAnchorView="DUn-Xg-xvE" id="ZIr-nC-IRE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-MI-dsL">
+                                <rect key="frame" x="66" y="393" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.78153705600000001" blue="0.047274060549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kfj-dX-edK" kind="popoverPresentation" identifier="lookingForGroup" popoverAnchorView="DUn-Xg-xvE" id="EC3-pc-j7p">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAx-qj-cTE">
+                                <rect key="frame" x="66" y="265" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.78153705600000001" blue="0.047274060549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kfj-dX-edK" kind="popoverPresentation" identifier="whatsToday" popoverAnchorView="DUn-Xg-xvE" id="cwO-92-ria">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21173727510000001" green="0.21178042890000001" blue="0.21173459289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" id="Jkd-CZ-YjT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103.2" y="1059.2203898050975"/>
+        </scene>
+        <!--Discover Function Controller-->
+        <scene sceneID="VEo-Th-14T">
+            <objects>
+                <viewController id="kfj-dX-edK" customClass="DiscoverFunctionController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6zn-Kz-bxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5D-DZ-Vqm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PBL-tg-bBf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="500"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-9R-8qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="1907"/>
         </scene>
         <!--Data Analysis Controller-->
         <scene sceneID="J84-4r-61H">
@@ -933,4 +990,7 @@
             <point key="canvasLocation" x="-1012" y="868.51574212893559"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZIr-nC-IRE"/>
+    </inferredMetricsTieBreakers>
 </document>
