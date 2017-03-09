@@ -1,5 +1,5 @@
 //
-//  MapInfo.swift
+//  HeroInfo.swift
 //  Overwatch Helper
 //
 //  Created by Benyan Gong on 3/5/17.
@@ -7,7 +7,45 @@
 //
 
 import Foundation
+import UIKit
 
 struct MapInfo {
     
+}
+enum MapType{
+    case Assault
+    case Escort
+    case Hybrid
+    case Control
+    case Arena
+}
+
+class MapDetailHeroIcon : UITableViewCell
+{
+//    @IBOutlet weak var iconImage: UIImageView!
+//    @IBOutlet weak var iconLabel: UILabel!
+    
+}
+class MapDetailBasicInfo : UITableViewCell
+{
+//    @IBOutlet weak var basicInfo: UILabel!
+    
+}
+class MapDetailDetailInfo : UITableViewCell
+{
+//    @IBOutlet weak var detailInfo: UILabel!
+    
+}
+class MapIntroInfo
+{
+    var topImage : UIImage
+    var mapType : MapType
+    var location : String
+    var flagImage: UIImage
+    init(loacation: String, mapImage: UIImage, flagImage: UIImage, type: MapType) {
+        self.topImage = image
+        self.location = loacation
+        self.mapType = type
+        self.flagImage = flagImage
+    }
 }
