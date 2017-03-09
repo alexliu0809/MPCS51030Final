@@ -43,7 +43,7 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         //https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json
         SharedNetworking.Shared.fetchJSON(URLString: "https://cdn.rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/News.json", completion: { (data) in
-            print(data)
+            //print(data)
             let json = data as! [[String:AnyObject]]
             //print(json.count)
             
