@@ -30,7 +30,7 @@ class MapDetailController: UITableViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        icon = #imageLiteral(resourceName: "map_lijiangtower")
+        icon = #imageLiteral(resourceName: "map_oasis")
         detail = "Liangtower is a xxxxx"
         loc = "China"
         terrain = "City"
@@ -56,7 +56,8 @@ class MapDetailController: UITableViewController{
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapIcon", for: indexPath) as! MapDetailMapIcon
 
-            cell.mapImage.image = icon
+            cell.mapImage.image = UIImage(named: MapList.nameImageName[currentMapName]!)
+            cell.mapName.text = currentMapName
             return cell
         }
         else if (indexPath.row == 1) //change2
@@ -64,9 +65,10 @@ class MapDetailController: UITableViewController{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapBasicInfo", for: indexPath) as! MapDetailBasicInfo
             //print("2")
-            cell.location.text = loc
+            cell.location.text = MapList.country[currentMapName]
             cell.terrain.text = terrain
             cell.type.text = type
+            cell.flag.image = UIImage(named: MapList.country[currentMapName]!)
             return cell
         }
         else

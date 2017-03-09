@@ -24,6 +24,7 @@ class MapDetailMapIcon : UITableViewCell
 {
     @IBOutlet weak var mapImage: UIImageView!
     
+    @IBOutlet weak var mapName: UILabel!
 }
 class MapDetailBasicInfo : UITableViewCell
 {
@@ -32,6 +33,10 @@ class MapDetailBasicInfo : UITableViewCell
     @IBOutlet weak var terrain: UILabel!
     
     @IBOutlet weak var type: UILabel!
+    
+    @IBOutlet weak var flag: UIImageView!
+    
+    
 }
 class MapDetailDetailInfo : UITableViewCell
 {

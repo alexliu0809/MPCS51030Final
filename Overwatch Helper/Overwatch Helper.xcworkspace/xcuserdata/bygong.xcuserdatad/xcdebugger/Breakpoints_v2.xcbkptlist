@@ -237,7 +237,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "init(frame:image:label:_:_:)"
+            landmarkName = "init(frame:image:label:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Overwatch Helper/MapIntroController.swift"
-            timestampString = "510707022.057552"
+            timestampString = "510728553.745351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "handleTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -263,14 +263,124 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/MapIntroController.swift"
-            timestampString = "510707022.057552"
+            filePath = "Overwatch Helper/MapInfo.swift"
+            timestampString = "510764337.103961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "handleTap(_:)"
-            landmarkType = "7">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MapDetailBasicInfo"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.location.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732988.864989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Overwatch_Helper.MapDetailBasicInfo"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732988.867709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.MapDetailBasicInfo&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732988.870084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Overwatch Helper/MapInfo.swift"
+            timestampString = "510764337.103961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MapDetailBasicInfo"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.location.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732945.510333"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; Overwatch_Helper.MapDetailBasicInfo"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732945.514736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.MapDetailBasicInfo.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.MapDetailBasicInfo&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/MapInfo.swift"
+                  timestampString = "510732945.516698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
