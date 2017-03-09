@@ -43,7 +43,7 @@ class MapIntroInfo
     var location : String
     var flagImage: UIImage
     init(loacation: String, mapImage: UIImage, flagImage: UIImage, type: MapType) {
-        self.topImage = image
+        self.topImage = mapImage
         self.location = loacation
         self.mapType = type
         self.flagImage = flagImage
