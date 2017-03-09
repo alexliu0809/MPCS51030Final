@@ -39,6 +39,7 @@
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
 		C33BB4DF1E6E17E80051E292 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33BB4DE1E6E17E80051E292 /* HeroCell.swift */; };
 		C376A5AE1E71C2E200764617 /* PlayerStatsCellProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */; };
+		C3FC77611E71F35F0027484D /* PlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC77601E71F35F0027484D /* PlayerStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C33BB4DE1E6E17E80051E292 /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatsCellProto.swift; sourceTree = "<group>"; };
+		C3FC77601E71F35F0027484D /* PlayerStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +223,12 @@
 				C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */,
 				C33BB4DE1E6E17E80051E292 /* HeroCell.swift */,
 				C17CB6F51E71AD120009E090 /* MapList.swift */,
+<<<<<<< HEAD
 				C17CB6FB1E7208C30009E090 /* HeroRecommendationSurvey.swift */,
 				C17CB6FD1E720A1B0009E090 /* HeroList.swift */,
+=======
+				C3FC77601E71F35F0027484D /* PlayerStats.swift */,
+>>>>>>> refs/remotes/origin/Dev
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 				C10C4F871E6C70AB00B0F67E /* MapDetailController.swift in Sources */,
 				C17CB6FA1E71FD6B0009E090 /* DiscoverFunctionController.swift in Sources */,
 				C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */,
+				C3FC77611E71F35F0027484D /* PlayerStats.swift in Sources */,
 				C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */,
 				C10C4F941E6C80C400B0F67E /* MapInfo.swift in Sources */,
 				C17CB6F61E71AD120009E090 /* MapList.swift in Sources */,

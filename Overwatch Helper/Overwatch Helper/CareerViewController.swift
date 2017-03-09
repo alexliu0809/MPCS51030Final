@@ -31,6 +31,14 @@ class CareerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SeguePlayerStats")
+        {
+            let account = careerUsername.text?.replacingOccurrences(of: "#", with: "-")
+            let controller = segue.destination as! PlayerStatController
+            controller.playerAccount = account
+        }
+    }
 
     /*
     // MARK: - Navigation
