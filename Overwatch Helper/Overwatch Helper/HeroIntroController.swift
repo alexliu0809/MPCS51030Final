@@ -143,6 +143,9 @@ class HeroIntroController: UITableViewController {
         //btnView.isUserInteractionEnabled = true;
         let heroTpye = cell.containerView.subviews[1].subviews[1] as! UILabel
         heroTpye.text = "\(heroArray[indexPath.row].heroType)"
+        let diffImage = cell.containerView.subviews[1].subviews[3] as! UIImageView
+        //var str = "\(heroArray[indexPath.row].difficulty)stars"
+        diffImage.image = UIImage(named: "\(heroArray[indexPath.row].difficulty)stars")
         //set labels and images
 //        cell.heroDetailContent.text = "123455"
 //        cell
