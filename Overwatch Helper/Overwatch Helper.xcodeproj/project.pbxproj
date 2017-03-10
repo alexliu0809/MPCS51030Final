@@ -207,6 +207,7 @@
 		C10C4F821E6C6F3100B0F67E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */,
 				C1873CA71E709481008F6130 /* MapCell.swift */,
 				C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */,
 			);
@@ -216,7 +217,6 @@
 		C10C4F831E6C6F3500B0F67E /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */,
 				C10C4F931E6C80C400B0F67E /* MapInfo.swift */,
 				C10C4F951E6C80EE00B0F67E /* HeroInfo.swift */,
 				C10C4F971E6C810000B0F67E /* PlayerData.swift */,
