@@ -435,15 +435,37 @@
                     <view key="view" contentMode="scaleToFill" id="VRA-cn-3Bi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="OIq-jM-MU7">
+                                <rect key="frame" x="7" y="283" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="verwatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcC-6d-tmj">
+                                <rect key="frame" x="98" y="283" width="268" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ompanion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jck-n8-gnZ">
+                                <rect key="frame" x="94" y="406" width="281" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="55"/>
+                                <color key="textColor" red="0.97217541933059692" green="0.61851024627685547" blue="0.099836356937885284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.082177810370922089" green="0.085983268916606903" blue="0.10258174687623978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <segue destination="md9-6N-XEo" kind="show" id="dI0-PY-ObG"/>
+                        <outlet property="companion" destination="jck-n8-gnZ" id="Gil-fN-mYi"/>
+                        <outlet property="overwatch" destination="NcC-6d-tmj" id="Iak-1e-Sed"/>
+                        <segue destination="md9-6N-XEo" kind="show" identifier="showMain" id="dI0-PY-ObG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo0-O3-L2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1722" y="-36"/>
+            <point key="canvasLocation" x="-1722.4000000000001" y="-36.431784107946029"/>
         </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="3Xd-D1-7kx">
@@ -1007,6 +1029,9 @@
             <point key="canvasLocation" x="-1721" y="869"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splashIcon" width="900" height="900"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p2O-ey-rm6"/>
     </inferredMetricsTieBreakers>

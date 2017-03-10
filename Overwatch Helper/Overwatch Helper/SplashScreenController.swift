@@ -10,10 +10,33 @@ import UIKit
 
 class SplashScreenController: UIViewController {
 
+    @IBOutlet weak var overwatch: UILabel!
+    
+    @IBOutlet weak var companion: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        companion.alpha = 0
+        
+        
+        DispatchQueue.main.async {
+            sleep(2)
+            UIView.animate(withDuration: 0.7, animations: {
+                self.overwatch.alpha = 0
+                self.overwatch.center.y -= 123
+                self.companion.alpha = 1
+                self.companion.center.y -= 123
+                
+                
+            }, completion: {
+                finish in
+                sleep(2)
+                self.performSegue(withIdentifier: "showMain", sender: self)
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
