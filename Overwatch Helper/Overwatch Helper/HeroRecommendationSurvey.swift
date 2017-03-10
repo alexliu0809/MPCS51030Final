@@ -12,6 +12,19 @@ class HeroRecommendationSurvey {
     var HeroScores: [Int] = []
     var Questions: [RecommendationQuestion] = []
     
+    @objc func choose1(){
+        print("choose1")
+    }
+    func choose2(){
+        
+    }
+    func choose3(){
+        
+    }
+    func choose4(){
+        
+    }
+    
 }
 
 struct RecommendationQuestion {
