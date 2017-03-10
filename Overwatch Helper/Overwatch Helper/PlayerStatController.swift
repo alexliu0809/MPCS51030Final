@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+import Kingfisher
 
 class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -54,6 +55,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             
             self.loadDetailInfo()
+            
+            self.tableView.rowHeight = UITableViewAutomaticDimension
+            self.tableView.estimatedRowHeight = 80
             
         })
     }
@@ -122,7 +126,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        if (playerData.playerName != nil)
+        {
+            return 3 + playerData.typeDetails.count
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -146,7 +154,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             }
             else
             {
-                return 1
+                return playerData.featureNumbers.count
             }
         }
         else if (section == 2)
@@ -168,12 +176,72 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             }
             else
             {
-                return 1
+                return playerData.typeDetails[section-3].subTitle.count
             }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if (indexPath.section == 0)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerHeaderCell", for: indexPath) as! PlayerHeader
+
+            cell.featureImage.kf.setImage(with: URL(string:playerData.featureImageURL))
+            cell.playerName.text = playerData.playerName!
+            cell.gamesWon.text = playerData.gamesWon!
+            cell.rankIcon.contentMode = .scaleToFill
+            cell.rankIcon.kf.setImage(with: URL(string:playerData.rankIconURL!))
+            cell.rankPoints.text = playerData.rankPoints!
+            
+            return cell
+        }
+        else if (indexPath.section == 1) //change2
+        {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerFeatureCell", for: indexPath) as! PlayerFeature
+            //print("2")
+            cell.backgroundColor = UIColor.gray
+            cell.featureDescription.text = playerData.featureDescription[indexPath.row]
+            cell.featureNumber.text = "\(playerData.featureNumbers[indexPath.row])"
+            //cell.youtubePlayer.loadVideoID(detailItem!.videoUrl)
+            return cell
+        }
+        else if (indexPath.section == 2)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerTopHeroCell", for: indexPath) as! PlayerTopHero
+            //print("3+")
+            //cell.backgroundColor = UIColor.green
+            //cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-2] //change3
+            //cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-2]
+            //cell.detailInfoImage.image = detailItem?.//heroAbilityImage[indexPath.row-2]
+            return cell
+        }
+        else
+        {
+           let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerStatsCell", for: indexPath) as! PlayerStats
+           //cell.typeName.text = playerData.
+            cell.typeDetail.text = playerData.typeDetails[indexPath.section-3].subVal[indexPath.row]
+            cell.typeName.text = playerData.typeDetails[indexPath.section-3].subTitle[indexPath.row]
+            
+            
+            return cell
+        }
+
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.section == 0)
+        {
+            return 116
+        }
+        else if (indexPath.section == 2) //change 1
+        {
+            return UITableViewAutomaticDimension
+        }
+        else
+        {
+            //return UITableViewAutomaticDimension
+            return 80
+        }
     }
 }
