@@ -19,12 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MMCardView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Overwatch Helper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftCharts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,17 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0722A03BB84388358FC274FEFEDB8740</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2311247055C20256BE148E033ECC01F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4C1BEA4CD86D4494B606051FB99E7119</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5925379832D39693A7009455F2D2F527</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEB8FF609FB4239FA636536ACB1AAB6E</key>
+		<key>A9C5EFEF38F703A2422B91E13B96E522</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B626E472969D6F87698AF0041EAAFC38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC36166D5F8C60CB710587431D4A9B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE77C64C638009621B49A7DE21FD4E2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
