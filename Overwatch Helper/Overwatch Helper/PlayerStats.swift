@@ -22,7 +22,7 @@ class PlayerStatatistic {
     var typeDetails:[typeDetail] = []
     
     var topHerosName:[String] = []
-    var topHeroTime:[Int] = []
+    var topHeroTime:[Double] = []
     
     init() {
         
