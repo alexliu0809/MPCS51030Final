@@ -4,6 +4,7 @@ PODS:
   - FoldingCell (2.0.3)
   - Kingfisher (3.5.1)
   - MMCardView (0.3.2)
+  - SwiftCharts (0.5.1)
   - SwiftyJSON (3.1.4)
   - YouTubePlayer-Swift (1.0)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - FoldingCell
   - Kingfisher (~> 3.0)
   - MMCardView
+  - SwiftCharts (~> 0.5)
   - SwiftyJSON
   - YouTubePlayer-Swift
 
@@ -22,9 +24,10 @@ SPEC CHECKSUMS:
   FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
   MMCardView: 81470780ffa5fd6501ffadfc67d47e9ef446a9c0
+  SwiftCharts: d263289cdc7fc955fef54ae3bc6529f696e69933
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: fe3166b7942e59a659b6ea3631de9ddf8fefb13a
+PODFILE CHECKSUM: be0f9c654f05157670a664735baddd6533b49bf0
 
 COCOAPODS: 1.2.0

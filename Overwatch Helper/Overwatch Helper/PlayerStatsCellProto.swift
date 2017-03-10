@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SwiftCharts
 class PlayerHeader: UITableViewCell
 {
     @IBOutlet weak var playerIcon: UIImageView!
@@ -35,7 +35,9 @@ class PlayerFeature: UITableViewCell
 
 class PlayerTopHero: UITableViewCell
 {
-    
+    var chart: Chart? // arc
+
+    //@IBOutlet weak var view: UIView!
 }
 
 class PlayerStats: UITableViewCell

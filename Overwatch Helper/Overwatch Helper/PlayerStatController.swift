@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Kingfisher
+import SwiftCharts
 
 class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -62,6 +63,65 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         })
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        return 45
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.orange
+        
+        let label = UILabel()
+        if (section == 0)
+        {
+            view.backgroundColor = UIColor.white
+            return view
+        }
+        else if (section == 1)
+        {
+            label.text = "FEATURED STATS"
+        }
+        else if (section == 2)
+        {
+            label.text = "TOP HEROS"
+        }
+        else if (section != 3 + playerData.typeDetails.count) //no footer last one
+        {
+            label.text =  playerData.typeDetails[section-3].typeName!
+        }
+        label.frame = CGRect(x: 5, y: 5, width: 100, height: 35)
+        
+        view.addSubview(label)
+        //self.tableView.tableHeaderView = view
+        return view
+        
+    }
+    
+    /*
+     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+     if (section == 0)
+     {
+     return "Overwatch"
+     }
+     else if (section == 1)
+     {
+     return "FEATURED STATS"
+     }
+     else if (section == 2)
+     {
+     return "TOP HEROS"
+     }
+     else
+     {
+     return playerData.typeDetails[section-3].typeName!
+     }
+     }
+     */
     func loadDetailInfo()
     {
         let str = "https://ow-api.herokuapp.com/stats/pc/us/\(playerAccount!)"
@@ -84,7 +144,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 self.tempPlayerData.topHerosName.append(json["stats"]["top_heroes"]["quickplay"][i]["hero"].string!)
                 var hours = json["stats"]["top_heroes"]["quickplay"][i]["played"].string!
                 hours = hours.components(separatedBy: " ")[0]
-                self.tempPlayerData.topHeroTime.append(Int(hours)!)
+                self.tempPlayerData.topHeroTime.append(Double(hours)!)
             }
             
             /*** Load Career Stats Data ***/
@@ -116,6 +176,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.tableView.contentInset = UIEdgeInsets(top: -45, left: 0, bottom: 0, right: 0) //to hide the header
+        
     }
     
     
@@ -135,6 +198,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 1
+        
+        
+        
         if (section == 0)
         {
             if (playerData.playerName != nil)
@@ -182,10 +248,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if (indexPath.section == 0)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerHeaderCell", for: indexPath) as! PlayerHeader
-
+            
             cell.featureImage.kf.setImage(with: URL(string:playerData.featureImageURL))
             cell.playerName.text = playerData.playerName!
             cell.gamesWon.text = playerData.gamesWon!
@@ -214,19 +281,52 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             //cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-2] //change3
             //cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-2]
             //cell.detailInfoImage.image = detailItem?.//heroAbilityImage[indexPath.row-2]
+            generateChart(cell:cell)
+            
             return cell
         }
         else
         {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerStatsCell", for: indexPath) as! PlayerStats
-           //cell.typeName.text = playerData.
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerStatsCell", for: indexPath) as! PlayerStats
+            //cell.typeName.text = playerData.
             cell.typeDetail.text = playerData.typeDetails[indexPath.section-3].subVal[indexPath.row]
             cell.typeName.text = playerData.typeDetails[indexPath.section-3].subTitle[indexPath.row]
             
             
             return cell
         }
-
+        
+    }
+    func generateChart(cell:PlayerTopHero)
+    {
+        
+        let chartConfig = BarsChartConfig(
+            valsAxisConfig: ChartAxisConfig(from: 0, to: 1.0, by: 0.5)
+        )
+ 
+        
+        var bars : [(String, Double)] = []
+        for i in 0..<5{
+            bars.append((playerData.topHerosName[i],playerData.topHeroTime[i]/playerData.topHeroTime.max()!))
+        }
+        
+        print(cell.frame.width)
+        print(cell.frame.height)
+        let chart = BarsChart(
+            frame: CGRect.init(x:0, y:0, width:cell.frame.width, height:cell.frame.height),
+            chartConfig: chartConfig,
+            xTitle: "Totoal Time",
+            yTitle: "Hero Name",
+            bars: bars,
+            color: UIColor.red,
+            barWidth: 20,
+            horizontal: true
+        )
+ 
+        
+     
+        cell.addSubview(chart.view)
+        cell.chart = chart
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -236,7 +336,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         }
         else if (indexPath.section == 2) //change 1
         {
-            return UITableViewAutomaticDimension
+            return 5 * 100 //playerData.top.count
         }
         else
         {
