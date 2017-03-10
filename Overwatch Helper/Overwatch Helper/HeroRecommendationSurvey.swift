@@ -14,13 +14,15 @@ class HeroRecommendationSurvey: UIView {
     var Questions: [RecommendationQuestion] = []
     var nextQuestionIndex = 0
     
+    let question = UILabel(frame: (CGRect(x: 20, y: 100, width: 200, height: 50)))
+    let option1 = UIButton(frame: CGRect(x: 20, y: 160, width: 200, height: 50))
+    let option2 = UIButton(frame: CGRect(x: 20, y: 220, width: 200, height: 50))
+    let option3 = UIButton(frame: CGRect(x: 20, y: 280, width: 200, height: 50))
+    let option4 = UIButton(frame: CGRect(x: 20, y: 340, width: 200, height: 50))
+    
     init(){
         super.init(frame: CGRect(x: 0, y: 0, width: 375, height: 500))
-        let question = UILabel(frame: (CGRect(x: 20, y: 100, width: 200, height: 50)))
-        let option1 = UIButton(frame: CGRect(x: 20, y: 160, width: 200, height: 50))
-        let option2 = UIButton(frame: CGRect(x: 20, y: 220, width: 200, height: 50))
-        let option3 = UIButton(frame: CGRect(x: 20, y: 280, width: 200, height: 50))
-        let option4 = UIButton(frame: CGRect(x: 20, y: 340, width: 200, height: 50))
+        
         question.text = "question1"
         question.backgroundColor = UIColor.brown
         
@@ -51,25 +53,45 @@ class HeroRecommendationSurvey: UIView {
         nextQuestion()
     }
     
-    
-    
     func choose1(){
-        print("choose1")
+        makeChoice(0)
     }
     func choose2(){
-        print("choose2")
+        makeChoice(1)
     }
     func choose3(){
-        
+        makeChoice(2)
     }
     func choose4(){
-        print("choose4")
+        makeChoice(3)
     }
     
     func nextQuestion() {
         if nextQuestionIndex == Questions.count{
+            settle()
             return
         }
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: <#T##TimeInterval#>, animations: {
+                self.question.text = self.Questions[self.nextQuestionIndex].question
+                self.option1.setTitle(self.Questions[self.nextQuestionIndex].options[0], for: .normal)
+                self.option2.setTitle(self.Questions[self.nextQuestionIndex].options[1], for: .normal)
+                self.option3.setTitle(self.Questions[self.nextQuestionIndex].options[2], for: .normal)
+                self.option4.setTitle(self.Questions[self.nextQuestionIndex].options[3], for: .normal)
+            })
+        }
+    }
+    
+    func makeChoice(_ choice : Int){
+        for i in 0...HeroScores.count{
+            HeroScores[i] += (Questions[nextQuestionIndex].choice[choice]?[i])!
+        }
+        nextQuestionIndex += 1
+        nextQuestion()
+    }
+    
+    func settle(){
+//        maxHero
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,5 +101,7 @@ class HeroRecommendationSurvey: UIView {
 }
 
 struct RecommendationQuestion {
-    let options: [[String:Int]]
+    let choice: [Int:[Int]]
+    let options: [String] = ["option1"]
+    let question: String = "question1"
 }
