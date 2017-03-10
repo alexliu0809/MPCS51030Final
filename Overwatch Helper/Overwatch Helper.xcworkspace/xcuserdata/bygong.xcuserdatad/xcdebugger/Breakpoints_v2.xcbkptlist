@@ -402,15 +402,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Overwatch Helper/DiscoverController.swift"
-            timestampString = "510788915.498484"
+            timestampString = "510859896.409465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -421,45 +421,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/DiscoverFunctionController.swift"
-            timestampString = "510824744.764726"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "whatsToday()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
-            timestampString = "510814519.816927"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "HeroRecommendationSurvey"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
-            timestampString = "510824744.764726"
+            filePath = "Overwatch Helper/DiscoverController.swift"
+            timestampString = "510848115.720987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "init()"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -470,60 +438,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
-            timestampString = "510824847.756067"
+            timestampString = "510854023.74072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "makeChoice(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
-            timestampString = "510824744.764726"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "nextQuestion()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
-            timestampString = "510824744.764726"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "nextQuestion()"
-            landmarkType = "7">
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "HeroRecommendationSurvey"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.HeroRecommendationSurvey&gt;"
+                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.question.getter : __ObjC.UILabel"
                   moduleName = "Overwatch Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
-                  timestampString = "510818280.314449"
+                  timestampString = "510854024.373921"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.init () -&gt; Overwatch_Helper.HeroRecommendationSurvey"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
+                  timestampString = "510854024.375428"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "206">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -533,12 +484,12 @@
                   moduleName = "Overwatch Helper"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
-                  timestampString = "510818280.316026"
+                  timestampString = "510854024.37682"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "41">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "215">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -549,13 +500,76 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Overwatch Helper/DiscoverController.swift"
-            timestampString = "510825308.501278"
+            filePath = "Overwatch Helper/HeroRecommendationSurvey.swift"
+            timestampString = "510854024.896672"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "HeroRecommendationSurvey"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.option2.getter : __ObjC.UIButton"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
+                  timestampString = "510854025.220838"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.init () -&gt; Overwatch_Helper.HeroRecommendationSurvey"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
+                  timestampString = "510854025.223642"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "423">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Overwatch_Helper.HeroRecommendationSurvey.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Overwatch_Helper.HeroRecommendationSurvey&gt;"
+                  moduleName = "Overwatch Helper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bygong/course/iosDevelope/OverwatchHelper/MPCS51030Final/Overwatch%20Helper/Overwatch%20Helper/HeroRecommendationSurvey.swift"
+                  timestampString = "510854025.225912"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "435">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Overwatch Helper/DrawRandomHero.swift"
+            timestampString = "510856590.046192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "start()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

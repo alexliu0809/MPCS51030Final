@@ -10,21 +10,29 @@ import Foundation
 import UIKit
 
 class HeroRecommendationSurvey: UIView {
+    weak var delegate: SurveyDelegate?
+    
     var HeroScores: [Int] = []
     var Questions: [RecommendationQuestion] = []
     var nextQuestionIndex = 0
-    var result: HeroIntroInfo?
-    var kadf = UIViewController()
-
     
-    let question = UILabel(frame: (CGRect(x: 20, y: 100, width: 200, height: 50)))
-    let option1 = UIButton(frame: CGRect(x: 20, y: 160, width: 200, height: 50))
-    let option2 = UIButton(frame: CGRect(x: 20, y: 220, width: 200, height: 50))
-    let option3 = UIButton(frame: CGRect(x: 20, y: 280, width: 200, height: 50))
-    let option4 = UIButton(frame: CGRect(x: 20, y: 340, width: 200, height: 50))
+    var question: UILabel
+    var option1: UIButton
+    var option2: UIButton
+    var option3: UIButton
+    var option4: UIButton
+//    var result: HeroIntroInfo?
     
-    init(){
-        super.init(frame: CGRect(x: 0, y: 0, width: 375, height: 500))
+    override init(frame: CGRect){
+        question = UILabel(frame: (CGRect(x: 20, y: 100, width: 200, height: 50)))
+        option1 = UIButton(frame: CGRect(x: 20, y: 160, width: 200, height: 50))
+        option2 = UIButton(frame: CGRect(x: 20, y: 220, width: 200, height: 50))
+        option3 = UIButton(frame: CGRect(x: 20, y: 280, width: 200, height: 50))
+        option4 = UIButton(frame: CGRect(x: 20, y: 340, width: 200, height: 50))
+        
+        super.init(frame: frame)
+        
+        
         
         question.text = "question1"
         question.backgroundColor = UIColor.brown
@@ -41,7 +49,7 @@ class HeroRecommendationSurvey: UIView {
         
         option4.titleLabel?.text = "Option4"
         option4.setTitle("Option4", for: .normal)
-
+        
         option1.addTarget(self, action: #selector(self.choose1), for: .touchUpInside)
         option2.addTarget(self, action: #selector(self.choose2), for: .touchUpInside)
         option3.addTarget(self, action: #selector(self.choose3), for: .touchUpInside)
@@ -52,12 +60,10 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(option2)
         self.addSubview(option3)
         self.addSubview(option4)
-        
-        
     }
     
     func surveyStart(){
-        nextQuestion()
+//        survey.delegate.nextQuestion()
     }
     
     func choose1(){
@@ -109,13 +115,20 @@ class HeroRecommendationSurvey: UIView {
         while HeroScores[i] != maxScore {
             i += 1
         }
-//        result = HeroIntroInfo()
-    
+        //        result = HeroIntroInfo()
+//        delegate?.getSurveyResult(result)
+        
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+protocol SurveyDelegate: class {
+ 
+    func getSurveyResult(_ hero: HeroIntroInfo)
     
 }
 

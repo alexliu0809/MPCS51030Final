@@ -24,8 +24,9 @@ class DiscoverController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DiscoverFunctionController
-        controller.modalPresentationStyle = UIModalPresentationStyle.popover
-        controller.popoverPresentationController!.delegate = self
+//        controller.modalPresentationStyle = UIModalPresentationStyle.popover
+//        controller.popoverPresentationController!.delegate = self
+        controller.restart()
         if segue.identifier == "whatsToday" {
             controller.functionType = .whatsToday
         }else if segue.identifier == "heroRecommend" {
@@ -37,17 +38,17 @@ class DiscoverController: UIViewController {
         }
     }
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
-    }
+//    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+//        return .none
+//    }
    
 
     
 }
 
 //popover style
-extension DiscoverController: UIPopoverPresentationControllerDelegate{
-    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-        
-    }
-}
+//extension DiscoverController: UIPopoverPresentationControllerDelegate{
+//    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+//        
+//    }
+//}
