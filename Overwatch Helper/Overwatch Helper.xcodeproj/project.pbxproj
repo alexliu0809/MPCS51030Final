@@ -32,6 +32,8 @@
 		C17A5D311E7304B5005A40C7 /* DrawRandomHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D301E7304B5005A40C7 /* DrawRandomHero.swift */; };
 		C17A5D331E73113C005A40C7 /* LookingForGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D321E73113C005A40C7 /* LookingForGroup.swift */; };
 		C17A5D351E73146A005A40C7 /* LFGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D341E73146A005A40C7 /* LFGCell.swift */; };
+		C17A5D371E7341EE005A40C7 /* LFGMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D361E7341EE005A40C7 /* LFGMessage.swift */; };
+		C17A5D391E734DF0005A40C7 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */; };
 		C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A86B71E6D197000310B9A /* NetworkService.swift */; };
 		C17CB6F61E71AD120009E090 /* MapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F51E71AD120009E090 /* MapList.swift */; };
 		C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F71E71ECD50009E090 /* DiscoverController.swift */; };
@@ -96,6 +98,8 @@
 		C17A5D301E7304B5005A40C7 /* DrawRandomHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawRandomHero.swift; sourceTree = "<group>"; };
 		C17A5D321E73113C005A40C7 /* LookingForGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookingForGroup.swift; sourceTree = "<group>"; };
 		C17A5D341E73146A005A40C7 /* LFGCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFGCell.swift; sourceTree = "<group>"; };
+		C17A5D361E7341EE005A40C7 /* LFGMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFGMessage.swift; sourceTree = "<group>"; };
+		C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		C17A86B71E6D197000310B9A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C17CB6F51E71AD120009E090 /* MapList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapList.swift; sourceTree = "<group>"; };
 		C17CB6F71E71ECD50009E090 /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				C10C4F8C1E6C753000B0F67E /* DataAnalysisController.swift */,
 				C17CB6F71E71ECD50009E090 /* DiscoverController.swift */,
 				C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */,
+				C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				C17CB6F51E71AD120009E090 /* MapList.swift */,
 				C17A5D2C1E7212F9005A40C7 /* HeroList.swift */,
 				C3FC77601E71F35F0027484D /* PlayerStats.swift */,
+				C17A5D361E7341EE005A40C7 /* LFGMessage.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				C10C4F9A1E6C811A00B0F67E /* NewsDigest.swift in Sources */,
 				C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */,
 				C17A5D351E73146A005A40C7 /* LFGCell.swift in Sources */,
+				C17A5D391E734DF0005A40C7 /* SplashScreenController.swift in Sources */,
 				C10C4F891E6C748E00B0F67E /* NewsDetailController.swift in Sources */,
 				C10C4F961E6C80EE00B0F67E /* HeroInfo.swift in Sources */,
 				C17A5D2B1E7212ED005A40C7 /* HeroRecommendationSurvey.swift in Sources */,
@@ -475,6 +482,7 @@
 				C376A5AE1E71C2E200764617 /* PlayerStatsCellProto.swift in Sources */,
 				C17A5D331E73113C005A40C7 /* LookingForGroup.swift in Sources */,
 				C1873CA81E709481008F6130 /* MapCell.swift in Sources */,
+				C17A5D371E7341EE005A40C7 /* LFGMessage.swift in Sources */,
 				C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */,
 				C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */,
 				C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */,
