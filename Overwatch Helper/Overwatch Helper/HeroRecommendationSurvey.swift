@@ -13,6 +13,9 @@ class HeroRecommendationSurvey: UIView {
     var HeroScores: [Int] = []
     var Questions: [RecommendationQuestion] = []
     var nextQuestionIndex = 0
+    var result: HeroIntroInfo?
+    var kadf = UIViewController()
+
     
     let question = UILabel(frame: (CGRect(x: 20, y: 100, width: 200, height: 50)))
     let option1 = UIButton(frame: CGRect(x: 20, y: 160, width: 200, height: 50))
@@ -50,6 +53,10 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(option3)
         self.addSubview(option4)
         
+        
+    }
+    
+    func surveyStart(){
         nextQuestion()
     }
     
@@ -72,7 +79,7 @@ class HeroRecommendationSurvey: UIView {
             return
         }
         DispatchQueue.main.async {
-            UIView.animate(withDuration: <#T##TimeInterval#>, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.question.text = self.Questions[self.nextQuestionIndex].question
                 self.option1.setTitle(self.Questions[self.nextQuestionIndex].options[0], for: .normal)
                 self.option2.setTitle(self.Questions[self.nextQuestionIndex].options[1], for: .normal)
@@ -83,6 +90,9 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func makeChoice(_ choice : Int){
+        guard !HeroScores.isEmpty else {
+            return
+        }
         for i in 0...HeroScores.count{
             HeroScores[i] += (Questions[nextQuestionIndex].choice[choice]?[i])!
         }
@@ -91,7 +101,16 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func settle(){
-//        maxHero
+        let maxScore = HeroScores.max()
+        var i = 0
+        guard !HeroScores.isEmpty else {
+            return
+        }
+        while HeroScores[i] != maxScore {
+            i += 1
+        }
+//        result = HeroIntroInfo()
+    
     }
     
     required init?(coder aDecoder: NSCoder) {

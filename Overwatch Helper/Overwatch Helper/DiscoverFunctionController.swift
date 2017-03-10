@@ -41,6 +41,13 @@ class DiscoverFunctionController: UIViewController {
         }
     }
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        print("will despe")
+////        for v in view.subviews {
+////            v.removeFromSuperview()
+////        }
+//    }
+    
 
     func whatsToday(){
         
@@ -50,7 +57,7 @@ class DiscoverFunctionController: UIViewController {
         print("heroRec")
         let survey = HeroRecommendationSurvey()
         self.view.addSubview(survey)
-        
+        survey.surveyStart()
     }
     
     func lookingForGroup(){
