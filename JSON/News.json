@@ -2,16 +2,16 @@
   {
     "url": "https://www.youtube.com/watch?v=NGkZXyo3soc",
     "title": "Tony Stark - Play of the Game",
-    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/Tony.jpeg"
   },
   {
     "url": "https://www.youtube.com/watch?v=vGrMQhowWIQ",
     "title": "Sounds Like Overwatch",
-    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
+    "image": "https://cdn.rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/SoundsLikeOW.jpeg"
   },
   {
     "url": "https://www.youtube.com/watch?v=Qi69aTLYF8E",
     "title": "Overwatch Rap",
-    "image": "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png"
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/Rap.jpeg"
   }
 ]
