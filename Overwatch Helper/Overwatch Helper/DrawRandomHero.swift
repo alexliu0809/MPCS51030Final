@@ -68,6 +68,8 @@ class DrawRandomHero: UIView {
         detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
+        detailButton.isEnabled = false
+        detailButton.alpha = 0
         
         detailButton.setTitle("See Profile", for: .normal)
         detailButton.setTitleColor(UIColor.black, for: .normal)
@@ -86,14 +88,18 @@ class DrawRandomHero: UIView {
         guard Heros.count > 0 else {
             return
         }
-        drawTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(changeHero), userInfo: nil, repeats: true)
+        drawTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeHero), userInfo: nil, repeats: true)
     }
     
     func changeHero(){
         
         print(heroIndex)
-        heroImg.image = Heros[heroIndex].topImage
-        heroName.text = Heros[heroIndex].heroName
+        UIView.animate(withDuration: 1, animations: {
+
+                self.heroImg.image = self.Heros[self.heroIndex].topImage
+                self.heroName.text = self.Heros[self.heroIndex].heroName
+ 
+        })
         heroIndex += 1
         if heroIndex >= Heros.count{
             heroIndex = 0
@@ -109,7 +115,11 @@ class DrawRandomHero: UIView {
         }else if (drawTimer?.isValid)!{
             drawTimer?.invalidate()
             stopButton.setTitle("Again?", for: .normal)
+            detailButton.isEnabled = true
+            detailButton.alpha = 1
         }else{
+            detailButton.isEnabled = false
+            detailButton.alpha = 0
             start()
             stopButton.setTitle("Stop", for: .normal)
         }

@@ -42,7 +42,7 @@ class PlayerTopHero: UITableViewCell
 
 class PlayerStats: UITableViewCell
 {
-    @IBOutlet weak var typeIcon: UIImageView!
+    //@IBOutlet weak var typeIcon: UIImageView!
     
     @IBOutlet weak var typeName: UILabel!
     

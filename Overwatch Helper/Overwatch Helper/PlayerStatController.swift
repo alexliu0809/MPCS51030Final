@@ -11,6 +11,7 @@ import UIKit
 import SwiftyJSON
 import Kingfisher
 import SwiftCharts
+import SwiftSVG
 
 class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -41,7 +42,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             self.tempPlayerData = PlayerStatatistic()
             
             //json[0]["fasfd"].string
-            self.tempPlayerData.playerName = json["username"].string
+            self.tempPlayerData.playerName = json["username"].string?.uppercased()
             self.tempPlayerData.iconImageURL = json["portrait"].string
             self.tempPlayerData.playerLevel = json["level"].int
             
@@ -75,7 +76,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         
         
         let view = UIView()
-        view.backgroundColor = UIColor.orange
+        view.backgroundColor = UIColor.init(red: 63.0/255.0, green: 96.0/255.0, blue: 159.0/255.0, alpha: 1.0)
+        
+        let imageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 35, height: 35))
         
         let label = UILabel()
         if (section == 0)
@@ -86,18 +89,25 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         else if (section == 1)
         {
             label.text = "FEATURED STATS"
+            imageView.image = UIImage(named: "SVG-GAME")
         }
         else if (section == 2)
         {
             label.text = "TOP HEROS"
+            imageView.image = UIImage(named: "SVG-AWARDS")
         }
         else if (section != 3 + playerData.typeDetails.count) //no footer last one
         {
-            label.text =  playerData.typeDetails[section-3].typeName!
+            label.text =  playerData.typeDetails[section-3].typeName!.uppercased()
+            imageView.image = UIImage(named: "SVG-\(label.text!)")
+            view.backgroundColor = UIColor.init(red: 185.0/255.0, green: 192.0/255.0, blue: 214.0/255.0, alpha: 1.0)
         }
-        label.frame = CGRect(x: 5, y: 5, width: 170, height: 35)
-        
+        label.frame = CGRect(x: 55, y: 5, width: 250, height: 35)
+        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = label.font.bolditalic()
+        label.textColor = UIColor.white
         view.addSubview(label)
+        view.addSubview(imageView)
         //self.tableView.tableHeaderView = view
         return view
         
@@ -157,7 +167,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             for i in 0..<keys.count{
                 let temp = typeDetail()
-                temp.typeName = keys[i]
+                temp.typeName = keys[i].uppercased()
                 for j in 0..<json["stats"][keys[i]]["quickplay"].count
                 {
                     //self.playerData.
@@ -295,7 +305,8 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             //cell.typeName.text = playerData.
             cell.typeDetail.text = playerData.typeDetails[indexPath.section-3].subVal[indexPath.row]
             cell.typeName.text = playerData.typeDetails[indexPath.section-3].subTitle[indexPath.row]
-            
+            cell.typeName.sizeToFit()
+            //cell.typeDetail.sizeToFit()
             
             return cell
         }
@@ -342,10 +353,31 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         {
             return 5 * 100 //playerData.top.count
         }
+        else if (indexPath.section == 1)
+        {
+            return 80
+        }
         else
         {
             //return UITableViewAutomaticDimension
-            return 80
+            return 45
         }
     }
+}
+
+extension UIFont {
+    
+    func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits))
+        return UIFont(descriptor: descriptor!, size: 0)
+    }
+    
+    func bold() -> UIFont {
+        return withTraits(traits: .traitBold)
+    }
+    
+    func bolditalic() -> UIFont {
+        return withTraits(traits: .traitItalic, .traitBold)
+    }
+    
 }
