@@ -111,6 +111,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         case .whatsToday:
             self.draw = DrawRandomHero()
             self.view.addSubview(self.draw!)
+            self.view.addSubview((draw?.stopButton)!)
 //            self.draw?.start()
         case .heroRecommend:
             self.survey = HeroRecommendationSurvey()

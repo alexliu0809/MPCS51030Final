@@ -21,6 +21,7 @@ class DrawRandomHero: UIView {
     var heroImg: UIImageView
     var heroName: UILabel
     var stopButton: UIButton
+    var detailButton: UIButton
     var drawTimer: Timer?
     var Heros: [HeroIntroInfo] = []
     var heroIndex = 0
@@ -28,9 +29,10 @@ class DrawRandomHero: UIView {
     weak var delegate: DrawHeroDelegate?
     
     override init(frame: CGRect) {
-        heroImg = UIImageView(frame: CGRect(x: 37, y: 200, width: 300, height: 200))
-        heroName = UILabel(frame: CGRect(x: 37, y: 420, width: 300, height: 100))
-        stopButton = UIButton(frame: CGRect(x: 37, y: 520, width: 300, height: 50))
+        heroImg = UIImageView(frame: CGRect(x: 37, y: 110, width: 300, height: 300))
+        heroName = UILabel(frame: CGRect(x: 0, y: 200, width: 300, height: 100))
+        stopButton = UIButton(frame: CGRect(x: 87, y: 430, width: 200, height: 50))
+        detailButton = UIButton(frame:CGRect(x: 77, y: 500, width: 210, height: 50))
         
 
         
@@ -39,20 +41,42 @@ class DrawRandomHero: UIView {
         super.init(frame: frame)
         
         self.addSubview(heroImg)
-        self.addSubview(heroName)
+//        self.addSubview(heroName)
         
-        self.isUserInteractionEnabled = true
+        heroImg.layer.cornerRadius = heroImg.frame.height/2
+        heroImg.clipsToBounds = true
+        heroImg.contentMode = .scaleAspectFill
+        heroImg.addSubview(heroName)
+        heroName.textAlignment = .center
         
-        heroName.backgroundColor = UIColor.white
-        stopButton.backgroundColor = UIColor.white
-        stopButton.setTitle("Stop", for: .normal)
+        
+        heroName.font = UIFont(name: "Verdana-BoldItalic", size: 35)
+        heroName.textColor = UIColor.white
+        heroName.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        
+        stopButton.backgroundColor = UIColor(netHex: 0xFFC70C)
         stopButton.setTitleColor(UIColor.black, for: .normal)
-//        stopButton.isUserInteractionEnabled
+        stopButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        stopButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(stopButtonTapped(_:)))
-//        stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside))
-        stopButton.addGestureRecognizer(tap)
+        stopButton.setTitle("Let's Rock!", for: .normal)
+        stopButton.setTitleColor(UIColor.black, for: .normal)
+        
+        detailButton.backgroundColor = UIColor(netHex: 0xFFC70C)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
+        detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
+        
+        detailButton.setTitle("See Profile", for: .normal)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
+        
+        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(stopButtonTapped(_:)))
+        stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside)
+
+        self.addSubview(detailButton)
         self.addSubview(stopButton)
+        print(stopButton.allTargets)
     }
     
     func start(){
@@ -72,13 +96,27 @@ class DrawRandomHero: UIView {
         heroIndex += 1
     }
     
-    func stopButtonTapped(_ recognizer: UITapGestureRecognizer){
+//    func stopButtonTapped(_ recognizer: UITapGestureRecognizer){
+//        if (drawTimer == nil) {
+//            start()
+//        }else if (drawTimer?.isValid)!{
+//            drawTimer?.invalidate()
+//        }else{
+//            start()
+//        }
+//    }
+    
+    func stopButtonTapped(){
         if (drawTimer == nil) {
             start()
+            stopButton.setTitle("Stop", for: .normal)
+            
         }else if (drawTimer?.isValid)!{
             drawTimer?.invalidate()
+            stopButton.setTitle("Again?", for: .normal)
         }else{
             start()
+            stopButton.setTitle("Stop", for: .normal)
         }
     }
     
@@ -98,6 +136,20 @@ class DrawRandomHero: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(netHex:Int) {
+        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+    }
 }
 
 protocol DrawHeroDelegate: class {
