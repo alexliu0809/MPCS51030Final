@@ -133,6 +133,35 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
      }
      }
      */
+    func ifContains(str:String) -> Bool{
+        //return false
+        if (str.contains("Objective Time"))
+        {
+            return false
+        }
+        if (str.contains("Deaths"))
+        {
+            return false
+        }
+        if (str.contains("Damage Done"))
+        {
+            return false
+        }
+        if (str.contains("Healing Done"))
+        {
+            return false
+        }
+        if (str.contains("Objective Kills"))
+        {
+            return false
+        }
+        if (str.contains("Eliminations"))
+        {
+            return false
+        }
+        return true
+    }
+    
     func loadDetailInfo()
     {
         let str = "https://ow-api.herokuapp.com/stats/pc/us/\(playerAccount!)"
@@ -146,6 +175,10 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             /*** Load Feature Data ***/
             for i in 0..<json["stats"]["average"]["quickplay"].count{
+                if (self.ifContains(str: json["stats"]["average"]["quickplay"][i]["title"].string!))
+                {
+                    continue
+                }
                 self.tempPlayerData.featureDescription.append(json["stats"]["average"]["quickplay"][i]["title"].string!)
                 self.tempPlayerData.featureNumbers.append(json["stats"]["average"]["quickplay"][i]["value"].string!)
             }
@@ -285,6 +318,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             cell.featureDescription.text = playerData.featureDescription[indexPath.row]
             cell.featureNumber.text = "\(playerData.featureNumbers[indexPath.row])"
             //cell.youtubePlayer.loadVideoID(detailItem!.videoUrl)
+            cell.featureImg.image = UIImage(named: "SVG-\(indexPath.row)")
             return cell
         }
         else if (indexPath.section == 2)

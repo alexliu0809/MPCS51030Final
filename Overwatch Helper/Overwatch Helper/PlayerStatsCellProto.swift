@@ -30,6 +30,7 @@ class PlayerFeature: UITableViewCell
 {
     @IBOutlet weak var featureNumber: UILabel!
     
+    @IBOutlet weak var featureImg: UIImageView!
     @IBOutlet weak var featureDescription: UILabel!
 }
 
