@@ -35,10 +35,21 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     
     func getSurveyResult(_ hero: HeroIntroInfo) {
 //        result = hero
+        heroSelection(hero)
     }
     
     func getDrawResult(_ hero: HeroIntroInfo){
-        
+        heroSelection(hero)
+    }
+    
+    func heroSelection(_ hero: HeroIntroInfo){
+        performSegue(withIdentifier: "discoverToHero", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "discoverToHero"{
+            
+        }
     }
     
     func restart(){
@@ -100,11 +111,11 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         case .whatsToday:
             self.draw = DrawRandomHero()
             self.view.addSubview(self.draw!)
-            self.draw?.start()
+//            self.draw?.start()
         case .heroRecommend:
             self.survey = HeroRecommendationSurvey()
             self.view.addSubview(survey!)
-            survey?.surveyStart()
+//            survey?.surveyStart()
         case .lookingForGroup:
             self.LFG = UITableView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
             LFG?.delegate = self
@@ -128,12 +139,13 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         }
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        print("will despe")
-////        for v in view.subviews {
-////            v.removeFromSuperview()
-////        }
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("will despe")
+        if functionType == .whatsToday{
+            draw!.stop()
+        }
+    }
+    
     
     func fetchLFGData() -> [(String,String,UIImage)] {
         
