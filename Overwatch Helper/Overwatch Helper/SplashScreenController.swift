@@ -100,7 +100,7 @@ let π:CGFloat = CGFloat(M_PI)
         circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = UIColor.red.cgColor
+        circleLayer.strokeColor = UIColor(red: 248.0/255.0, green: 158.0/255.0, blue: 25.0/255.0, alpha: 1.0).cgColor
         circleLayer.lineWidth = 8.0;
         
         // Don't draw the circle initially

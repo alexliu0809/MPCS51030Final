@@ -95,7 +95,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         {
             label.text =  playerData.typeDetails[section-3].typeName!
         }
-        label.frame = CGRect(x: 5, y: 5, width: 100, height: 35)
+        label.frame = CGRect(x: 5, y: 5, width: 170, height: 35)
         
         view.addSubview(label)
         //self.tableView.tableHeaderView = view
@@ -254,13 +254,16 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerHeaderCell", for: indexPath) as! PlayerHeader
             
-            cell.featureImage.kf.setImage(with: URL(string:playerData.featureImageURL))
+            //cell.featureImage.kf.setImage(with: URL(string:playerData.featureImageURL))
             cell.playerName.text = playerData.playerName!
-            cell.gamesWon.text = playerData.gamesWon!
+            cell.gamesWon.text = "\(playerData.gamesWon!) GAMES WON"
             cell.rankIcon.contentMode = .scaleToFill
             cell.rankIcon.kf.setImage(with: URL(string:playerData.rankIconURL!))
             cell.rankPoints.text = playerData.rankPoints!
-            
+            cell.backgroundColor = UIColor(patternImage: UIImage(named: "PlayerStats-Bg")!)
+            cell.playerIcon.kf.setImage(with: URL(string:playerData.iconImageURL!))
+            cell.playerName.sizeToFit()
+            cell.gamesWon.adjustsFontSizeToFitWidth = true
             return cell
         }
         else if (indexPath.section == 1) //change2
@@ -333,7 +336,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.section == 0)
         {
-            return 116
+            return 140
         }
         else if (indexPath.section == 2) //change 1
         {
