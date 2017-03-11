@@ -21,7 +21,7 @@ class SplashScreenController: UIViewController {
         // Do any additional setup after loading the view.
         
         companion.alpha = 0
-        self.addCircleView(0.7)
+        self.addCircleView(1.0) //C
         
         
         DispatchQueue.main.async {
@@ -36,12 +36,15 @@ class SplashScreenController: UIViewController {
                 
             }, completion: {
                 finish in
-                sleep(2)
-                self.performSegue(withIdentifier: "showMain", sender: self)
+                self.addWhiteCircleView(0.3)//White
+
+                //sleep(2)
+                //self.performSegue(withIdentifier: "showMain", sender: self)
             })
         }
-        
-        let dispatchtime = DispatchTime.now()
+
+        //sleep(1)
+        //self.addWhiteCircleView(0.3)//White
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,9 +63,17 @@ class SplashScreenController: UIViewController {
         //let test = CircleView(frame: CGRect(x: diceRoll, y: 0, width: circleWidth, height: circleHeight))
         
         view.addSubview(circleView)
-        circleView.animateCircle(duration: 1.0)
+        circleView.animateCircle(duration: duration)
     }
-
+    
+    func addWhiteCircleView(_ duration: Double)
+    {
+        let circleView = WhiteArch(frame: CGRect(x: 7+25, y:283+25, width: 50, height: 50))
+        //let test = CircleView(frame: CGRect(x: diceRoll, y: 0, width: circleWidth, height: circleHeight))
+        
+        view.addSubview(circleView)
+        circleView.animateCircle(duration: duration)
+    }
     /*
     // MARK: - Navigation
 
@@ -139,39 +150,73 @@ let π:CGFloat = CGFloat(M_PI)
     }
     
     
+    
+}
+
+@IBDesignable class WhiteArch: UIView {
+    
     /*
-     @IBInspectable var counter: Int = 5
-     @IBInspectable var outlineColor: UIColor = UIColor.blue
-     @IBInspectable var counterColor: UIColor = UIColor.orange
-     
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
      override func draw(_ rect: CGRect) {
-     // 1
-     let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
-     
-     // 2
-     let radius: CGFloat = max(bounds.width, bounds.height)
-     
-     // 3
-     let arcWidth: CGFloat = 76
-     
-     // 4
-     let startAngle: CGFloat =  π / 4
-     let endAngle: CGFloat = 7 * π / 4
-     
-     // 5
-     var path = UIBezierPath(arcCenter: center,
-     radius: radius/2 - arcWidth/2,
-     startAngle: startAngle,
-     endAngle: endAngle,
-     clockwise: true)
-     
-     // 6
-     path.lineWidth = arcWidth
-     counterColor.setStroke()
-     path.stroke()
+     // Drawing code
      }
      */
     
+    
+    var circleLayer: CAShapeLayer!
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.clear
+        
+        // Use UIBezierPath as an easy way to create the CGPath for the layer.
+        // The path should be the entire circle.
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(M_PI * 7.1/4), endAngle: CGFloat(M_PI * 0.9/4), clockwise: true)
+        
+        // Setup the CAShapeLayer with the path, colors, and line width
+        circleLayer = CAShapeLayer()
+        circleLayer.path = circlePath.cgPath
+        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.strokeColor = UIColor.white.cgColor
+        circleLayer.lineWidth = 8.0;
+        
+        // Don't draw the circle initially
+        circleLayer.strokeEnd = 0.0 //1.0 show 0.0 hide
+        
+        // Add the circleLayer to the view's layer's sublayers
+        layer.addSublayer(circleLayer)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func animateCircle(duration: TimeInterval) {
+        // We want to animate the strokeEnd property of the circleLayer
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        // Set the animation duration appropriately
+        animation.duration = duration
+        
+        // Animate from 0 (no circle) to 1 (full circle)
+        animation.fromValue = 0
+        animation.toValue = 1
+        
+        // Do a linear animation (i.e. the speed of the animation stays the same)
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        
+        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
+        // right value when the animation ends.
+        circleLayer.strokeEnd = 1.0
+        
+        // Do the actual animation
+        circleLayer.add(animation, forKey: "animateCircle")
+        //self.performSegue(withIdentifier: "showMain", sender: self)
+    }
+    
+    
+    
 }
+
 
 
