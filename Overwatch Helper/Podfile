@@ -10,4 +10,5 @@ target 'Overwatch Helper' do
     pod 'MMCardView'
     pod 'Kingfisher', '~> 3.0’
     pod 'SwiftCharts', '~> 0.5'
+    pod 'SwiftSVG'
 end

@@ -5,6 +5,7 @@ PODS:
   - Kingfisher (3.5.1)
   - MMCardView (0.3.2)
   - SwiftCharts (0.5.1)
+  - SwiftSVG (1.3.1)
   - SwiftyJSON (3.1.4)
   - YouTubePlayer-Swift (1.0)
 
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - Kingfisher (~> 3.0)
   - MMCardView
   - SwiftCharts (~> 0.5)
+  - SwiftSVG
   - SwiftyJSON
   - YouTubePlayer-Swift
 
@@ -25,9 +27,10 @@ SPEC CHECKSUMS:
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
   MMCardView: 81470780ffa5fd6501ffadfc67d47e9ef446a9c0
   SwiftCharts: d263289cdc7fc955fef54ae3bc6529f696e69933
+  SwiftSVG: d277d860c26f2461b6a82ac5c535bc14d794f13d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: be0f9c654f05157670a664735baddd6533b49bf0
+PODFILE CHECKSUM: 3a4206f597b9f82a6c7e978a19766f18e3e7de77
 
 COCOAPODS: 1.2.0
