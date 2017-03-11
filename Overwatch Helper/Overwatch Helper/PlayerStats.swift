@@ -14,7 +14,7 @@ class PlayerStatatistic {
     var gamesWon : String?
     var rankIconURL : String?
     var rankPoints : String?
-    var featureImageURL = "https://blzgdapipro-a.akamaihd.net/hero/mercy/career-portrait.png"
+    //var featureImageURL = "https://blzgdapipro-a.akamaihd.net/hero/mercy/career-portrait.png"
     var featureNumbers:[String] = []
     var featureDescription:[String] = []
     
