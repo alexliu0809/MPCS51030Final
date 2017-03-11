@@ -21,12 +21,12 @@ class SplashScreenController: UIViewController {
         // Do any additional setup after loading the view.
         
         companion.alpha = 0
-        self.addCircleView(1.0) //C
+        
         
         
         DispatchQueue.main.async {
             sleep(2)
-            
+            self.addCircleView(1.0) //C
             UIView.animate(withDuration: 0.7, animations: {
                 self.overwatch.alpha = 0
                 self.overwatch.center.y -= 123
@@ -36,15 +36,25 @@ class SplashScreenController: UIViewController {
                 
             }, completion: {
                 finish in
-                self.addWhiteCircleView(0.3)//White
+//                self.addWhiteCircleView(0.3)//White
 
-                //sleep(2)
-                //self.performSegue(withIdentifier: "showMain", sender: self)
-            })
+                sleep(1)
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.addWhiteCircleView(0.3)
+                }, completion: {
+                    finish in
+                    sleep(1)
+                    self.performSegue(withIdentifier: "showMain", sender: self)
+                })
+                
+                            })
         }
 
-        //sleep(1)
-        //self.addWhiteCircleView(0.3)//White
+//        let dispatchTime = DispatchTime.now() + .milliseconds(3500)
+//        DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
+//            self.addWhiteCircleView(0.3)
+//        })
+        
     }
 
     override func didReceiveMemoryWarning() {
