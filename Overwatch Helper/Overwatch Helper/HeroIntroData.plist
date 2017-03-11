@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Mcree</key>
+	<dict>
+		<key>name</key>
+		<string>Mcree</string>
+		<key>image</key>
+		<string>Hero-Mcree</string>
+		<key>diff</key>
+		<integer>3</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>8</integer>
+		<key>url</key>
+		<string>kq4OlEDiCi8</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Peacekeeper</string>
+				<key>des</key>
+				<string>McCree fires off a round from his trusty six-shooter.</string>
+				<key>img</key>
+				<string>Mcree-P</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>McCree dives in the direction he&apos;s moving, effortlessly reloading his Peacekeeper in the process.</string>
+				<key>img</key>
+				<string>Mcree-CR</string>
+				<key>name</key>
+				<string>Combat Roll</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Flashbang</string>
+				<key>des</key>
+				<string>McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.</string>
+				<key>img</key>
+				<string>Mcree-F</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Deadeye</string>
+				<key>des</key>
+				<string>Focus. Mark. Draw. McCree takes a few precious moments to aim; when he&apos;s ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he&apos;ll line up a killshot.</string>
+				<key>img</key>
+				<string>Mcree-D</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Lucio</key>
+	<dict>
+		<key>name</key>
+		<string>Lucio</string>
+		<key>image</key>
+		<string>Hero-Lucio</string>
+		<key>diff</key>
+		<integer>2</integer>
+		<key>type</key>
+		<string>Support</string>
+		<key>id</key>
+		<integer>7</integer>
+		<key>url</key>
+		<string>ywTNgR3ldFc</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Sonic Amplifier</string>
+				<key>des</key>
+				<string>Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.</string>
+				<key>img</key>
+				<string>Lucio-SA</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Lúcio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.</string>
+				<key>img</key>
+				<string>Lucio-C</string>
+				<key>name</key>
+				<string>Crossfade</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Amp It Up</string>
+				<key>des</key>
+				<string>Lúcio increases the volume on his speakers, boosting the effects of his songs.</string>
+				<key>img</key>
+				<string>Lucio-AIU</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Sound Barrier</string>
+				<key>des</key>
+				<string>Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.</string>
+				<key>img</key>
+				<string>Lucio-SB</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Genji</key>
+	<dict>
+		<key>name</key>
+		<string>Genji</string>
+		<key>image</key>
+		<string>Hero-Genji</string>
+		<key>diff</key>
+		<integer>3</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>4</integer>
+		<key>url</key>
+		<string>lYOjIDhJIG0</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shuriken</string>
+				<key>des</key>
+				<string>Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.</string>
+				<key>img</key>
+				<string>Genji-Shuriken</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.</string>
+				<key>img</key>
+				<string>Genji-SS</string>
+				<key>name</key>
+				<string>Swift Strike</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Deflect</string>
+				<key>des</key>
+				<string>With lightning-quick swipes of his sword, Genji reflects any oncoming projectiles and can send them rebounding towards his enemies.</string>
+				<key>img</key>
+				<string>Genji-Deflect</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Cyber-Agility</string>
+				<key>des</key>
+				<string>Thanks to his cybernetic abilities, Genji can climb walls and perform jumps in mid-air.</string>
+				<key>img</key>
+				<string>Genji-CA</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Dragonblade</string>
+				<key>des</key>
+				<string>Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach.</string>
+				<key>img</key>
+				<string>Genji-Dragonblade</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Soldier76</key>
+	<dict>
+		<key>name</key>
+		<string>Soldier76</string>
+		<key>image</key>
+		<string>Hero-76</string>
+		<key>diff</key>
+		<integer>1</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>15</integer>
+		<key>url</key>
+		<string>V_0eqEbG7yA</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Heavy Pulse Rifle</string>
+				<key>des</key>
+				<string>Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.</string>
+				<key>img</key>
+				<string>76-HPR</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.</string>
+				<key>img</key>
+				<string>76-HR</string>
+				<key>name</key>
+				<string>Helix Rockets</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Sprint</string>
+				<key>des</key>
+				<string>Sodier76.setHeroAblity(des: &quot;Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.</string>
+				<key>img</key>
+				<string>76-S</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Biotic Field</string>
+				<key>des</key>
+				<string>Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.</string>
+				<key>img</key>
+				<string>76-BF</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tactical Visor</string>
+				<key>des</key>
+				<string>Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.</string>
+				<key>img</key>
+				<string>76-TV</string>
+			</dict>
+		</array>
+	</dict>
+	<key>ProtoType</key>
+	<dict>
+		<key>name</key>
+		<string></string>
+		<key>image</key>
+		<string></string>
+		<key>diff</key>
+		<integer>0</integer>
+		<key>type</key>
+		<string></string>
+		<key>id</key>
+		<integer>0</integer>
+		<key>url</key>
+		<string></string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+				<key>name</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

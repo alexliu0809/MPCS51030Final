@@ -18,6 +18,7 @@ enum HeroType{
     case Offense
     case Support
     case Defense
+    case NotDefined
 }
 
 class HeroDetailHeroIcon : UITableViewCell

@@ -24,6 +24,9 @@ class CareerViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Career-Bg")!)
+        
+        //initialize Heros
+        HeroIntroController.initializeHeros()
     }
 
     override func didReceiveMemoryWarning() {

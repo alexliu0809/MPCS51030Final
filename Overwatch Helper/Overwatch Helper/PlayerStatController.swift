@@ -26,6 +26,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     
     func loadBasicInfo()
     {
+        
         let str = "https://ow-api.herokuapp.com/profile/pc/us/\(playerAccount!)"
         //let str = "https://ow-api.herokuapp.com/profile/pc/us/dfas"
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
