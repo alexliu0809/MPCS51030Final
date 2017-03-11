@@ -112,11 +112,18 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             self.draw = DrawRandomHero()
             self.view.addSubview(self.draw!)
             self.view.addSubview((draw?.stopButton)!)
+            self.view.addSubview((draw?.detailButton)!)
+            draw?.delegate = self
 //            self.draw?.start()
         case .heroRecommend:
             self.survey = HeroRecommendationSurvey()
             self.view.addSubview(survey!)
-//            survey?.surveyStart()
+            self.view.addSubview((survey?.option1)!)
+            self.view.addSubview((survey?.option2)!)
+            self.view.addSubview((survey?.option3)!)
+            self.view.addSubview((survey?.option4)!)
+            survey?.delegate = self
+            survey?.surveyStart()
         case .lookingForGroup:
             self.LFG = UITableView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
             LFG?.delegate = self

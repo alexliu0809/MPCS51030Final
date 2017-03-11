@@ -40,6 +40,8 @@
 		C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F71E71ECD50009E090 /* DiscoverController.swift */; };
 		C17CB6FA1E71FD6B0009E090 /* DiscoverFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */; };
 		C1873CA81E709481008F6130 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1873CA71E709481008F6130 /* MapCell.swift */; };
+		C1B2C97B1E748B72009AA7BF /* RecommendationQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */; };
+		C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97C1E749B5D009AA7BF /* Extensions.swift */; };
 		C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E01E6DFB6000181A7C /* CareerViewController.swift */; };
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
@@ -107,6 +109,8 @@
 		C17CB6F71E71ECD50009E090 /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverFunctionController.swift; sourceTree = "<group>"; };
 		C1873CA71E709481008F6130 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationQuestion.swift; sourceTree = "<group>"; };
+		C1B2C97C1E749B5D009AA7BF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C33508E01E6DFB6000181A7C /* CareerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				C17A5D2C1E7212F9005A40C7 /* HeroList.swift */,
 				C3FC77601E71F35F0027484D /* PlayerStats.swift */,
 				C17A5D361E7341EE005A40C7 /* LFGMessage.swift */,
+				C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			children = (
 				C17A86B71E6D197000310B9A /* NetworkService.swift */,
 				BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */,
+				C1B2C97C1E749B5D009AA7BF /* Extensions.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -488,10 +494,12 @@
 				C1873CA81E709481008F6130 /* MapCell.swift in Sources */,
 				C17A5D371E7341EE005A40C7 /* LFGMessage.swift in Sources */,
 				C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */,
+				C1B2C97B1E748B72009AA7BF /* RecommendationQuestion.swift in Sources */,
 				C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */,
 				C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */,
 				C17A5D2D1E7212F9005A40C7 /* HeroList.swift in Sources */,
 				BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */,
+				C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */,
 				C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */,
 				C10C4F851E6C6FAB00B0F67E /* MapIntroController.swift in Sources */,
 			);

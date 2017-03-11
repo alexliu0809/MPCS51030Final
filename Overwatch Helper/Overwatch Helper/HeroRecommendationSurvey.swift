@@ -12,9 +12,9 @@ import UIKit
 class HeroRecommendationSurvey: UIView {
     weak var delegate: SurveyDelegate?
     
-    var HeroScores: [Int] = []
-    var Questions: [RecommendationQuestion] = []
-    var nextQuestionIndex = 0
+    var HeroLeft: [HeroIntroInfo] = heroArray
+    var Questions: [RQ] = RQ.questions
+    var nextQuestionIndex = -1
     
     var question: UILabel
     var option1: UIButton
@@ -63,7 +63,7 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func surveyStart(){
-//        survey.delegate.nextQuestion()
+        nextQuestion()
     }
     
     func choose1(){
@@ -80,7 +80,8 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func nextQuestion() {
-        if nextQuestionIndex == Questions.count{
+        nextQuestionIndex += 1
+        if nextQuestionIndex >= Questions.count{
             settle()
             return
         }
@@ -96,27 +97,28 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func makeChoice(_ choice : Int){
-        guard !HeroScores.isEmpty else {
+        guard !HeroLeft.isEmpty else {
             return
         }
-        for i in 0...HeroScores.count{
-            HeroScores[i] += (Questions[nextQuestionIndex].choice[choice]?[i])!
-        }
-        nextQuestionIndex += 1
+//        for i in 0...HeroScores.count{
+//            HeroScores[i] += (Questions[nextQuestionIndex].choice[choice]?[i])!
+//        }
+        HeroLeft = Questions[nextQuestionIndex].getResult(HeroLeft,choice)
         nextQuestion()
     }
     
     func settle(){
-        let maxScore = HeroScores.max()
-        var i = 0
-        guard !HeroScores.isEmpty else {
+        option1.isEnabled = false
+        option2.isEnabled = false
+        option3.isEnabled = false
+        option4.isEnabled = false
+        guard HeroLeft.count > 0 else {
+//            delegate?.getSurveyResult(HeroIntroInfo())
             return
         }
-        while HeroScores[i] != maxScore {
-            i += 1
-        }
-        //        result = HeroIntroInfo()
-//        delegate?.getSurveyResult(result)
+        HeroLeft.shuffle()
+        let result = HeroLeft[0]
+        delegate?.getSurveyResult(result)
         
     }
 
@@ -132,8 +134,4 @@ protocol SurveyDelegate: class {
     
 }
 
-struct RecommendationQuestion {
-    let choice: [Int:[Int]]
-    let options: [String] = ["option1"]
-    let question: String = "question1"
-}
+

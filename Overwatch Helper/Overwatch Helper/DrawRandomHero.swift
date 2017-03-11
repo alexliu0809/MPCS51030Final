@@ -47,6 +47,8 @@ class DrawRandomHero: UIView {
         heroImg.clipsToBounds = true
         heroImg.contentMode = .scaleAspectFill
         heroImg.addSubview(heroName)
+        heroImg.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        
         heroName.textAlignment = .center
         
         
@@ -73,6 +75,7 @@ class DrawRandomHero: UIView {
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(stopButtonTapped(_:)))
         stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside)
+        detailButton.addTarget(self, action: #selector(self.selectionHandler), for: .touchUpInside)
 
         self.addSubview(detailButton)
         self.addSubview(stopButton)
@@ -87,24 +90,16 @@ class DrawRandomHero: UIView {
     }
     
     func changeHero(){
-        if heroIndex >= Heros.count{
-            heroIndex = 0
-        }
+        
         print(heroIndex)
         heroImg.image = Heros[heroIndex].topImage
         heroName.text = Heros[heroIndex].heroName
         heroIndex += 1
+        if heroIndex >= Heros.count{
+            heroIndex = 0
+        }
     }
     
-//    func stopButtonTapped(_ recognizer: UITapGestureRecognizer){
-//        if (drawTimer == nil) {
-//            start()
-//        }else if (drawTimer?.isValid)!{
-//            drawTimer?.invalidate()
-//        }else{
-//            start()
-//        }
-//    }
     
     func stopButtonTapped(){
         if (drawTimer == nil) {
@@ -136,20 +131,6 @@ class DrawRandomHero: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    }
-    
-    convenience init(netHex:Int) {
-        self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
-    }
 }
 
 protocol DrawHeroDelegate: class {

@@ -25,35 +25,30 @@ class SplashScreenController: UIViewController {
         
         
         DispatchQueue.main.async {
-            sleep(2)
-            self.addCircleView(1.0) //C
-            UIView.animate(withDuration: 0.7, animations: {
-                self.overwatch.alpha = 0
-                self.overwatch.center.y -= 123
-                self.companion.alpha = 1
-                self.companion.center.y -= 123
-                
-                
-            }, completion: {
-                finish in
-//                self.addWhiteCircleView(0.3)//White
-
-                sleep(1)
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.addWhiteCircleView(0.3)
-                }, completion: {
-                    finish in
-                    sleep(1)
+//            sleep(2)
+//            self.addCircleView(1.0) //C
+//            UIView.animate(withDuration: 0.7, animations: {
+//                self.overwatch.alpha = 0
+//                self.overwatch.center.y -= 123
+//                self.companion.alpha = 1
+//                self.companion.center.y -= 123
+//                
+//                
+//            }, completion: {
+//                finish in
+////                self.addWhiteCircleView(0.3)//White
+//
+//                sleep(1)
+//                UIView.animate(withDuration: 0.3, animations: {
+//                    self.addWhiteCircleView(0.3)
+//                }, completion: {
+//                    finish in
+//                    sleep(1)
                     self.performSegue(withIdentifier: "showMain", sender: self)
-                })
-                
-                            })
+//                })
+//                
+//                            })
         }
-
-//        let dispatchTime = DispatchTime.now() + .milliseconds(3500)
-//        DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
-//            self.addWhiteCircleView(0.3)
-//        })
         
     }
 
