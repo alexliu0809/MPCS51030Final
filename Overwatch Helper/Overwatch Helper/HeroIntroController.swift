@@ -225,34 +225,68 @@ class HeroIntroController: UITableViewController {
             return
         }
         
+        //for Folding Cell:
+        //cell.selectedAnimation(true, animated: true, completion: nil) is set space
+        //Is displaying the expanding animation
+        //tableView.beginUpdates()
+        //tableView.endUpdates()
+        //is the real expanding the view
+        
         if let lastSelected = lastSelected
         {
             let lastIndexPath = IndexPath(row: lastSelected, section: 0)
             guard case let lastCell as FoldingCell = tableView.cellForRow(at: lastIndexPath) else {
                 return
             }
-            
-            cellHeights[lastIndexPath.row] = kCloseCellHeight
-            lastCell.selectedAnimation(false, animated: true, completion: nil)
-            let duration = 0.5
-            
-            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
-                tableView.beginUpdates()
-                tableView.endUpdates()
-            }, completion: {
-                (response) in
-                if (lastIndexPath == indexPath)
-                {
-                    return
-                }
+            print(1)
+            if (self.cellHeights[lastIndexPath.row] == self.kOpenCellHeight && lastIndexPath != indexPath) //last is open
+            {
+                cellHeights[lastIndexPath.row] = kCloseCellHeight
+                lastCell.selectedAnimation(false, animated: true, completion: nil)
+                let duration = 1.1
                 
+                UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+                    tableView.beginUpdates()
+                    tableView.endUpdates()
+                }, completion: {
+                    
+                    (response) in
+                    print(2)
+                    var duration = 0.0
+                    if self.cellHeights[indexPath.row] == self.kCloseCellHeight { // open cell
+                        self.cellHeights[indexPath.row] = self.kOpenCellHeight
+                        cell.selectedAnimation(true, animated: true, completion: nil)
+                        duration = 0.5
+                    } else {// close cell
+                        self.cellHeights[indexPath.row] = self.kCloseCellHeight
+                        cell.selectedAnimation(false, animated: true, completion: nil)
+                        duration = 1.1
+                    }
+                    
+                    UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+                        tableView.beginUpdates()
+                        tableView.endUpdates()
+                    }, completion: {
+                        (Result) in
+                        print(3)
+                        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                        //self.lastSelected = indexPath.row
+                    })
+                    
+                    
+                })
+            }
+            
+            else
+            {
+                print(4)
                 var duration = 0.0
-                if self.cellHeights[indexPath.row] == self.kCloseCellHeight { // open cell
-                    self.cellHeights[indexPath.row] = self.kOpenCellHeight
+                if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
+                    cellHeights[indexPath.row] = kOpenCellHeight
                     cell.selectedAnimation(true, animated: true, completion: nil)
                     duration = 0.5
                 } else {// close cell
-                    self.cellHeights[indexPath.row] = self.kCloseCellHeight
+                    cellHeights[indexPath.row] = kCloseCellHeight
                     cell.selectedAnimation(false, animated: true, completion: nil)
                     duration = 1.1
                 }
@@ -263,34 +297,37 @@ class HeroIntroController: UITableViewController {
                 }, completion: {
                     (Result) in
                     self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-                    self.lastSelected = indexPath.row
+                    //self.lastSelected = indexPath.row
                 })
-
                 
+            }
+            
+            
+        }
+        
+        else
+        {
+            var duration = 0.0
+            if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
+                cellHeights[indexPath.row] = kOpenCellHeight
+                cell.selectedAnimation(true, animated: true, completion: nil)
+                duration = 0.5
+            } else {// close cell
+                cellHeights[indexPath.row] = kCloseCellHeight
+                cell.selectedAnimation(false, animated: true, completion: nil)
+                duration = 1.1
+            }
+            
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+                tableView.beginUpdates()
+                tableView.endUpdates()
+            }, completion: {
+                (Result) in
+                self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                //self.lastSelected = indexPath.row
             })
-            return
         }
-        
-        
-        var duration = 0.0
-        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
-            cellHeights[indexPath.row] = kOpenCellHeight
-            cell.selectedAnimation(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {// close cell
-            cellHeights[indexPath.row] = kCloseCellHeight
-            cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 1.1
-        }
-        
-        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-        }, completion: {
-            (Result) in
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         self.lastSelected = indexPath.row
-        })
     }
     
     /*
