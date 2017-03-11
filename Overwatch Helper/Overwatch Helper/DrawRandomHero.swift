@@ -41,13 +41,13 @@ class DrawRandomHero: UIView {
         super.init(frame: frame)
         
         self.addSubview(heroImg)
-//        self.addSubview(heroName)
+        self.addSubview(heroName)
         
         heroImg.layer.cornerRadius = heroImg.frame.height/2
         heroImg.clipsToBounds = true
         heroImg.contentMode = .scaleAspectFill
         heroImg.addSubview(heroName)
-        heroImg.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        heroImg.backgroundColor = UIColor(netHex: 0x363636)
         
         heroName.textAlignment = .center
         
@@ -88,18 +88,15 @@ class DrawRandomHero: UIView {
         guard Heros.count > 0 else {
             return
         }
-        drawTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeHero), userInfo: nil, repeats: true)
+        drawTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(changeHero), userInfo: nil, repeats: true)
     }
     
     func changeHero(){
         
         print(heroIndex)
-        UIView.animate(withDuration: 1, animations: {
-
                 self.heroImg.image = self.Heros[self.heroIndex].topImage
                 self.heroName.text = self.Heros[self.heroIndex].heroName
- 
-        })
+
         heroIndex += 1
         if heroIndex >= Heros.count{
             heroIndex = 0
