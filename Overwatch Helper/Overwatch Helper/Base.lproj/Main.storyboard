@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="2783.1999999999998" y="292.80359820089956"/>
         </scene>
-        <!--Career View Controller-->
+        <!--My Career-->
         <scene sceneID="K4a-be-1Yf">
             <objects>
                 <viewController id="f8p-zQ-pte" customClass="CareerViewController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cy4-v6-cym"/>
+                    <navigationItem key="navigationItem" title="My Career" id="Cy4-v6-cym"/>
                     <connections>
                         <outlet property="careerBtn" destination="JOF-OQ-mxg" id="vRD-Yd-gyL"/>
                         <outlet property="careerUsername" destination="gfw-D4-K4I" id="9YK-nW-Kq4"/>
@@ -203,7 +203,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="LqD-wP-uNQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhC-nV-K8n">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2250" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhC-nV-K8n">
                                                     <rect key="frame" x="47" y="93" width="64" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Cej-bf-qOb"/>
@@ -213,22 +213,22 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="111GmesWon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-TM-xvw">
-                                                    <rect key="frame" x="8" y="55" width="103" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Career-Mercy" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-cW-WBP">
-                                                    <rect key="frame" x="216" y="0.0" width="157" height="139.5"/>
+                                                    <rect key="frame" x="168" y="0.0" width="205" height="139.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DARK Mother Fucker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-gc-jsQ">
-                                                    <rect key="frame" x="47" y="19" width="169" height="28"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DARK Mother" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-gc-jsQ">
+                                                    <rect key="frame" x="47" y="19" width="121" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="w9g-rK-0Cz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="111GmesWon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-TM-xvw">
+                                                    <rect key="frame" x="8" y="51" width="93" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -308,28 +308,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerStatsCell" rowHeight="80" id="YU3-CF-m3H" customClass="PlayerStats" customModule="Overwatch_Helper" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="328" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerStatsCell" rowHeight="45" id="YU3-CF-m3H" customClass="PlayerStats" customModule="Overwatch_Helper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YU3-CF-m3H" id="PgZ-yW-nM4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYz-ta-uBi">
-                                                    <rect key="frame" x="56" y="8" width="319" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="127,000,000,00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-EY-Z3P">
+                                                    <rect key="frame" x="256" y="5" width="116" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpM-tW-HwI">
-                                                    <rect key="frame" x="8" y="8" width="40" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYz-ta-uBi">
+                                                    <rect key="frame" x="3" y="5" width="248" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-EY-Z3P">
-                                                    <rect key="frame" x="8" y="45" width="367" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -337,7 +333,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="typeDetail" destination="4uL-EY-Z3P" id="mh2-w0-mEr"/>
-                                            <outlet property="typeIcon" destination="GpM-tW-HwI" id="nE3-z3-5UJ"/>
                                             <outlet property="typeName" destination="pYz-ta-uBi" id="RCU-6a-KJZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -403,7 +398,7 @@
                         <color key="backgroundColor" red="0.21173727510000001" green="0.21178042890000001" blue="0.21173459289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discover" id="Jkd-CZ-YjT"/>
-                    <navigationItem key="navigationItem" id="JFK-66-e7g"/>
+                    <navigationItem key="navigationItem" title="Discover" id="JFK-66-e7g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -837,7 +832,7 @@
             </objects>
             <point key="canvasLocation" x="14" y="-1047"/>
         </scene>
-        <!--Map Intro Controller-->
+        <!--Maps-->
         <scene sceneID="H8z-dd-Fg1">
             <objects>
                 <viewController id="p2X-Uc-yfb" customClass="MapIntroController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
@@ -862,7 +857,7 @@
                             <constraint firstAttribute="trailing" secondItem="4cH-DD-cgJ" secondAttribute="trailing" id="tBW-hv-VGq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="K2k-tf-ftE"/>
+                    <navigationItem key="navigationItem" title="Maps" id="K2k-tf-ftE"/>
                     <connections>
                         <outlet property="scrollView" destination="4cH-DD-cgJ" id="I12-of-Jf7"/>
                         <segue destination="0WQ-6o-SdM" kind="show" identifier="showMapDetail" animates="NO" id="CCQ-qt-JuV"/>
@@ -1070,7 +1065,7 @@
     </scenes>
     <resources>
         <image name="Career-Mercy" width="847" height="449"/>
-        <image name="splashIcon" width="900" height="900"/>
+        <image name="splashIcon" width="450" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p2O-ey-rm6"/>

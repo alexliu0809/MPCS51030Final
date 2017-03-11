@@ -41,7 +41,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             self.tempPlayerData = PlayerStatatistic()
             
             //json[0]["fasfd"].string
-            self.tempPlayerData.playerName = json["username"].string
+            self.tempPlayerData.playerName = json["username"].string?.uppercased()
             self.tempPlayerData.iconImageURL = json["portrait"].string
             self.tempPlayerData.playerLevel = json["level"].int
             
@@ -157,7 +157,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             for i in 0..<keys.count{
                 let temp = typeDetail()
-                temp.typeName = keys[i]
+                temp.typeName = keys[i].uppercased()
                 for j in 0..<json["stats"][keys[i]]["quickplay"].count
                 {
                     //self.playerData.
@@ -295,7 +295,8 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             //cell.typeName.text = playerData.
             cell.typeDetail.text = playerData.typeDetails[indexPath.section-3].subVal[indexPath.row]
             cell.typeName.text = playerData.typeDetails[indexPath.section-3].subTitle[indexPath.row]
-            
+            cell.typeName.sizeToFit()
+            //cell.typeDetail.sizeToFit()
             
             return cell
         }
@@ -342,10 +343,14 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         {
             return 5 * 100 //playerData.top.count
         }
+        else if (indexPath.section == 1)
+        {
+            return 80
+        }
         else
         {
             //return UITableViewAutomaticDimension
-            return 80
+            return 45
         }
     }
 }

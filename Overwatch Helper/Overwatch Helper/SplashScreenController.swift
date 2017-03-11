@@ -25,8 +25,8 @@ class SplashScreenController: UIViewController {
         
         
         DispatchQueue.main.async {
-            sleep(2)
-            self.addCircleView(1.0) //C
+            usleep(1500000) //Show overwatch
+            self.addCircleView(0.7) //C
             UIView.animate(withDuration: 0.7, animations: {
                 self.overwatch.alpha = 0
                 self.overwatch.center.y -= 123
@@ -38,12 +38,12 @@ class SplashScreenController: UIViewController {
                 finish in
 //                self.addWhiteCircleView(0.3)//White
 
-                sleep(1)
+                usleep(1000000) //After orange, wait for white
                 UIView.animate(withDuration: 0.3, animations: {
                     self.addWhiteCircleView(0.3)
                 }, completion: {
                     finish in
-                    sleep(1)
+                    usleep(300000) //show segue
                     self.performSegue(withIdentifier: "showMain", sender: self)
                 })
                 
@@ -181,7 +181,7 @@ let π:CGFloat = CGFloat(M_PI)
         
         // Use UIBezierPath as an easy way to create the CGPath for the layer.
         // The path should be the entire circle.
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(M_PI * 7.1/4), endAngle: CGFloat(M_PI * 0.9/4), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: CGFloat(M_PI * 7.3/4), endAngle: CGFloat(M_PI * 0.7/4), clockwise: true)
         
         // Setup the CAShapeLayer with the path, colors, and line width
         circleLayer = CAShapeLayer()
