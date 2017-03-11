@@ -40,6 +40,8 @@ class SplashScreenController: UIViewController {
                 self.performSegue(withIdentifier: "showMain", sender: self)
             })
         }
+        
+        let dispatchtime = DispatchTime.now()
     }
 
     override func didReceiveMemoryWarning() {
