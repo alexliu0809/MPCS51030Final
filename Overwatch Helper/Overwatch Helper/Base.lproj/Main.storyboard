@@ -140,7 +140,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bg-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C55-hG-qxs">
-                                <rect key="frame" x="0.0" y="64" width="375" height="218"/>
+                                <rect key="frame" x="-10" y="64" width="396" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -162,7 +162,7 @@
         <scene sceneID="2j7-Z9-2m7">
             <objects>
                 <navigationController id="hMw-dM-5jF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" id="Ae8-KP-Znc"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="Bar-Discover" id="Ae8-KP-Znc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQD-RT-afY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -819,7 +819,7 @@
         <scene sceneID="3Dv-Sd-L8q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TiH-dO-230" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" id="HD5-SZ-3d7"/>
+                    <tabBarItem key="tabBarItem" title="News" image="Bar-News" id="HD5-SZ-3d7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIJ-UU-RoS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -838,7 +838,7 @@
         <scene sceneID="DEv-0D-DcW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jN-j4-6UD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="J9T-3l-CGi"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Bar-Maps" id="J9T-3l-CGi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1x-CX-fq9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1073,7 +1073,7 @@
         <scene sceneID="wuk-J7-vEL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10w-0U-8uL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hero" id="ED8-TF-IFs"/>
+                    <tabBarItem key="tabBarItem" title="Hero" image="Bar-Heros" id="ED8-TF-IFs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nQ-rz-tmv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1109,6 +1109,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bar-Discover" width="50" height="50"/>
+        <image name="Bar-Heros" width="50" height="50"/>
+        <image name="Bar-Maps" width="48" height="48"/>
+        <image name="Bar-News" width="50" height="50"/>
         <image name="Bg-Icon" width="540" height="291"/>
         <image name="Career-Mercy" width="423" height="224"/>
         <image name="splashIcon" width="450" height="450"/>

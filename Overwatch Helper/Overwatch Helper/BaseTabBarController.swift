@@ -46,7 +46,7 @@ class BaseTabBarController: UITabBarController {
         menuButton.layer.cornerRadius = menuButtonFrame.height/2
         view.addSubview(menuButton)
         
-        menuButton.setImage(UIImage(named: "Main-Icon"), for: .normal)
+        menuButton.setImage(UIImage(named: "Main-Icon-New"), for: .normal)
         menuButton.addTarget(self, action: #selector(menuButtonAction(sender:)), for: .touchUpInside)
         
         view.layoutIfNeeded()
