@@ -12,7 +12,7 @@ class DiscoverController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -39,17 +39,10 @@ class DiscoverController: UIViewController {
         }
     }
     
-//    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return .none
-//    }
-   
+    func messageInitialize(){
+        LFGMessage.Messages = [LFGMessage(ID: "McGree", avatar: #imageLiteral(resourceName: "mcgree1"), saying: "Looking for a support GTG. IT'S HIGH NOON!"),LFGMessage(ID: "Winston", avatar: #imageLiteral(resourceName: "winsdom1"), saying: "It was not the plane, but the beauty killed the beast."), LFGMessage(ID: "D.Va", avatar: #imageLiteral(resourceName: "dva1"), saying: "123123123213213213"),LFGMessage(ID: "Reaper", avatar: #imageLiteral(resourceName: "reaper1"), saying: "Die Die Die")]
+    }
 
     
 }
 
-//popover style
-//extension DiscoverController: UIPopoverPresentationControllerDelegate{
-//    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
-//        
-//    }
-//}

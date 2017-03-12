@@ -13,4 +13,12 @@ struct LFGMessage {
     var battleID: String
     var avatar: UIImage
     var descrip: String
+    
+    static var Messages: [LFGMessage] = []
+    
+    init(ID: String, avatar: UIImage, saying: String) {
+        self.battleID = ID
+        self.avatar = avatar
+        self.descrip = saying
+    }
 }
