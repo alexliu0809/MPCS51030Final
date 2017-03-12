@@ -22,17 +22,28 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.newsTable.dataSource = self
         self.navigationItem.title = "News"
         
+        
         let tempImageView = UIImageView(image: UIImage(named: "News-Bg"))
         tempImageView.frame = self.newsTable.frame
         tempImageView.contentMode = .scaleToFill
-        self.newsTable.backgroundView = tempImageView;
+        tempImageView.alpha = 1.0
+        //self.newsTable.backgroundView = tempImageView;
+        self.view.addSubview(tempImageView)
+        
 
+        let tempView = UIView(frame: self.newsTable.frame)
+        tempView.backgroundColor = UIColor.black
+        tempView.alpha = 0.6
+        self.view.addSubview(tempView)
+        
         self.newsTable.separatorColor = UIColor.orange
         self.newsTable.layer.borderWidth = 1.2
         self.newsTable.layer.borderColor = UIColor.orange.cgColor
-        
+        self.newsTable.backgroundColor = UIColor.clear
+        self.view.bringSubview(toFront: self.newsTable)
         //self.newsTable.
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
