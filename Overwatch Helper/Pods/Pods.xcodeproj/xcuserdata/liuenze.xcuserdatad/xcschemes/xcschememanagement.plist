@@ -8,56 +8,99 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>CSStickyHeaderFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>FoldingCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>MMCardView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-Overwatch Helper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>SwiftCharts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SwiftSVG.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>YouTubePlayer-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>25C509A7452E3A54877F4533D95BA021</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D165B2374723C84EB853779BEDB89B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43DD641B6EBBE47890A957530B2919A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4C1BEA4CD86D4494B606051FB99E7119</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5925379832D39693A7009455F2D2F527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F288D04871C8DB111BCC506A2716ABC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +126,11 @@
 			<true/>
 		</dict>
 		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBFD85AE7E29CFE95CF795D84CDC22DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
