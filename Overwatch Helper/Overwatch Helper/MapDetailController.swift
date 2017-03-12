@@ -25,7 +25,7 @@ class MapDetailController: UITableViewController{
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.estimatedRowHeight = 500
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "discover-bg"))
         
     }
     

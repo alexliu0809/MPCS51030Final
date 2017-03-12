@@ -121,14 +121,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Your Battle.net ID Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-D4-K4I">
-                                <rect key="frame" x="59" y="337" width="274" height="30"/>
+                                <rect key="frame" x="57" y="380" width="274" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bg-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C55-hG-qxs">
+                                <rect key="frame" x="-26" y="64" width="435" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-OQ-mxg">
-                                <rect key="frame" x="59" y="400" width="272" height="30"/>
+                                <rect key="frame" x="57" y="457" width="272" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.61960784313725492" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
@@ -139,11 +144,6 @@
                                     <action selector="careerSubmitBtnPressed:" destination="f8p-zQ-pte" eventType="touchUpInside" id="46H-FH-ldA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bg-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="C55-hG-qxs">
-                                <rect key="frame" x="-10" y="64" width="396" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -1109,10 +1109,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bar-Discover" width="50" height="50"/>
-        <image name="Bar-Heros" width="50" height="50"/>
-        <image name="Bar-Maps" width="48" height="48"/>
-        <image name="Bar-News" width="50" height="50"/>
+        <image name="Bar-Discover" width="25" height="25"/>
+        <image name="Bar-Heros" width="25" height="25"/>
+        <image name="Bar-Maps" width="24" height="24"/>
+        <image name="Bar-News" width="25" height="25"/>
         <image name="Bg-Icon" width="540" height="291"/>
         <image name="Career-Mercy" width="423" height="224"/>
         <image name="splashIcon" width="450" height="450"/>

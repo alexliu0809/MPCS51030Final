@@ -13,6 +13,11 @@ class DiscoverController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageInitialize()
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "discover-bg")?.draw(in: self.view.bounds)
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
         // Do any additional setup after loading the view.
     }
 

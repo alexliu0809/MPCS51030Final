@@ -21,14 +21,44 @@ class HeroRecommendationSurvey: UIView {
     var option2: UIButton
     var option3: UIButton
     var option4: UIButton
+    
+    var heroImg: UIImageView
+    var heroName: UILabel
+    var backView: UIView
 //    var result: HeroIntroInfo?
     
     override init(frame: CGRect){
         question = UILabel(frame: (CGRect(x: 0, y: 350, width: 375, height:100)))
-        option1 = UIButton(frame: CGRect(x: 87, y: 400, width: 200, height: 30))
-        option2 = UIButton(frame: CGRect(x: 87, y: 450, width: 200, height: 30))
-        option3 = UIButton(frame: CGRect(x: 87, y: 500, width: 200, height: 30))
-        option4 = UIButton(frame: CGRect(x: 87, y: 550, width: 200, height: 30))
+        option1 = UIButton(frame: CGRect(x: 575, y: 400, width: 250, height: 30))
+        option2 = UIButton(frame: CGRect(x: 575, y: 450, width: 250, height: 30))
+        option3 = UIButton(frame: CGRect(x: 575, y: 500, width: 250, height: 30))
+        option4 = UIButton(frame: CGRect(x: 575, y: 550, width: 250, height: 30))
+        
+        
+        heroImg = UIImageView(frame: CGRect(x: 92, y: 90, width: 190, height: 190))
+        heroName = UILabel(frame: CGRect(x: 0, y: 130, width: 190, height: 60))
+        
+        
+        heroImg.layer.cornerRadius = heroImg.frame.height/2
+        heroImg.clipsToBounds = true
+//        heroImg.contentMode = .scaleToFill
+        heroImg.addSubview(heroName)
+        heroImg.backgroundColor = UIColor(netHex: 0x484848)
+        heroImg.image = #imageLiteral(resourceName: "questionMark")
+        
+        backView = UIView(frame: CGRect(x: 72, y: 70, width: 230, height: 230))
+        backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        backView.layer.cornerRadius = 115
+        backView.clipsToBounds = true
+        
+        heroName.textAlignment = .center
+        
+        
+        heroName.font = UIFont(name: "Verdana-BoldItalic", size: 27)
+        heroName.textColor = UIColor.white
+        heroName.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        
+        
         
         super.init(frame: frame)
         
@@ -39,6 +69,9 @@ class HeroRecommendationSurvey: UIView {
         question.numberOfLines = 0
         question.lineBreakMode = .byWordWrapping
         question.sizeToFit()
+        question.layer.masksToBounds = true
+        question.layer.cornerRadius = 5
+        question.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         
         
         initOption(option1)
@@ -57,11 +90,12 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(option2)
         self.addSubview(option3)
         self.addSubview(option4)
+        self.addSubview(backView)
+        heroImg.addSubview(heroName)
+        self.addSubview(heroImg)
     }
     
     func initOption(_ option1: UIButton){
-        option1.titleLabel?.text = "Option1"
-        option1.setTitle("Option1", for: .normal)
         option1.backgroundColor = UIColor(hexString: "F89E19")
         option1.titleLabel?.font = UIFont(name: "Verdana-BoldItalic", size: 20)
         option1.layer.cornerRadius = 5
@@ -69,6 +103,7 @@ class HeroRecommendationSurvey: UIView {
         option1.titleLabel?.textAlignment = .left
         option1.contentHorizontalAlignment = .left
         option1.setTitleColor(UIColor.black, for: .normal)
+        option1.alpha = 0
     }
     
     func surveyStart(){
@@ -103,7 +138,7 @@ class HeroRecommendationSurvey: UIView {
         })
     }
     func choose4(){
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             self.option4.alpha = 0
         }, completion: {finish in
             self.makeChoice(3)
@@ -120,19 +155,31 @@ class HeroRecommendationSurvey: UIView {
             UIView.animate(withDuration: 0.3, animations: {
                 self.question.text = self.Questions[self.nextQuestionIndex].question
                 self.question.sizeToFit()
+                self.question.center.x = 187
                 
                 self.option1.setTitle("   " + self.Questions[self.nextQuestionIndex].options[0], for: .normal)
                 self.option2.setTitle("   " + self.Questions[self.nextQuestionIndex].options[1], for: .normal)
                 self.option3.setTitle("   " + self.Questions[self.nextQuestionIndex].options[2], for: .normal)
                 self.option4.setTitle("   " + self.Questions[self.nextQuestionIndex].options[3], for: .normal)
-                self.option1.center.x = 187
-                self.option2.center.x = 187
-                self.option3.center.x = 187
-                self.option4.center.x = 187
-                self.option1.alpha = 1
-                self.option2.alpha = 1
-                self.option3.alpha = 1
-                self.option4.alpha = 1
+                if self.option1.title(for: .normal) != "   "{
+                    self.option1.center.x = 187
+                    self.option1.alpha = 1
+                }
+                if self.option2.title(for: .normal) != "   "{
+                    self.option2.center.x = 187
+                    self.option2.alpha = 1
+                }
+                if self.option3.title(for: .normal) != "   "{
+                    self.option3.center.x = 187
+                    self.option3.alpha = 1
+                }
+                if self.option4.title(for: .normal) != "   "{
+                    self.option4.center.x = 187
+                    self.option4.alpha = 1
+                }
+                
+                
+                
             })
         }
     }
@@ -171,6 +218,8 @@ class HeroRecommendationSurvey: UIView {
         }
         HeroLeft.shuffle()
         let result = HeroLeft[0]
+        heroImg.image = HeroLeft[0].topImage
+        
         delegate?.getSurveyResult(result)
         
     }
