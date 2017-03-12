@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -268,17 +268,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elimination - Average" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PF-Vw-MRq">
-                                                    <rect key="frame" x="18" y="51" width="349" height="28"/>
+                                                    <rect key="frame" x="131" y="38" width="230" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="349" id="3eB-IT-Pzs"/>
+                                                        <constraint firstAttribute="width" constant="230" id="3eB-IT-Pzs"/>
                                                         <constraint firstAttribute="height" constant="28" id="BnX-5X-DYd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-dH-icv">
+                                                    <rect key="frame" x="17" y="0.0" width="79" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="79" id="IXD-2f-rv3"/>
+                                                        <constraint firstAttribute="height" constant="79" id="SOE-VG-4Lu"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11.06" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHU-hl-LQb">
-                                                    <rect key="frame" x="18" y="21" width="169" height="36"/>
+                                                    <rect key="frame" x="131" y="8" width="169" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="169" id="77n-AE-CQt"/>
                                                         <constraint firstAttribute="height" constant="36" id="kM4-Mj-NTq"/>
@@ -287,18 +294,16 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3r-dH-icv">
-                                                    <rect key="frame" x="288" y="0.0" width="79" height="79"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="2PF-Vw-MRq" firstAttribute="leading" secondItem="3fh-rS-1gh" secondAttribute="leading" constant="18" id="5zr-6p-KRo"/>
-                                            <constraint firstItem="IHU-hl-LQb" firstAttribute="leading" secondItem="3fh-rS-1gh" secondAttribute="leading" constant="18" id="93f-rk-sUM"/>
-                                            <constraint firstItem="IHU-hl-LQb" firstAttribute="top" secondItem="3fh-rS-1gh" secondAttribute="top" constant="21" id="JRw-4N-gic"/>
-                                            <constraint firstItem="2PF-Vw-MRq" firstAttribute="top" secondItem="3fh-rS-1gh" secondAttribute="top" constant="51" id="hrN-ug-pHb"/>
+                                            <constraint firstItem="IHU-hl-LQb" firstAttribute="top" secondItem="3fh-rS-1gh" secondAttribute="top" constant="8" id="65r-EA-XjZ"/>
+                                            <constraint firstItem="IHU-hl-LQb" firstAttribute="leading" secondItem="3fh-rS-1gh" secondAttribute="leading" constant="131" id="QmC-Qb-37s"/>
+                                            <constraint firstItem="F3r-dH-icv" firstAttribute="leading" secondItem="3fh-rS-1gh" secondAttribute="leading" constant="17" id="YOr-Sk-Hzw"/>
+                                            <constraint firstItem="2PF-Vw-MRq" firstAttribute="top" secondItem="3fh-rS-1gh" secondAttribute="top" constant="38" id="asM-hP-HLB"/>
+                                            <constraint firstItem="2PF-Vw-MRq" firstAttribute="leading" secondItem="3fh-rS-1gh" secondAttribute="leading" constant="131" id="biB-Sx-CPk"/>
+                                            <constraint firstItem="F3r-dH-icv" firstAttribute="top" secondItem="3fh-rS-1gh" secondAttribute="top" id="pF3-ss-X67"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="featureDescription" destination="2PF-Vw-MRq" id="CEC-ba-ty9"/>

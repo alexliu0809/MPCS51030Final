@@ -22,6 +22,7 @@ class SharedNetworking{
             guard let JSON = response.result.value, response.result.error == nil else {
                 return
             }
+            print(JSON)
             completion(JSON)
         })
     }
@@ -35,6 +36,7 @@ class SharedNetworking{
             guard let JSON = response.data, response.result.error == nil else {
                 return
             }
+            print(JSON)
             completion(JSON)
         })
     }

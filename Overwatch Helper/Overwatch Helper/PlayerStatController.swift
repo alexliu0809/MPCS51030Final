@@ -166,7 +166,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     {
         let str = "https://ow-api.herokuapp.com/stats/pc/us/\(playerAccount!)"
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
-            
+            print(profile!)
             var json = JSON(data:profile!)
             if (json.count == 0)
             {
@@ -186,9 +186,22 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             /*** Load Top Hero Data ***/
             for i in 0..<json["stats"]["top_heroes"]["quickplay"].count{
                 self.tempPlayerData.topHerosName.append(json["stats"]["top_heroes"]["quickplay"][i]["hero"].string!)
-                var hours = json["stats"]["top_heroes"]["quickplay"][i]["played"].string!
-                hours = hours.components(separatedBy: " ")[0]
-                self.tempPlayerData.topHeroTime.append(Double(hours)!)
+                let hours = json["stats"]["top_heroes"]["quickplay"][i]["played"].string!
+                if (hours == "--") // no data
+                {
+                    continue
+                }
+                var time = Double(hours.components(separatedBy: " ")[0])!
+                let type = hours.components(separatedBy: " ")[0]
+                if (type == "seconds")
+                {
+                    time = 1.0/60.0
+                }
+                else if (type == "minutes")
+                {
+                    time = time / 60.0
+                }
+                self.tempPlayerData.topHeroTime.append(time)
             }
             
             /*** Load Career Stats Data ***/
@@ -301,8 +314,21 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             cell.playerName.text = playerData.playerName!
             cell.gamesWon.text = "\(playerData.gamesWon!) GAMES WON"
             cell.rankIcon.contentMode = .scaleToFill
-            cell.rankIcon.kf.setImage(with: URL(string:playerData.rankIconURL!))
-            cell.rankPoints.text = playerData.rankPoints!
+            
+            //could be nil
+            if (playerData.rankIconURL != nil)
+            {
+                cell.rankIcon.kf.setImage(with: URL(string:playerData.rankIconURL!))
+            }
+            if (playerData.rankPoints != nil)
+            {
+                cell.rankPoints.text = playerData.rankPoints!
+            }
+            else
+            {
+                cell.rankPoints.text = ""
+            }
+            
             cell.backgroundColor = UIColor(patternImage: UIImage(named: "PlayerStats-Bg")!)
             cell.playerIcon.kf.setImage(with: URL(string:playerData.iconImageURL!))
             cell.playerName.sizeToFit()
