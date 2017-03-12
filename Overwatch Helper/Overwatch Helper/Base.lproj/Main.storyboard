@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -915,59 +915,59 @@
                                     <outlet property="mapName" destination="4yP-nc-5U5" id="hVd-Eg-dJ1"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapBasicInfo" rowHeight="165" id="FAa-q0-Isr" customClass="MapDetailBasicInfo" customModule="Overwatch_Helper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="193" width="375" height="165"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapBasicInfo" rowHeight="230" id="FAa-q0-Isr" customClass="MapDetailBasicInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="193" width="375" height="230"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FAa-q0-Isr" id="Vpw-E2-DwS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klQ-kp-fQz">
-                                            <rect key="frame" x="308" y="12" width="67" height="42"/>
+                                            <rect key="frame" x="51" y="55" width="46" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfV-YP-jPi">
-                                            <rect key="frame" x="44" y="16" width="126" height="35"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfV-YP-jPi">
+                                            <rect key="frame" x="42" y="16" width="283" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.78153705596923828" blue="0.047274060547351837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbt-oH-p1a">
-                                            <rect key="frame" x="178" y="16" width="122" height="35"/>
+                                            <rect key="frame" x="105" y="53" width="212" height="28"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.76513653993606567" blue="0.99861770868301392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terrain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-gH-xh3">
-                                            <rect key="frame" x="70" y="65" width="100" height="35"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Terrain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mS-gH-xh3">
+                                            <rect key="frame" x="42" y="95" width="283" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.78153705600000001" blue="0.047274060549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0R-NV-Ghy">
-                                            <rect key="frame" x="178" y="65" width="114" height="35"/>
+                                            <rect key="frame" x="100" y="130" width="275" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
                                             <color key="textColor" red="0.0" green="0.76513653989999997" blue="0.9986177087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-YB-ipI">
-                                            <rect key="frame" x="101" y="114" width="69" height="35"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3Z-YB-ipI">
+                                            <rect key="frame" x="42" y="165" width="283" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.7803921568627451" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scu-3U-SyZ">
-                                            <rect key="frame" x="178" y="114" width="114" height="35"/>
+                                            <rect key="frame" x="100" y="199" width="263" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="22"/>
@@ -988,7 +988,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapDetailInfo" id="reB-i4-KRc" customClass="MapDetailDetailInfo" customModule="Overwatch_Helper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="358" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="423" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="reB-i4-KRc" id="6wx-tc-rxr">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1018,6 +1018,30 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="mapBrief" destination="4SK-HS-Srk" id="4XH-eF-qpQ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapVideoInfo" rowHeight="165" id="vqp-HD-S9W" customClass="MapVideoInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqp-HD-S9W" id="Y2d-eY-chG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-sa-g8M" customClass="YouTubePlayerView" customModule="YouTubePlayer_Swift">
+                                            <rect key="frame" x="8" y="8" width="359" height="149"/>
+                                            <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DlZ-sa-g8M" secondAttribute="bottom" constant="8" id="FS0-nQ-KAL"/>
+                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="top" secondItem="Y2d-eY-chG" secondAttribute="top" constant="8" id="Tuc-Fm-amT"/>
+                                        <constraint firstAttribute="trailing" secondItem="DlZ-sa-g8M" secondAttribute="trailing" constant="8" id="Y5N-is-X8N"/>
+                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="leading" secondItem="Y2d-eY-chG" secondAttribute="leading" constant="8" id="eUy-zB-h6l"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.21173727510000001" green="0.21178042890000001" blue="0.21173459289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="video" destination="DlZ-sa-g8M" id="tqT-Dp-NLb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

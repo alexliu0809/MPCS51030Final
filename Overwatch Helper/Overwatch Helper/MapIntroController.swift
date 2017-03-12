@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var mapArray: [MapIntroInfo] = []
+
 class MapIntroController: UIViewController{
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -16,7 +18,7 @@ class MapIntroController: UIViewController{
     var mapNameList : [String] = ["map_volskayaindustry","map_nepal","map_antarctica","map_dorado","map_templeofanubis","map_oasis","map_numbani","map_route66","map_gibraltar","map_hanamura","map_hollywood","map_eichenwalde","map_lijiangtower","map_Ilios"]
     var mapNames : [String] = ["VOLSKAYA INDUSTRY","NEPAL","ANTARCTICA","DORADO","TEMPLE OF ANUBIS","OASIS","NUMBANI","ROUTE 66","GIBRALTAR","HANAMURA","HOLLYWOOD","EICHENWALDE","LIJIANG TOWER","ILIOS"]
     var gestures : [UITapGestureRecognizer] = []
-    var seletedMap : String? = nil
+    var selectedMap : MapIntroInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class MapIntroController: UIViewController{
             
             let width1 = i % 2 == 0 ? 275 : 200
             let width2 = 475 - width1
-            let newMap1 = MapCell(frame: CGRect(x: -50, y: -50 + i*120, width: width1, height: 100), image: UIImage(named: mapNameList[2*i])!, label: mapNames[2*i], true)
+            let newMap1 = MapCell(frame: CGRect(x: -50, y: -50 + i*120, width: width1, height: 100), mapArray[2*i], true, 2*i)
             
             let ges1 = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             newMap1.addGestureRecognizer(ges1)
@@ -35,7 +37,7 @@ class MapIntroController: UIViewController{
             self.scrollView.addSubview(newMap1)
             
             
-            let newMap2 = MapCell(frame: CGRect(x: width1 - 40, y: -50 + i*120, width: width2, height: 100), image: UIImage(named: mapNameList[2*i+1])!, label: mapNames[2*i+1], false)
+            let newMap2 = MapCell(frame: CGRect(x: width1 - 40, y: -50 + i*120, width: width2, height: 100), mapArray[2*i+1], false, 2*i+1)
             
             let ges2 = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             newMap2.addGestureRecognizer(ges2)
@@ -67,7 +69,7 @@ class MapIntroController: UIViewController{
     func handleTap(_ recognizer : UITapGestureRecognizer){
         
         if let selectedCell = (recognizer.view as! MapCell?) {
-            seletedMap = selectedCell.name
+            selectedMap = mapArray[selectedCell.number]
         }else{
             return
         }
@@ -92,7 +94,7 @@ class MapIntroController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMapDetail" {
             let dest = (segue.destination as! MapDetailController)
-            dest.currentMapName = seletedMap!
+            dest.currentMap = selectedMap!
             
             
 
@@ -118,5 +120,26 @@ class MapIntroController: UIViewController{
     
     func goDetail(){
         self.performSegue(withIdentifier: "showMapDetail", sender: self)
+    }
+    
+    static func initializeMaps()
+    {
+        let path = Bundle.main.path(forResource: "MapIntroData", ofType: "plist")
+        let datas =  NSArray(contentsOfFile: path!)
+        guard let data = datas
+            else
+        {
+            return
+        }
+
+        
+        for i in data
+        {
+            let proto = MapIntroInfo(loacation: (i as! [String:String])["location"]!, mapImage: UIImage.init(named: MapList.nameImageName[(i as! [String:String])["name"]!]!)!, flagImage: UIImage.init(named: MapList.country[(i as! [String:String])["name"]!]!)!, type: (i as! [String:String])["type"]!, terrain: (i as! [String:String])["terrain"]!, name: (i as! [String:String])["name"]!, description: (i as! [String:String])["description"]!, url: (i as! [String:String])["videoURL"]!)
+            
+            //print(proto.heroName)
+            
+            mapArray.append(proto)  
+        }
     }
 }

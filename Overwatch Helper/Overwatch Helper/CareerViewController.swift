@@ -27,6 +27,7 @@ class CareerViewController: UIViewController {
         
         //initialize Heros
         HeroIntroController.initializeHeros()
+        MapIntroController.initializeMaps() 
     }
 
     override func didReceiveMemoryWarning() {

@@ -36,12 +36,12 @@
 		C17A5D371E7341EE005A40C7 /* LFGMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D361E7341EE005A40C7 /* LFGMessage.swift */; };
 		C17A5D391E734DF0005A40C7 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */; };
 		C17A86B81E6D197000310B9A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A86B71E6D197000310B9A /* NetworkService.swift */; };
-		C17CB6F61E71AD120009E090 /* MapList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F51E71AD120009E090 /* MapList.swift */; };
 		C17CB6F81E71ECD50009E090 /* DiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F71E71ECD50009E090 /* DiscoverController.swift */; };
 		C17CB6FA1E71FD6B0009E090 /* DiscoverFunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */; };
 		C1873CA81E709481008F6130 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1873CA71E709481008F6130 /* MapCell.swift */; };
 		C1B2C97B1E748B72009AA7BF /* RecommendationQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */; };
 		C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97C1E749B5D009AA7BF /* Extensions.swift */; };
+		C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */; };
 		C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E01E6DFB6000181A7C /* CareerViewController.swift */; };
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
@@ -105,12 +105,12 @@
 		C17A5D361E7341EE005A40C7 /* LFGMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LFGMessage.swift; sourceTree = "<group>"; };
 		C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		C17A86B71E6D197000310B9A /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		C17CB6F51E71AD120009E090 /* MapList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapList.swift; sourceTree = "<group>"; };
 		C17CB6F71E71ECD50009E090 /* DiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverController.swift; sourceTree = "<group>"; };
 		C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverFunctionController.swift; sourceTree = "<group>"; };
 		C1873CA71E709481008F6130 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationQuestion.swift; sourceTree = "<group>"; };
 		C1B2C97C1E749B5D009AA7BF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapIntroData.plist; sourceTree = "<group>"; };
 		C33508E01E6DFB6000181A7C /* CareerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +178,7 @@
 				C10C4F571E6C630300B0F67E /* Main.storyboard */,
 				C10C4F5A1E6C630300B0F67E /* Assets.xcassets */,
 				C10C4F5C1E6C630300B0F67E /* LaunchScreen.storyboard */,
+				C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */,
 				C10C4F5F1E6C630300B0F67E /* Info.plist */,
 				BBE5EB261E73855F007A2146 /* HeroIntroData.plist */,
 			);
@@ -244,7 +245,6 @@
 				C10C4F991E6C811A00B0F67E /* NewsDigest.swift */,
 				C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */,
 				C33BB4DE1E6E17E80051E292 /* HeroCell.swift */,
-				C17CB6F51E71AD120009E090 /* MapList.swift */,
 				C17A5D2C1E7212F9005A40C7 /* HeroList.swift */,
 				C3FC77601E71F35F0027484D /* PlayerStats.swift */,
 				C17A5D361E7341EE005A40C7 /* LFGMessage.swift */,
@@ -393,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10C4F5E1E6C630300B0F67E /* LaunchScreen.storyboard in Resources */,
+				C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */,
 				BBE5EB271E73855F007A2146 /* HeroIntroData.plist in Resources */,
 				C10C4F5B1E6C630300B0F67E /* Assets.xcassets in Resources */,
 				C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */,
@@ -485,7 +486,6 @@
 				C3FC77611E71F35F0027484D /* PlayerStats.swift in Sources */,
 				C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */,
 				C10C4F941E6C80C400B0F67E /* MapInfo.swift in Sources */,
-				C17CB6F61E71AD120009E090 /* MapList.swift in Sources */,
 				C10C4F981E6C810000B0F67E /* PlayerData.swift in Sources */,
 				C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */,
 				C10C4F8B1E6C74EE00B0F67E /* PlayerStatController.swift in Sources */,

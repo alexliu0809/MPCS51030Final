@@ -11,12 +11,14 @@ import UIKit
 
 class MapDetailController: UITableViewController{
     
-    var currentMapName: String = ""
-    var icon: UIImage = UIImage()
-    var detail: String = ""
-    var loc: String = ""
-    var terrain: String = ""
-    var type: String = ""
+//    var currentMapName: String = ""
+//    var icon: UIImage = UIImage()
+//    var detail: String = ""
+//    var loc: String = ""
+//    var terrain: String = ""
+//    var type: String = ""
+//    
+    var currentMap: MapIntroInfo?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,7 @@ class MapDetailController: UITableViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        icon = #imageLiteral(resourceName: "map_oasis")
-        detail = "Liangtower is a xxxxx"
-        loc = "China"
-        terrain = "City"
-        type = "Escort"
+
         for i in self.tableView.subviews{
             i.alpha = 0
         }
@@ -57,13 +55,13 @@ class MapDetailController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard currentMapName != ""
+        guard currentMap != nil
             else
         {
             return 1
         }
         
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,8 +69,8 @@ class MapDetailController: UITableViewController{
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapIcon", for: indexPath) as! MapDetailMapIcon
 
-            cell.mapImage.image = UIImage(named: MapList.nameImageName[currentMapName]!)
-            cell.mapName.text = currentMapName
+            cell.mapImage.image = currentMap?.topImage
+            cell.mapName.text = currentMap?.name
             return cell
         }
         else if (indexPath.row == 1) //change2
@@ -80,15 +78,15 @@ class MapDetailController: UITableViewController{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapBasicInfo", for: indexPath) as! MapDetailBasicInfo
             //print("2")
-            cell.location.text = MapList.country[currentMapName]
-            cell.terrain.text = terrain
-            cell.type.text = type
-            cell.flag.image = UIImage(named: MapList.country[currentMapName]!)
+            cell.location.text = currentMap?.location
+            cell.terrain.text = currentMap?.terrain
+            cell.type.text = currentMap?.mapType
+            cell.flag.image = currentMap?.flagImage
             cell.flag.backgroundColor = UIColor.clear
             cell.flag.contentMode = .scaleAspectFit
-            cell.locTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
-            cell.terrainTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
-            cell.typeTag.transform = CGAffineTransform(a: 1, b: 0, c: 0.3, d: 1, tx: 0, ty: 0)
+            cell.locTag.transform = CGAffineTransform(a: 1, b: 0, c: -0.3, d: 1, tx: 0, ty: 0)
+            cell.terrainTag.transform = CGAffineTransform(a: 1, b: 0, c: -0.3, d: 1, tx: 0, ty: 0)
+            cell.typeTag.transform = CGAffineTransform(a: 1, b: 0, c: -0.3, d: 1, tx: 0, ty: 0)
             cell.locTag.layer.cornerRadius = 5
             cell.locTag.layer.masksToBounds = true
             cell.typeTag.layer.cornerRadius = 5
@@ -98,18 +96,25 @@ class MapDetailController: UITableViewController{
 
             return cell
         }
-        else
+        else if (indexPath.row == 2)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapDetailInfo", for: indexPath) as! MapDetailDetailInfo
             //print("3+")
 //            cell.backgroundColor = UIColor.green
-            cell.mapBrief.text = MapList.description[currentMapName]
+            cell.mapBrief.text = currentMap?.description
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "mapVideoInfo", for: indexPath) as! MapVideoInfo
+            cell.video.loadVideoID((currentMap?.videoURL)!)
             return cell
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.item < 2 {
+        if indexPath.item == 0 || indexPath.item == 3 {
             return 165
+        }else if indexPath.item == 1{
+            return 230
         }else{
             return UITableViewAutomaticDimension
         }

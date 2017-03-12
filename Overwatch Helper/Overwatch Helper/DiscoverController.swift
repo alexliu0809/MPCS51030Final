@@ -27,7 +27,7 @@ class DiscoverController: UIViewController {
 //        controller.modalPresentationStyle = UIModalPresentationStyle.popover
 //        controller.popoverPresentationController!.delegate = self
         
-        controller.restart()
+        controller.triggeredBySegue = true
         if segue.identifier == "whatsToday" {
             controller.functionType = .whatsToday
         }else if segue.identifier == "heroRecommend" {

@@ -41,7 +41,7 @@ class DrawRandomHero: UIView {
         super.init(frame: frame)
         
         self.addSubview(heroImg)
-        self.addSubview(heroName)
+//        self.addSubview(heroName)
         
         heroImg.layer.cornerRadius = heroImg.frame.height/2
         heroImg.clipsToBounds = true
@@ -111,14 +111,10 @@ class DrawRandomHero: UIView {
             
         }else if (drawTimer?.isValid)!{
             drawTimer?.invalidate()
-            stopButton.setTitle("Again?", for: .normal)
-            detailButton.isEnabled = true
-            detailButton.alpha = 1
+            setBtn(false)
         }else{
-            detailButton.isEnabled = false
-            detailButton.alpha = 0
+            setBtn(true)
             start()
-            stopButton.setTitle("Stop", for: .normal)
         }
     }
     
@@ -127,6 +123,19 @@ class DrawRandomHero: UIView {
             return
         }else if (drawTimer?.isValid)!{
             drawTimer?.invalidate()
+            setBtn(false)
+        }
+    }
+    
+    func setBtn(_ toStop: Bool){
+        if toStop{
+            stopButton.setTitle("Stop", for: .normal)
+            detailButton.isEnabled = false
+            detailButton.alpha = 0
+        } else {
+            stopButton.setTitle("Again?", for: .normal)
+            detailButton.isEnabled = true
+            detailButton.alpha = 1
         }
     }
     

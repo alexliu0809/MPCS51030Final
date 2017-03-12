@@ -23,6 +23,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     var draw: DrawRandomHero?
     var LFG: UITableView?
     var posts: [(String,String,UIImage)] = []
+    var triggeredBySegue: Bool = true
     
 //    var result: HeroIntroInfo
     
@@ -52,13 +53,17 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         }
     }
     
-    func restart(){
+    func clear(){
         if (survey != nil){
             survey!.removeFromSuperview()
         }
         
         if (draw != nil){
             draw!.removeFromSuperview()
+        }
+        
+        if (LFG != nil){
+            LFG!.removeFromSuperview()
         }
     }
     
@@ -100,13 +105,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         return 1
     }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+    func reset(){
         switch functionType {
         case .whatsToday:
             self.draw = DrawRandomHero()
@@ -114,7 +113,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             self.view.addSubview((draw?.stopButton)!)
             self.view.addSubview((draw?.detailButton)!)
             draw?.delegate = self
-//            self.draw?.start()
+        //            self.draw?.start()
         case .heroRecommend:
             self.survey = HeroRecommendationSurvey()
             self.view.addSubview(survey!)
@@ -141,9 +140,28 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             LFG?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
             
             posts = fetchLFGData()
-        
+            
         default:
             break
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if triggeredBySegue {
+            triggeredBySegue = false
+            clear()
+            reset()
+        }else{
+//            if functionType == .whatsToday{
+//                draw!.start()
+//            }
         }
     }
     

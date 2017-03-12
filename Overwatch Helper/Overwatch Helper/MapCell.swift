@@ -13,19 +13,20 @@ class MapCell: UIView {
     var img: UIImageView
     var lbl: UILabel
     var name: String
+    var number: Int
     
-    
-    init(frame: CGRect, image: UIImage, label: String,_ left: Bool) {
-        self.name = label
+    init(frame: CGRect, _ map: MapIntroInfo,_ left: Bool, _ num: Int) {
+        self.name = map.name
         img = UIImageView(frame: CGRect(x: left ? 50 : 0, y: 0, width: frame.width - 50, height: frame.height))
-        img.image = image
+        img.image = map.topImage
         
         lbl = UILabel(frame: CGRect(x: left ? 50 : 0, y: 30, width: frame.width - 50, height: 50))
         lbl.textColor = UIColor.white
         lbl.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         lbl.font = UIFont(name: "Verdana-BoldItalic", size: 15)
-        lbl.text = label
+        lbl.text = map.name
         lbl.textAlignment = .center
+        self.number = num
         
         super.init(frame: frame)
         
