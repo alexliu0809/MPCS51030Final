@@ -9,7 +9,7 @@
 		<key>image</key>
 		<string>Hero-Mcree</string>
 		<key>diff</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>type</key>
 		<string>Offense</string>
 		<key>id</key>
@@ -218,6 +218,192 @@
 			</dict>
 		</array>
 	</dict>
+	<key>Hanzo</key>
+	<dict>
+		<key>name</key>
+		<string>Hanzo</string>
+		<key>image</key>
+		<string>Hero-Hanzo</string>
+		<key>diff</key>
+		<integer>3</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>12</integer>
+		<key>url</key>
+		<string>oOVb9x0zd6M</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Storm Bow
+Storm Bow
+</string>
+				<key>des</key>
+				<string>Hanzo nocks and fires an arrow at his target.
+Hanzo nocks and fires an arrow at his target.</string>
+				<key>img</key>
+				<string>Hanzo-SB</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.</string>
+				<key>img</key>
+				<string>Hanzo-SNA</string>
+				<key>name</key>
+				<string>Sonic Arrow
+</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Scatter Arrow
+</string>
+				<key>des</key>
+				<string>Hanzo shoots a fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.</string>
+				<key>img</key>
+				<string>Hanzo-SCA</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Dragonstrike
+</string>
+				<key>des</key>
+				<string>Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.</string>
+				<key>img</key>
+				<string>Hanzo-D</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Mei</key>
+	<dict>
+		<key>name</key>
+		<string>Mei</string>
+		<key>image</key>
+		<string>Hero-Mei</string>
+		<key>diff</key>
+		<integer>1</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>2</integer>
+		<key>url</key>
+		<string>J4hB88uMY8k</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Endothermic Blaster
+</string>
+				<key>des</key>
+				<string>Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place.
+</string>
+				<key>img</key>
+				<string>Mei-EB</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Mei can also use her blaster to shoot icicle-like projectiles at medium range.</string>
+				<key>img</key>
+				<string>Mei-I</string>
+				<key>name</key>
+				<string>Icicle</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Cryo-Freeze
+</string>
+				<key>des</key>
+				<string>Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities.
+</string>
+				<key>img</key>
+				<string>Mei-CF</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Ice Wall
+</string>
+				<key>des</key>
+				<string>Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks.
+</string>
+				<key>img</key>
+				<string>Mei-IW</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Blizzard</string>
+				<key>des</key>
+				<string>Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.
+</string>
+				<key>img</key>
+				<string>Mei-B</string>
+			</dict>
+		</array>
+	</dict>
+	<key>WidowMaker</key>
+	<dict>
+		<key>name</key>
+		<string>WidowMaker</string>
+		<key>image</key>
+		<string>Hero-Widow</string>
+		<key>diff</key>
+		<integer>2</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>0</integer>
+		<key>url</key>
+		<string>fvPp6XbbTb0</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Widow&apos;s Kiss: Sniper
+</string>
+				<key>des</key>
+				<string>Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets.
+</string>
+				<key>img</key>
+				<string>Widow-S</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Widow&apos;s Kiss: Assault
+</string>
+				<key>des</key>
+				<string>Should targets close to medium range, the rifle can also be fired in fully-automatic mode.
+</string>
+				<key>img</key>
+				<string>Widow-A</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Grappling Hook
+</string>
+				<key>des</key>
+				<string>Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.</string>
+				<key>img</key>
+				<string>Widow-GH</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Venom Mine
+</string>
+				<key>des</key>
+				<string>Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.</string>
+				<key>img</key>
+				<string>Widow-VM</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Infra-Sight
+</string>
+				<key>des</key>
+				<string>Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.</string>
+				<key>img</key>
+				<string>Widow-IS</string>
+			</dict>
+		</array>
+	</dict>
 	<key>ProtoType</key>
 	<dict>
 		<key>name</key>
@@ -243,11 +429,11 @@
 				<string></string>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string></string>
 				<key>des</key>
 				<string></string>
 				<key>img</key>
-				<string></string>
-				<key>name</key>
 				<string></string>
 			</dict>
 			<dict>

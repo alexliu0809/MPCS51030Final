@@ -15,9 +15,11 @@ var heroArray:[HeroIntroInfo] = []
 
 class HeroIntroController: UITableViewController {
 
+    static let numberOfHeros = 7
+    
     
     var lastSelected:Int?
-    var CELLCOUNT = 0
+    var CELLCOUNT = numberOfHeros //change
     
     //------when make change on your cell size, also modify these------
     fileprivate struct C {
@@ -34,7 +36,7 @@ class HeroIntroController: UITableViewController {
     
     
     //cell count may vary
-    var cellHeights = (0..<4).map { _ in C.CellHeight.close }
+    var cellHeights = (0..<numberOfHeros).map { _ in C.CellHeight.close } //change2
     
     //Views
     //@IBOutlet weak var moreView: UIView!
@@ -71,8 +73,13 @@ class HeroIntroController: UITableViewController {
         
         var tempArray:[HeroIntroInfo] = []
         
-        for i in 0..<keys.count-1
+        for i in 0..<keys.count
         {
+            if (keys[i] == "ProtoType")
+            {
+                continue
+            }
+            
             let basicInfo = data.value(forKey: keys[i]) as! NSDictionary
             //print(basicInfo.value(forKey: "name")!)
             var type = HeroType.NotDefined
@@ -163,7 +170,7 @@ class HeroIntroController: UITableViewController {
     /** **/
     func initializeTable()
     {
-        CELLCOUNT = heroArray.count
+        //CELLCOUNT = heroArray.count
         self.tableView.reloadData()
     }
     
@@ -185,7 +192,7 @@ class HeroIntroController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CELLCOUNT
+        return heroArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "heroCell", for: indexPath) as! HeroCell
@@ -237,10 +244,11 @@ class HeroIntroController: UITableViewController {
         //tableView.beginUpdates()
         //tableView.endUpdates()
         //is the real expanding the view
-        
+        /*
         if let lastSelected = lastSelected
         {
             let lastIndexPath = IndexPath(row: lastSelected, section: 0)
+            print(self.tableView.numberOfRows(inSection: 0))
             guard case let lastCell as FoldingCell = tableView.cellForRow(at: lastIndexPath) else {
                 return
             }
@@ -282,10 +290,10 @@ class HeroIntroController: UITableViewController {
                     
                 })
             }
-            
-            else
-            {
-                print(4)
+ 
+            //else
+            //{
+            //    print(4)
                 var duration = 0.0
                 if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
                     cellHeights[indexPath.row] = kOpenCellHeight
@@ -306,19 +314,22 @@ class HeroIntroController: UITableViewController {
                     //self.lastSelected = indexPath.row
                 })
                 
-            }
-            
+            //}
+ 
             
         }
-        
-        else
-        {
+         */
+        //else
+        //{
             var duration = 0.0
+            var type = 0
             if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
+                type = 0
                 cellHeights[indexPath.row] = kOpenCellHeight
                 cell.selectedAnimation(true, animated: true, completion: nil)
                 duration = 0.5
             } else {// close cell
+                type = 1
                 cellHeights[indexPath.row] = kCloseCellHeight
                 cell.selectedAnimation(false, animated: true, completion: nil)
                 duration = 1.1
@@ -329,11 +340,14 @@ class HeroIntroController: UITableViewController {
                 tableView.endUpdates()
             }, completion: {
                 (Result) in
-                self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                if (type == 0)
+                {
+                    self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                }
                 //self.lastSelected = indexPath.row
             })
-        }
-        self.lastSelected = indexPath.row
+       // }
+       // self.lastSelected = indexPath.row
     }
     
     /*
@@ -383,4 +397,10 @@ class HeroIntroController: UITableViewController {
     
 
 }
-
+extension String
+{
+    func trim() -> String
+    {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
+}
