@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Hero-Genji.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Hero-Genji.jpg",
       "scale" : "2x"
     },
     {

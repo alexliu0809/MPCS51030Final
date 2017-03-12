@@ -23,7 +23,7 @@ class CareerViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Career-Bg")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Career-Bg")!)
         
         //initialize Heros
         HeroIntroController.initializeHeros()
