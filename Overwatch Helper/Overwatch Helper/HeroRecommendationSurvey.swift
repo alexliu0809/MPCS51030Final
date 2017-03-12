@@ -74,16 +74,33 @@ class HeroRecommendationSurvey: UIView {
     }
     
     func choose1(){
-        makeChoice(0)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.option1.alpha = 0
+        }, completion: {finish in
+            
+        })
+        self.makeChoice(0)
     }
     func choose2(){
-        makeChoice(1)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.option2.alpha = 0
+        }, completion: {finish in
+            self.makeChoice(1)
+        })
     }
     func choose3(){
-        makeChoice(2)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.option3.alpha = 0
+        }, completion: {finish in
+            self.makeChoice(2)
+        })
     }
     func choose4(){
-        makeChoice(3)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.option4.alpha = 0
+        }, completion: {finish in
+            self.makeChoice(3)
+        })
     }
     
     func nextQuestion() {
@@ -99,6 +116,10 @@ class HeroRecommendationSurvey: UIView {
                 self.option2.setTitle(self.Questions[self.nextQuestionIndex].options[1], for: .normal)
                 self.option3.setTitle(self.Questions[self.nextQuestionIndex].options[2], for: .normal)
                 self.option4.setTitle(self.Questions[self.nextQuestionIndex].options[3], for: .normal)
+                self.option1.center.x = 187
+                self.option2.center.x = 187
+                self.option3.center.x = 187
+                self.option4.center.x = 187
             })
         }
     }
@@ -107,9 +128,18 @@ class HeroRecommendationSurvey: UIView {
         guard !HeroLeft.isEmpty else {
             return
         }
-
+        
         HeroLeft = Questions[nextQuestionIndex].getResult(HeroLeft,choice)
-        nextQuestion()
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.option2.center.x = -200
+            self.option1.center.x = -200
+            self.option3.center.x = -200
+            self.option4.center.x = -200
+        }, completion: {finish in
+            self.nextQuestion()
+        })
+//        nextQuestion()
     }
     
     func settle(){

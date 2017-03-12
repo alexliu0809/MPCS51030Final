@@ -29,6 +29,7 @@ class LFGCell: UITableViewCell {
         self.contentView.addSubview(avatar)
         self.contentView.addSubview(battleID)
         self.contentView.addSubview(descrip)
+        self.isUserInteractionEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {

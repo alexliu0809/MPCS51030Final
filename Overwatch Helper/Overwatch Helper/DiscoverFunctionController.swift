@@ -54,6 +54,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             guard let destination = (segue.destination as? HeroDetailController) else{
                 return
             }
+            print(selectedHero?.heroName)
             destination.detailItem = selectedHero
         }
     }

@@ -26,6 +26,7 @@ class MapDetailController: UITableViewController{
         self.tableView.estimatedRowHeight = 500
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        
     }
     
     override func didReceiveMemoryWarning() {

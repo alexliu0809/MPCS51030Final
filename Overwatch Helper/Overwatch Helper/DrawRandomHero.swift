@@ -92,15 +92,15 @@ class DrawRandomHero: UIView {
     }
     
     func changeHero(){
-        
-        print(heroIndex)
-                self.heroImg.image = self.Heros[self.heroIndex].topImage
-                self.heroName.text = self.Heros[self.heroIndex].heroName
-
         heroIndex += 1
         if heroIndex >= Heros.count{
             heroIndex = 0
         }
+        print(heroIndex)
+                self.heroImg.image = self.Heros[self.heroIndex].topImage
+                self.heroName.text = self.Heros[self.heroIndex].heroName
+
+        
     }
     
     
@@ -140,6 +140,7 @@ class DrawRandomHero: UIView {
     }
     
     func selectionHandler(){
+        print(Heros[heroIndex].heroName)
         delegate?.getDrawResult(Heros[heroIndex])
     }
     
