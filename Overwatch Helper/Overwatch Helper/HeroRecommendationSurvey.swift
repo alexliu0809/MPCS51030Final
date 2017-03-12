@@ -57,7 +57,6 @@ class HeroRecommendationSurvey: UIView {
         option2.addTarget(self, action: #selector(self.choose2), for: .touchUpInside)
         option3.addTarget(self, action: #selector(self.choose3), for: .touchUpInside)
         option4.addTarget(self, action: #selector(self.choose4), for: .touchUpInside)
-        
         self.addSubview(question)
         self.addSubview(option1)
         self.addSubview(option2)
@@ -67,6 +66,11 @@ class HeroRecommendationSurvey: UIView {
     
     func surveyStart(){
         nextQuestion()
+    }
+    
+    func cursurOn(button: UIButton) {
+        
+        button.backgroundColor = UIColor.black
     }
     
     func choose1(){
@@ -103,9 +107,7 @@ class HeroRecommendationSurvey: UIView {
         guard !HeroLeft.isEmpty else {
             return
         }
-//        for i in 0...HeroScores.count{
-//            HeroScores[i] += (Questions[nextQuestionIndex].choice[choice]?[i])!
-//        }
+
         HeroLeft = Questions[nextQuestionIndex].getResult(HeroLeft,choice)
         nextQuestion()
     }

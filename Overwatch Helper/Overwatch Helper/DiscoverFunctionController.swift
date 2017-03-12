@@ -24,6 +24,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     var LFG: UITableView?
     var posts: [LFGMessage] = LFGMessage.Messages
     var triggeredBySegue: Bool = true
+    var selectedHero: HeroIntroInfo?
     
 //    var result: HeroIntroInfo
     
@@ -35,11 +36,12 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     }
     
     func getSurveyResult(_ hero: HeroIntroInfo) {
-//        result = hero
+        selectedHero = hero
         heroSelection(hero)
     }
     
     func getDrawResult(_ hero: HeroIntroInfo){
+        selectedHero = hero
         heroSelection(hero)
     }
     
@@ -49,7 +51,10 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "discoverToHero"{
-            
+            guard let destination = (segue.destination as? HeroDetailController) else{
+                return
+            }
+            destination.detailItem = selectedHero
         }
     }
     
@@ -161,7 +166,8 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         
         return ret
     }
-        
+    
+
     
 }
 
@@ -214,6 +220,9 @@ extension DiscoverFunctionController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    
+    
 }
 
 

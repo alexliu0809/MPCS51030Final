@@ -429,6 +429,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="LPn-v1-fgX" kind="show" identifier="discoverToHero" id="Jj8-9M-R2D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-9R-8qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1105,5 +1108,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p2O-ey-rm6"/>
+        <segue reference="Jj8-9M-R2D"/>
     </inferredMetricsTieBreakers>
 </document>
