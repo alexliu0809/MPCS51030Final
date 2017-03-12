@@ -36,9 +36,9 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempView.alpha = 0.6
         self.view.addSubview(tempView)
         
-        self.newsTable.separatorColor = UIColor.orange
-        self.newsTable.layer.borderWidth = 1.2
-        self.newsTable.layer.borderColor = UIColor.orange.cgColor
+        //self.newsTable.separatorColor = UIColor.orange
+        //self.newsTable.layer.borderWidth = 1.2
+        //self.newsTable.layer.borderColor = UIColor.orange.cgColor
         self.newsTable.backgroundColor = UIColor.clear
         self.view.bringSubview(toFront: self.newsTable)
         //self.newsTable.
