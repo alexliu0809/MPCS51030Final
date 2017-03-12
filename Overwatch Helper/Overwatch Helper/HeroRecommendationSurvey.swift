@@ -24,34 +24,29 @@ class HeroRecommendationSurvey: UIView {
 //    var result: HeroIntroInfo?
     
     override init(frame: CGRect){
-        question = UILabel(frame: (CGRect(x: 0, y: 100, width: 375, height: 50)))
-        option1 = UIButton(frame: CGRect(x: 87, y: 160, width: 200, height: 50))
-        option2 = UIButton(frame: CGRect(x: 87, y: 220, width: 200, height: 50))
-        option3 = UIButton(frame: CGRect(x: 87, y: 280, width: 200, height: 50))
-        option4 = UIButton(frame: CGRect(x: 87, y: 340, width: 200, height: 50))
+        question = UILabel(frame: (CGRect(x: 0, y: 350, width: 375, height:100)))
+        option1 = UIButton(frame: CGRect(x: 87, y: 400, width: 200, height: 30))
+        option2 = UIButton(frame: CGRect(x: 87, y: 450, width: 200, height: 30))
+        option3 = UIButton(frame: CGRect(x: 87, y: 500, width: 200, height: 30))
+        option4 = UIButton(frame: CGRect(x: 87, y: 550, width: 200, height: 30))
         
         super.init(frame: frame)
         
         
         
-        question.text = "question1"
-        question.backgroundColor = UIColor(netHex: 0xFFC70C)
+        question.backgroundColor = UIColor(hexString: "F89E19")
+        question.font = UIFont(name: "Verdana-BoldItalic", size: 27)
+        question.numberOfLines = 0
+        question.lineBreakMode = .byWordWrapping
+        question.sizeToFit()
         
-        option1.titleLabel?.text = "Option1"
-        option1.setTitle("Option1", for: .normal)
-        option1.backgroundColor = UIColor(netHex: 0xFFC70C)
         
-        option2.titleLabel?.text = "Option2"
-        option2.setTitle("Option2", for: .normal)
-        option2.backgroundColor = UIColor(netHex: 0xFFC70C)
+        initOption(option1)
+        initOption(option2)
+        initOption(option3)
+        initOption(option4)
         
-        option3.titleLabel?.text = "Option3"
-        option3.setTitle("Option3", for: .normal)
-        option3.backgroundColor = UIColor(netHex: 0xFFC70C)
         
-        option4.titleLabel?.text = "Option4"
-        option4.setTitle("Option4", for: .normal)
-        option4.backgroundColor = UIColor(netHex: 0xFFC70C)
         
         option1.addTarget(self, action: #selector(self.choose1), for: .touchUpInside)
         option2.addTarget(self, action: #selector(self.choose2), for: .touchUpInside)
@@ -62,6 +57,18 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(option2)
         self.addSubview(option3)
         self.addSubview(option4)
+    }
+    
+    func initOption(_ option1: UIButton){
+        option1.titleLabel?.text = "Option1"
+        option1.setTitle("Option1", for: .normal)
+        option1.backgroundColor = UIColor(hexString: "F89E19")
+        option1.titleLabel?.font = UIFont(name: "Verdana-BoldItalic", size: 20)
+        option1.layer.cornerRadius = 5
+        option1.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        option1.titleLabel?.textAlignment = .left
+        option1.contentHorizontalAlignment = .left
+        option1.setTitleColor(UIColor.black, for: .normal)
     }
     
     func surveyStart(){
@@ -112,14 +119,20 @@ class HeroRecommendationSurvey: UIView {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3, animations: {
                 self.question.text = self.Questions[self.nextQuestionIndex].question
-                self.option1.setTitle(self.Questions[self.nextQuestionIndex].options[0], for: .normal)
-                self.option2.setTitle(self.Questions[self.nextQuestionIndex].options[1], for: .normal)
-                self.option3.setTitle(self.Questions[self.nextQuestionIndex].options[2], for: .normal)
-                self.option4.setTitle(self.Questions[self.nextQuestionIndex].options[3], for: .normal)
+                self.question.sizeToFit()
+                
+                self.option1.setTitle("   " + self.Questions[self.nextQuestionIndex].options[0], for: .normal)
+                self.option2.setTitle("   " + self.Questions[self.nextQuestionIndex].options[1], for: .normal)
+                self.option3.setTitle("   " + self.Questions[self.nextQuestionIndex].options[2], for: .normal)
+                self.option4.setTitle("   " + self.Questions[self.nextQuestionIndex].options[3], for: .normal)
                 self.option1.center.x = 187
                 self.option2.center.x = 187
                 self.option3.center.x = 187
                 self.option4.center.x = 187
+                self.option1.alpha = 1
+                self.option2.alpha = 1
+                self.option3.alpha = 1
+                self.option4.alpha = 1
             })
         }
     }
@@ -138,8 +151,13 @@ class HeroRecommendationSurvey: UIView {
             self.option4.center.x = -200
         }, completion: {finish in
             self.nextQuestion()
+            self.option1.center.x = 575
+            self.option2.center.x = 575
+            self.option3.center.x = 575
+            self.option4.center.x = 575
         })
 //        nextQuestion()
+        
     }
     
     func settle(){

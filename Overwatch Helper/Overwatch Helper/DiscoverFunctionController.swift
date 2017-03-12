@@ -31,11 +31,14 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     override func viewDidLoad() {
         super.viewDidLoad()
         UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "discover-bg")?.drawInRect(self.view.bounds)
+        UIImage(named: "discover-bg")?.draw(in: self.view.bounds)
         
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         
         UIGraphicsEndImageContext()
+        
+        self.view.backgroundColor = UIColor(patternImage: image)
+//        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "discover-bg"))
         
         // Do any additional setup after loading the view.
     }

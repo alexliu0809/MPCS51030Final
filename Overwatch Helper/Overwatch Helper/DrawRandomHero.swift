@@ -30,13 +30,13 @@ class DrawRandomHero: UIView {
     weak var delegate: DrawHeroDelegate?
     
     override init(frame: CGRect) {
-        heroImg = UIImageView(frame: CGRect(x: 42, y: 100, width: 290, height: 290))
-        heroName = UILabel(frame: CGRect(x: 0, y: 185, width: 300, height: 100))
+        heroImg = UIImageView(frame: CGRect(x: 82, y: 130, width: 210, height: 210))
+        heroName = UILabel(frame: CGRect(x: 0, y: 150, width: 210, height: 60))
         stopButton = UIButton(frame: CGRect(x: 87, y: 435, width: 200, height: 50))
         detailButton = UIButton(frame:CGRect(x: 77, y: 505, width: 210, height: 50))
-        backView = UIView(frame: CGRect(x: 22, y: 80, width: 330, height: 330))
+        backView = UIView(frame: CGRect(x: 62, y: 110, width: 250, height: 250))
         backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-        backView.layer.cornerRadius = 160
+        backView.layer.cornerRadius = 125
         backView.clipsToBounds = true
         
         
@@ -59,11 +59,11 @@ class DrawRandomHero: UIView {
         heroName.textAlignment = .center
         
         
-        heroName.font = UIFont(name: "Verdana-BoldItalic", size: 35)
+        heroName.font = UIFont(name: "Verdana-BoldItalic", size: 27)
         heroName.textColor = UIColor.white
         heroName.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         
-        stopButton.backgroundColor = UIColor(netHex: 0xFFC70C)
+        stopButton.backgroundColor = UIColor(hexString: "F89E19")
         stopButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         stopButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
         stopButton.layer.cornerRadius = 5
@@ -71,7 +71,7 @@ class DrawRandomHero: UIView {
         stopButton.setTitle("Let's Rock!", for: .normal)
         stopButton.setTitleColor(UIColor.white, for: .normal)
         
-        detailButton.backgroundColor = UIColor(netHex: 0xFFC70C)
+        detailButton.backgroundColor = UIColor(hexString: "F89E19")
         detailButton.setTitleColor(UIColor.white, for: .normal)
         detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
