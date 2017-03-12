@@ -23,7 +23,12 @@ class LFGCell: UITableViewCell {
         
         descrip = UITextView(frame: CGRect(x: 110, y: 50, width: 255, height: 200))
         
+
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        self.contentView.addSubview(avatar)
+        self.contentView.addSubview(battleID)
+        self.contentView.addSubview(descrip)
     }
     
     required init?(coder aDecoder: NSCoder) {

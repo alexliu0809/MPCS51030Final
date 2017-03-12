@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -992,8 +992,32 @@
                                     <outlet property="typeTag" destination="X3Z-YB-ipI" id="dbe-IU-DHR"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapVideoInfo" rowHeight="165" id="vqp-HD-S9W" customClass="MapVideoInfo" customModule="Overwatch_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="423" width="375" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqp-HD-S9W" id="Y2d-eY-chG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-sa-g8M" customClass="YouTubePlayerView" customModule="YouTubePlayer_Swift">
+                                            <rect key="frame" x="8" y="8" width="359" height="149"/>
+                                            <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DlZ-sa-g8M" secondAttribute="bottom" constant="8" id="FS0-nQ-KAL"/>
+                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="top" secondItem="Y2d-eY-chG" secondAttribute="top" constant="8" id="Tuc-Fm-amT"/>
+                                        <constraint firstAttribute="trailing" secondItem="DlZ-sa-g8M" secondAttribute="trailing" constant="8" id="Y5N-is-X8N"/>
+                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="leading" secondItem="Y2d-eY-chG" secondAttribute="leading" constant="8" id="eUy-zB-h6l"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.21173727510000001" green="0.21178042890000001" blue="0.21173459289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="video" destination="DlZ-sa-g8M" id="tqT-Dp-NLb"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapDetailInfo" id="reB-i4-KRc" customClass="MapDetailDetailInfo" customModule="Overwatch_Helper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="423" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="588" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="reB-i4-KRc" id="6wx-tc-rxr">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1023,30 +1047,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="mapBrief" destination="4SK-HS-Srk" id="4XH-eF-qpQ"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapVideoInfo" rowHeight="165" id="vqp-HD-S9W" customClass="MapVideoInfo" customModule="Overwatch_Helper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="467" width="375" height="165"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vqp-HD-S9W" id="Y2d-eY-chG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-sa-g8M" customClass="YouTubePlayerView" customModule="YouTubePlayer_Swift">
-                                            <rect key="frame" x="8" y="8" width="359" height="149"/>
-                                            <color key="backgroundColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="DlZ-sa-g8M" secondAttribute="bottom" constant="8" id="FS0-nQ-KAL"/>
-                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="top" secondItem="Y2d-eY-chG" secondAttribute="top" constant="8" id="Tuc-Fm-amT"/>
-                                        <constraint firstAttribute="trailing" secondItem="DlZ-sa-g8M" secondAttribute="trailing" constant="8" id="Y5N-is-X8N"/>
-                                        <constraint firstItem="DlZ-sa-g8M" firstAttribute="leading" secondItem="Y2d-eY-chG" secondAttribute="leading" constant="8" id="eUy-zB-h6l"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.21173727510000001" green="0.21178042890000001" blue="0.21173459289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="video" destination="DlZ-sa-g8M" id="tqT-Dp-NLb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

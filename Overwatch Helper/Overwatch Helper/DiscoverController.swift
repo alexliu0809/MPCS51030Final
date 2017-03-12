@@ -12,7 +12,7 @@ class DiscoverController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        messageInitialize()
         // Do any additional setup after loading the view.
     }
 

@@ -96,7 +96,7 @@ class MapDetailController: UITableViewController{
 
             return cell
         }
-        else if (indexPath.row == 2)
+        else if (indexPath.row == 3)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapDetailInfo", for: indexPath) as! MapDetailDetailInfo
             //print("3+")
@@ -111,11 +111,14 @@ class MapDetailController: UITableViewController{
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.item == 0 || indexPath.item == 3 {
+        switch indexPath.item {
+        case 0:
             return 165
-        }else if indexPath.item == 1{
+        case 1:
             return 230
-        }else{
+        case 2:
+            return 200
+        default:
             return UITableViewAutomaticDimension
         }
     }

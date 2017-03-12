@@ -16,13 +16,13 @@ enum functionType{
     case none
 }
 
-class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDelegate, UITableViewDelegate, UITableViewDataSource {
+class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDelegate {
 
     var functionType: functionType = .none
     var survey: HeroRecommendationSurvey?
     var draw: DrawRandomHero?
     var LFG: UITableView?
-    var posts: [(String,String,UIImage)] = []
+    var posts: [LFGMessage] = LFGMessage.Messages
     var triggeredBySegue: Bool = true
     
 //    var result: HeroIntroInfo
@@ -68,43 +68,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lfgCell", for: indexPath) as! LFGCell
-//        cell.avatar = posts[indexPath.item]
-        cell.descrip.isScrollEnabled = false
-        let marginGuide = cell.contentView.layoutMarginsGuide
-        
-        cell.avatar.translatesAutoresizingMaskIntoConstraints = false
-        cell.battleID.translatesAutoresizingMaskIntoConstraints = false
-        cell.descrip.translatesAutoresizingMaskIntoConstraints = false
-        
-        cell.avatar.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
-        cell.avatar.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
-        cell.avatar.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-        cell.avatar.heightAnchor.constraint(equalTo: cell.avatar.widthAnchor).isActive = true
-        
-        cell.battleID.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
-        
-        cell.descrip.leadingAnchor.constraint(equalTo: cell.avatar.trailingAnchor).isActive = true
-        cell.descrip.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        cell.descrip.topAnchor.constraint(equalTo: cell.battleID.bottomAnchor).isActive = true
-        cell.descrip.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
-        
-        cell.avatar.image = posts[indexPath.item].2
-        cell.battleID.text = posts[indexPath.item].0
-        cell.descrip.text = posts[indexPath.item].1
-        
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     func reset(){
         switch functionType {
         case .whatsToday:
@@ -129,7 +93,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             LFG?.dataSource = self
             LFG?.register(LFGCell.self, forCellReuseIdentifier: "lfgCell")
             self.view.addSubview(LFG!)
-            LFG?.estimatedRowHeight = 100
+            LFG?.estimatedRowHeight = 300
             LFG?.rowHeight = UITableViewAutomaticDimension
             LFG?.reloadData()
             
@@ -138,8 +102,11 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             LFG?.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
             LFG?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             LFG?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            LFG?.separatorStyle = .none
+            LFG?.backgroundColor = UIColor(netHex: 0x363636)
+            LFG?.tableFooterView = UIView(frame: .zero)
             
-            posts = fetchLFGData()
+//            posts = fetchLFGData()
             
         default:
             break
@@ -196,6 +163,57 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     }
         
     
+}
+
+extension DiscoverFunctionController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lfgCell", for: indexPath) as! LFGCell
+        //        cell.avatar = posts[indexPath.item]
+        cell.descrip.isScrollEnabled = false
+        let marginGuide = cell.contentView.layoutMarginsGuide
+        
+//        cell.avatar.translatesAutoresizingMaskIntoConstraints = false
+//        cell.battleID.translatesAutoresizingMaskIntoConstraints = false
+//        cell.descrip.translatesAutoresizingMaskIntoConstraints = false
+        cell.avatar.clipsToBounds = true
+        cell.battleID.clipsToBounds = true
+        cell.descrip.clipsToBounds = true
+        cell.avatar.layer.cornerRadius = cell.avatar.frame.height / 2
+        cell.descrip.backgroundColor = UIColor(netHex: 0x363636)
+        cell.backgroundColor = UIColor(netHex: 0x363636)
+        
+        cell.avatar.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+        cell.avatar.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        cell.avatar.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
+//        cell.avatar.heightAnchor.constraint(equalTo: cell.avatar.widthAnchor).isActive = true
+        
+        cell.battleID.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        
+        cell.descrip.leadingAnchor.constraint(equalTo: cell.avatar.trailingAnchor).isActive = true
+        cell.descrip.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+        cell.descrip.topAnchor.constraint(equalTo: cell.battleID.bottomAnchor).isActive = true
+        cell.descrip.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
+
+        cell.clipsToBounds = true
+        
+        cell.avatar.image = posts[indexPath.item].avatar
+        cell.battleID.text = posts[indexPath.item].battleID
+        cell.descrip.text = posts[indexPath.item].descrip
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 }
 
 
