@@ -96,6 +96,10 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             self.view.addSubview((survey?.option2)!)
             self.view.addSubview((survey?.option3)!)
             self.view.addSubview((survey?.option4)!)
+                    survey?.question.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+                    survey?.question.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+                    survey?.question.translatesAutoresizingMaskIntoConstraints = true
+            survey?.question.clipsToBounds = true
             survey?.delegate = self
             survey?.surveyStart()
         case .lookingForGroup:
@@ -227,6 +231,25 @@ extension DiscoverFunctionController: UITableViewDelegate, UITableViewDataSource
         return UITableViewAutomaticDimension
     }
     
+    func heroNotFound() {
+        let alert = UIAlertController(title: "No match", message: nil, preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "Try again", style: .default, handler: {
+            action in
+            self.survey?.restart()
+        })
+        let action2 = UIAlertAction(title: "OK", style: .default, handler: {
+            action in
+            alert.dismiss(animated: true, completion: {})
+        })
+        
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     
 }
