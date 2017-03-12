@@ -22,6 +22,7 @@ class DrawRandomHero: UIView {
     var heroName: UILabel
     var stopButton: UIButton
     var detailButton: UIButton
+    var backView: UIView
     var drawTimer: Timer?
     var Heros: [HeroIntroInfo] = []
     var heroIndex = 0
@@ -29,16 +30,22 @@ class DrawRandomHero: UIView {
     weak var delegate: DrawHeroDelegate?
     
     override init(frame: CGRect) {
-        heroImg = UIImageView(frame: CGRect(x: 37, y: 110, width: 300, height: 300))
-        heroName = UILabel(frame: CGRect(x: 0, y: 200, width: 300, height: 100))
-        stopButton = UIButton(frame: CGRect(x: 87, y: 430, width: 200, height: 50))
-        detailButton = UIButton(frame:CGRect(x: 77, y: 500, width: 210, height: 50))
+        heroImg = UIImageView(frame: CGRect(x: 42, y: 100, width: 290, height: 290))
+        heroName = UILabel(frame: CGRect(x: 0, y: 185, width: 300, height: 100))
+        stopButton = UIButton(frame: CGRect(x: 87, y: 435, width: 200, height: 50))
+        detailButton = UIButton(frame:CGRect(x: 77, y: 505, width: 210, height: 50))
+        backView = UIView(frame: CGRect(x: 22, y: 80, width: 330, height: 330))
+        backView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        backView.layer.cornerRadius = 160
+        backView.clipsToBounds = true
         
-
+        
+        
         
         
         Heros = heroArray
         super.init(frame: frame)
+        self.addSubview(backView)
         
         self.addSubview(heroImg)
 //        self.addSubview(heroName)
@@ -57,30 +64,33 @@ class DrawRandomHero: UIView {
         heroName.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         
         stopButton.backgroundColor = UIColor(netHex: 0xFFC70C)
-        stopButton.setTitleColor(UIColor.black, for: .normal)
         stopButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         stopButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
+        stopButton.layer.cornerRadius = 5
         
         stopButton.setTitle("Let's Rock!", for: .normal)
-        stopButton.setTitleColor(UIColor.black, for: .normal)
+        stopButton.setTitleColor(UIColor.white, for: .normal)
         
         detailButton.backgroundColor = UIColor(netHex: 0xFFC70C)
-        detailButton.setTitleColor(UIColor.black, for: .normal)
+        detailButton.setTitleColor(UIColor.white, for: .normal)
         detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
         detailButton.isEnabled = false
         detailButton.alpha = 0
         
         detailButton.setTitle("See Profile", for: .normal)
-        detailButton.setTitleColor(UIColor.black, for: .normal)
+        detailButton.setTitleColor(UIColor.white, for: .normal)
+        detailButton.layer.cornerRadius = 5
         
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(stopButtonTapped(_:)))
         stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside)
         detailButton.addTarget(self, action: #selector(self.selectionHandler), for: .touchUpInside)
 
+        
         self.addSubview(detailButton)
         self.addSubview(stopButton)
+        
         print(stopButton.allTargets)
     }
     
