@@ -72,14 +72,16 @@ class HeroDetailController:UITableViewController{
             //cell.backgroundColor = UIColor.red
             //print(detailItem)
             cell.iconImage.image = detailItem?.topImage
+            cell.iconImage.layer.cornerRadius = (cell.iconImage.frame.height)/2
+            cell.iconImage.clipsToBounds = true
             return cell
         }
-        else if (indexPath.row == 1) //change2
+        else if (indexPath.row == 2 + (detailItem?.heroAbilityDescription.count)! - 1) //change2
         {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroBasicCell", for: indexPath) as! HeroDetailBasicInfo
             //print("2")
-            cell.backgroundColor = UIColor.gray
+            //cell.backgroundColor = UIColor.gray
             cell.youtubePlayer.loadVideoID(detailItem!.videoUrl)
             return cell
         }
@@ -87,10 +89,10 @@ class HeroDetailController:UITableViewController{
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroDetailCell", for: indexPath) as! HeroDetailDetailInfo
             //print("3+")
-            cell.backgroundColor = UIColor.green
-            cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-2] //change3
-            cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-2]
-            cell.detailInfoImage.image = detailItem?.heroAbilityImage[indexPath.row-2]
+            //cell.backgroundColor = UIColor.green
+            cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-1] //change3
+            cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-1]
+            cell.detailInfoImage.image = detailItem?.heroAbilityImage[indexPath.row-1]
             return cell
         }
     }
@@ -99,7 +101,7 @@ class HeroDetailController:UITableViewController{
         {
             return 165
         }
-        else if (indexPath.row == 1) //change 1
+        else if (indexPath.row == 2 + (detailItem?.heroAbilityDescription.count)! - 1) //change 1, original 1
         {
             return 165
         }

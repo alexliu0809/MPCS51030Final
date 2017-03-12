@@ -192,10 +192,16 @@ class HeroIntroController: UITableViewController {
         // Configure the cell...
         let foreImage = cell.foregroundView.subviews[0] as! UIImageView
         foreImage.image = heroArray[indexPath.row].topImage
+        foreImage.layer.cornerRadius = (foreImage.frame.height)/2
+        foreImage.clipsToBounds = true
+        cell.foregroundView.backgroundColor = UIColor(patternImage: UIImage(named: "Hero-Bg")!)
         //print(cell.containerView.subviews.count)
         //print(cell.containerView.subviews[0].subviews.count)
         let backImage = cell.containerView.subviews[0].subviews[0] as! UIImageView
         backImage.image = heroArray[indexPath.row].topImage
+        backImage.layer.cornerRadius = (backImage.frame.height)/2
+        backImage.clipsToBounds = true
+        cell.containerView.subviews[0].backgroundColor = UIColor(patternImage: UIImage(named: "Hero-Bg")!)
         //backImage.image = heroArray[indexPath.row].topImage
         //let btnView = cell.contentView.viewWithTag(1)?.subviews[0] as! UIButton
         //let recognizer = UITapGestureRecognizer()
