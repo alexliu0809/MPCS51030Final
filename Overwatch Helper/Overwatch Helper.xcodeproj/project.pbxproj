@@ -13,7 +13,6 @@
 		C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F531E6C630300B0F67E /* AppDelegate.swift */; };
 		C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F551E6C630300B0F67E /* HeroIntroController.swift */; };
 		C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10C4F571E6C630300B0F67E /* Main.storyboard */; };
-		C10C4F5B1E6C630300B0F67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10C4F5A1E6C630300B0F67E /* Assets.xcassets */; };
 		C10C4F5E1E6C630300B0F67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10C4F5C1E6C630300B0F67E /* LaunchScreen.storyboard */; };
 		C10C4F691E6C630300B0F67E /* Overwatch_HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F681E6C630300B0F67E /* Overwatch_HelperTests.swift */; };
 		C10C4F741E6C630300B0F67E /* Overwatch_HelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F731E6C630300B0F67E /* Overwatch_HelperUITests.swift */; };
@@ -42,6 +41,7 @@
 		C1B2C97B1E748B72009AA7BF /* RecommendationQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */; };
 		C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97C1E749B5D009AA7BF /* Extensions.swift */; };
 		C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */; };
+		C1B2C9871E762B4F009AA7BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B2C9861E762B4F009AA7BF /* Assets.xcassets */; };
 		C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E01E6DFB6000181A7C /* CareerViewController.swift */; };
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
@@ -77,7 +77,6 @@
 		C10C4F531E6C630300B0F67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C10C4F551E6C630300B0F67E /* HeroIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroIntroController.swift; sourceTree = "<group>"; };
 		C10C4F581E6C630300B0F67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C10C4F5A1E6C630300B0F67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C10C4F5D1E6C630300B0F67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C10C4F5F1E6C630300B0F67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C10C4F641E6C630300B0F67E /* Overwatch HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Overwatch HelperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +110,7 @@
 		C1B2C97A1E748B72009AA7BF /* RecommendationQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationQuestion.swift; sourceTree = "<group>"; };
 		C1B2C97C1E749B5D009AA7BF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapIntroData.plist; sourceTree = "<group>"; };
+		C1B2C9861E762B4F009AA7BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C33508E01E6DFB6000181A7C /* CareerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 				C10C4F821E6C6F3100B0F67E /* view */,
 				C10C4F811E6C6F2700B0F67E /* controller */,
 				C10C4F531E6C630300B0F67E /* AppDelegate.swift */,
+				C1B2C9861E762B4F009AA7BF /* Assets.xcassets */,
 				C10C4F571E6C630300B0F67E /* Main.storyboard */,
-				C10C4F5A1E6C630300B0F67E /* Assets.xcassets */,
 				C10C4F5C1E6C630300B0F67E /* LaunchScreen.storyboard */,
 				C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */,
 				C10C4F5F1E6C630300B0F67E /* Info.plist */,
@@ -395,8 +395,8 @@
 				C10C4F5E1E6C630300B0F67E /* LaunchScreen.storyboard in Resources */,
 				C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */,
 				BBE5EB271E73855F007A2146 /* HeroIntroData.plist in Resources */,
-				C10C4F5B1E6C630300B0F67E /* Assets.xcassets in Resources */,
 				C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */,
+				C1B2C9871E762B4F009AA7BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

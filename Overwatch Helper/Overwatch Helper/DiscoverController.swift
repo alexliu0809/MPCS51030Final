@@ -10,10 +10,11 @@ import UIKit
 
 class DiscoverController: UIViewController {
 
-    var bgIndex = 1
-    var maxBgIndex = 4
+    var bgIndex = 2
+    var maxBgIndex = 7
     var timer: Timer?
     
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bgImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class DiscoverController: UIViewController {
 //        self.view.backgroundColor = UIColor(patternImage: image)
         // Do any additional setup after loading the view.
         
-        self.bgImageView.image = #imageLiteral(resourceName: "discover-bg")
+        self.bgImageView.image = #imageLiteral(resourceName: "discoverBG1")
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(changeBG), userInfo: nil, repeats: true)
     
                 }
@@ -39,10 +40,12 @@ class DiscoverController: UIViewController {
             
             UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCrossDissolve, animations: {
                 self.bgImageView.alpha = 0
+                self.bottomView.alpha = 0
             }, completion: {_ in
                 self.bgImageView.image = UIImage(named: "discoverBG\(self.bgIndex)")
                 UIView.animate(withDuration: 0.5, animations: {
                     self.bgImageView.alpha = 1
+                    self.bottomView.alpha = 1
                 })
             })
         }
