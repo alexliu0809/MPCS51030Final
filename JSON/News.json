@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=NGkZXyo3soc",
+    "title": "Tony Stark - Play of the Game",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/Tony.jpeg"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=iGFFguq1UZo",
+    "title": "Overwatch Premier Series in China",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/OWPS.jpeg"
+  },
+    {
+    "url": "https://www.youtube.com/watch?v=aaHcHLQdCxM",
+    "title": "Overwatch Best Moments",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/OverwatchBest.jpg"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=vGrMQhowWIQ",
+    "title": "Sounds Like Overwatch",
+    "image": "https://cdn.rawgit.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/SoundsLikeOW.jpeg"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=Qi69aTLYF8E",
+    "title": "Overwatch Rap",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/Rap.jpeg"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=G_L27MSd_Rc",
+    "title": "Overwatch High",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/OverwatchHigh.jpg"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=JzoAScuimTU",
+    "title": "Leaning Tower Of D.Va",
+    "image": "https://raw.githubusercontent.com/alexliu0809/MPCS51030Final/Dev/JSON/NewsIcon/DVa.jpg"
+  }
+]

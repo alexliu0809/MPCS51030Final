@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Mcree</key>
+	<dict>
+		<key>name</key>
+		<string>Mcree</string>
+		<key>image</key>
+		<string>Hero-Mcree</string>
+		<key>diff</key>
+		<integer>2</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>8</integer>
+		<key>url</key>
+		<string>kq4OlEDiCi8</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Peacekeeper</string>
+				<key>des</key>
+				<string>McCree fires off a round from his trusty six-shooter.</string>
+				<key>img</key>
+				<string>Mcree-P</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>McCree dives in the direction he&apos;s moving, effortlessly reloading his Peacekeeper in the process.</string>
+				<key>img</key>
+				<string>Mcree-CR</string>
+				<key>name</key>
+				<string>Combat Roll</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Flashbang</string>
+				<key>des</key>
+				<string>McCree heaves a blinding grenade that explodes shortly after it leaves his hand. The blast staggers enemies in a small radius.</string>
+				<key>img</key>
+				<string>Mcree-F</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Deadeye</string>
+				<key>des</key>
+				<string>Focus. Mark. Draw. McCree takes a few precious moments to aim; when he&apos;s ready to fire, he shoots every enemy in his line of sight. The weaker his targets are, the faster he&apos;ll line up a killshot.</string>
+				<key>img</key>
+				<string>Mcree-D</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Lucio</key>
+	<dict>
+		<key>name</key>
+		<string>Lucio</string>
+		<key>image</key>
+		<string>Hero-Lucio</string>
+		<key>diff</key>
+		<integer>2</integer>
+		<key>type</key>
+		<string>Support</string>
+		<key>id</key>
+		<integer>7</integer>
+		<key>url</key>
+		<string>ywTNgR3ldFc</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Sonic Amplifier</string>
+				<key>des</key>
+				<string>Lúcio can hit his enemies with sonic projectiles or knock them back with a blast of sound.</string>
+				<key>img</key>
+				<string>Lucio-SA</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Lúcio continuously energizes himself, and nearby teammates, with music. He can switch between two songs: one amplifies movement speed, while the other regenerates health.</string>
+				<key>img</key>
+				<string>Lucio-C</string>
+				<key>name</key>
+				<string>Crossfade</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Amp It Up</string>
+				<key>des</key>
+				<string>Lúcio increases the volume on his speakers, boosting the effects of his songs.</string>
+				<key>img</key>
+				<string>Lucio-AIU</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Sound Barrier</string>
+				<key>des</key>
+				<string>Protective waves radiate out from Lúcio’s Sonic Amplifier, briefly providing him and nearby allies with personal shields.</string>
+				<key>img</key>
+				<string>Lucio-SB</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Genji</key>
+	<dict>
+		<key>name</key>
+		<string>Genji</string>
+		<key>image</key>
+		<string>Hero-Genji</string>
+		<key>diff</key>
+		<integer>3</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>4</integer>
+		<key>url</key>
+		<string>lYOjIDhJIG0</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Shuriken</string>
+				<key>des</key>
+				<string>Genji looses three deadly throwing stars in quick succession. Alternatively, he can throw three shuriken in a wider spread.</string>
+				<key>img</key>
+				<string>Genji-Shuriken</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Genji darts forward, slashing with his katana and passing through foes in his path. If Genji eliminates a target, he can instantly use this ability again.</string>
+				<key>img</key>
+				<string>Genji-SS</string>
+				<key>name</key>
+				<string>Swift Strike</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Deflect</string>
+				<key>des</key>
+				<string>With lightning-quick swipes of his sword, Genji reflects any oncoming projectiles and can send them rebounding towards his enemies.</string>
+				<key>img</key>
+				<string>Genji-Deflect</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Cyber-Agility</string>
+				<key>des</key>
+				<string>Thanks to his cybernetic abilities, Genji can climb walls and perform jumps in mid-air.</string>
+				<key>img</key>
+				<string>Genji-CA</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Dragonblade</string>
+				<key>des</key>
+				<string>Genji brandishes his katana for a brief period of time. Until he sheathes his sword, Genji can deliver killing strikes to any targets within his reach.</string>
+				<key>img</key>
+				<string>Genji-Dragonblade</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Soldier76</key>
+	<dict>
+		<key>name</key>
+		<string>Soldier76</string>
+		<key>image</key>
+		<string>Hero-76</string>
+		<key>diff</key>
+		<integer>1</integer>
+		<key>type</key>
+		<string>Offense</string>
+		<key>id</key>
+		<integer>15</integer>
+		<key>url</key>
+		<string>V_0eqEbG7yA</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Heavy Pulse Rifle</string>
+				<key>des</key>
+				<string>Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire. He can also fire single shots with pinpoint accuracy.</string>
+				<key>img</key>
+				<string>76-HPR</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.</string>
+				<key>img</key>
+				<string>76-HR</string>
+				<key>name</key>
+				<string>Helix Rockets</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Sprint</string>
+				<key>des</key>
+				<string>Sodier76.setHeroAblity(des: &quot;Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.</string>
+				<key>img</key>
+				<string>76-S</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Biotic Field</string>
+				<key>des</key>
+				<string>Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.</string>
+				<key>img</key>
+				<string>76-BF</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Tactical Visor</string>
+				<key>des</key>
+				<string>Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.</string>
+				<key>img</key>
+				<string>76-TV</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Hanzo</key>
+	<dict>
+		<key>name</key>
+		<string>Hanzo</string>
+		<key>image</key>
+		<string>Hero-Hanzo</string>
+		<key>diff</key>
+		<integer>3</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>12</integer>
+		<key>url</key>
+		<string>oOVb9x0zd6M</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Storm Bow
+Storm Bow
+</string>
+				<key>des</key>
+				<string>Hanzo nocks and fires an arrow at his target.
+Hanzo nocks and fires an arrow at his target.</string>
+				<key>img</key>
+				<string>Hanzo-SB</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Hanzo launches an arrow that contains a sonar tracking device. Any enemy within its detection radius is visibly marked, making them easier for Hanzo and his allies to hunt down.</string>
+				<key>img</key>
+				<string>Hanzo-SNA</string>
+				<key>name</key>
+				<string>Sonic Arrow
+</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Scatter Arrow
+</string>
+				<key>des</key>
+				<string>Hanzo shoots a fragmenting arrow that ricochets off walls and objects and can strike multiple targets at once.</string>
+				<key>img</key>
+				<string>Hanzo-SCA</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Dragonstrike
+</string>
+				<key>des</key>
+				<string>Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.</string>
+				<key>img</key>
+				<string>Hanzo-D</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Mei</key>
+	<dict>
+		<key>name</key>
+		<string>Mei</string>
+		<key>image</key>
+		<string>Hero-Mei</string>
+		<key>diff</key>
+		<integer>1</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>2</integer>
+		<key>url</key>
+		<string>J4hB88uMY8k</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Endothermic Blaster
+</string>
+				<key>des</key>
+				<string>Mei’s blaster unleashes a concentrated, short-range stream of frost that damages, slows, and ultimately freezes enemies in place.
+</string>
+				<key>img</key>
+				<string>Mei-EB</string>
+			</dict>
+			<dict>
+				<key>des</key>
+				<string>Mei can also use her blaster to shoot icicle-like projectiles at medium range.</string>
+				<key>img</key>
+				<string>Mei-I</string>
+				<key>name</key>
+				<string>Icicle</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Cryo-Freeze
+</string>
+				<key>des</key>
+				<string>Mei instantly surrounds herself with a block of thick ice. She heals and ignores damage while encased, but cannot move or use abilities.
+</string>
+				<key>img</key>
+				<string>Mei-CF</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Ice Wall
+</string>
+				<key>des</key>
+				<string>Mei generates an enormous ice wall that obstructs lines of sight, stops movement, and blocks attacks.
+</string>
+				<key>img</key>
+				<string>Mei-IW</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Blizzard</string>
+				<key>des</key>
+				<string>Mei deploys a weather-modification drone that emits gusts of wind and snow in a wide area. Enemies caught in the blizzard are slowed and take damage; those who linger too long are frozen solid.
+</string>
+				<key>img</key>
+				<string>Mei-B</string>
+			</dict>
+		</array>
+	</dict>
+	<key>WidowMaker</key>
+	<dict>
+		<key>name</key>
+		<string>WidowMaker</string>
+		<key>image</key>
+		<string>Hero-Widow</string>
+		<key>diff</key>
+		<integer>2</integer>
+		<key>type</key>
+		<string>Defense</string>
+		<key>id</key>
+		<integer>0</integer>
+		<key>url</key>
+		<string>fvPp6XbbTb0</string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Widow&apos;s Kiss: Sniper
+</string>
+				<key>des</key>
+				<string>Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets.
+</string>
+				<key>img</key>
+				<string>Widow-S</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Widow&apos;s Kiss: Assault
+</string>
+				<key>des</key>
+				<string>Should targets close to medium range, the rifle can also be fired in fully-automatic mode.
+</string>
+				<key>img</key>
+				<string>Widow-A</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Grappling Hook
+</string>
+				<key>des</key>
+				<string>Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.</string>
+				<key>img</key>
+				<string>Widow-GH</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Venom Mine
+</string>
+				<key>des</key>
+				<string>Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.</string>
+				<key>img</key>
+				<string>Widow-VM</string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Infra-Sight
+</string>
+				<key>des</key>
+				<string>Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.</string>
+				<key>img</key>
+				<string>Widow-IS</string>
+			</dict>
+		</array>
+	</dict>
+	<key>ProtoType</key>
+	<dict>
+		<key>name</key>
+		<string></string>
+		<key>image</key>
+		<string></string>
+		<key>diff</key>
+		<integer>0</integer>
+		<key>type</key>
+		<string></string>
+		<key>id</key>
+		<integer>0</integer>
+		<key>url</key>
+		<string></string>
+		<key>HeroAbility</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string></string>
+				<key>des</key>
+				<string></string>
+				<key>img</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
