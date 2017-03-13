@@ -275,7 +275,7 @@ class HeroRecommendationSurvey: UIView {
             delegate?.heroNotFound()
             return
         }
-        HeroLeft.shuffle()
+        HeroLeft = HeroLeft.shuffle()
         result = HeroLeft[0]
         heroImg.image = HeroLeft[0].topImage
         heroName.text = HeroLeft[0].heroName

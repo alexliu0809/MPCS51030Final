@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0GP-4H-gxM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAK-a2-ZZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2783.1999999999998" y="292.80359820089956"/>
+            <point key="canvasLocation" x="2982" y="293"/>
         </scene>
         <!--My Career-->
         <scene sceneID="K4a-be-1Yf">
@@ -172,7 +172,7 @@
             <objects>
                 <navigationController id="hMw-dM-5jF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="Bar-Discover" id="Ae8-KP-Znc"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQD-RT-afY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EQD-RT-afY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -480,24 +480,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-9R-8qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103" y="1907"/>
-        </scene>
-        <!--Data Analysis Controller-->
-        <scene sceneID="J84-4r-61H">
-            <objects>
-                <viewController id="Ct5-Gg-jEA" customClass="DataAnalysisController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aYP-VZ-l92"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vcw-yf-feN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cUg-Me-ofX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HLn-gQ-vfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2004" y="1058.3208395802101"/>
         </scene>
         <!--Map Detail Controller-->
         <scene sceneID="rqY-2z-yIN">
@@ -850,13 +832,13 @@
             </objects>
             <point key="canvasLocation" x="1976.8" y="-397.15142428785612"/>
         </scene>
-        <!--News-->
+        <!--Media-->
         <scene sceneID="3Dv-Sd-L8q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TiH-dO-230" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="Bar-News" id="HD5-SZ-3d7"/>
+                    <tabBarItem key="tabBarItem" title="Media" image="Bar-News" id="HD5-SZ-3d7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIJ-UU-RoS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hIJ-UU-RoS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -869,13 +851,13 @@
             </objects>
             <point key="canvasLocation" x="1104.8" y="292.80359820089956"/>
         </scene>
-        <!--Media-->
+        <!--Maps-->
         <scene sceneID="DEv-0D-DcW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jN-j4-6UD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Media" image="Bar-Maps" id="J9T-3l-CGi" userLabel="Media"/>
+                    <tabBarItem key="tabBarItem" title="Maps" image="Bar-Maps" id="J9T-3l-CGi" userLabel="Media"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="c1x-CX-fq9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1x-CX-fq9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -944,7 +926,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-SO-qZp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="164.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yP-nc-5U5">
                                             <rect key="frame" x="0.0" y="114" width="375" height="51"/>
@@ -1113,7 +1095,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10w-0U-8uL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Hero" image="Bar-Heros" id="ED8-TF-IFs"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5nQ-rz-tmv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nQ-rz-tmv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">

@@ -32,7 +32,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
         super.viewDidLoad()
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "discover-bg")?.draw(in: self.view.bounds)
-        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
 //        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "discover-bg"))
@@ -59,7 +59,6 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             guard let destination = (segue.destination as? HeroDetailController) else{
                 return
             }
-            print(selectedHero?.heroName)
             destination.detailItem = selectedHero
         }
     }

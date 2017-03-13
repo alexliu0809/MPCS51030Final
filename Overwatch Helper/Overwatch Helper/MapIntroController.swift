@@ -84,7 +84,7 @@ class MapIntroController: UIViewController{
                 })
             }
         }
-        var dispatchTime = DispatchTime.now() + .milliseconds(300)
+        let dispatchTime = DispatchTime.now() + .milliseconds(300)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
         
             self.performSelector(onMainThread: #selector(self.goDetail), with: nil, waitUntilDone: false)
