@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Overwatch Helper' do
+    pod 'SwiftyJSON'
+    pod 'Alamofire'
+    pod 'YouTubePlayer-Swift'
+    pod "CSStickyHeaderFlowLayout"
+    pod 'FoldingCell'
+    pod 'MMCardView'
+    pod 'Kingfisher', '~> 3.0’
+    pod 'SwiftCharts', '~> 0.5'
+    pod 'SwiftSVG'
+end

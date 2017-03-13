@@ -1,0 +1,16 @@
+//
+//  NewsTableViewCell.swift
+//  Overwatch Helper
+//
+//  Created by Enze on 3/6/17.
+//  Copyright © 2017 Alex&Ben. All rights reserved.
+//
+
+import UIKit
+
+class NewsTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var newsImage: UIImageView!
+    
+    @IBOutlet weak var newsContent: UITextView!
+}
