@@ -40,6 +40,7 @@
 		text-align: justify;
 	}
 	
+
 	strong
 	{
 	}
@@ -66,11 +67,21 @@
 /*********************************************************************************/
 	div.DetailDescription
 	{
+		margin: auto;
 		margin-bottom: 3em;
-		width: 100%
+		width: 80%;
+		
 	}
-
-
+	div.headerDescription
+	{
+		margin: auto;
+		width: 80%;
+	}
+	div.welcome
+	{
+		width: 80%;
+		margin: auto;
+	}
 
 /*********************************************************************************/
 /* Image Style                                                                   */
@@ -487,7 +498,8 @@
 	{
 		position: relative;
 		float: left;
-		width: 21%; /** 300 */
+		width: 20%; /** 300 */
+		
 		padding: 3em 0em;
 	}
 
@@ -602,7 +614,8 @@
 	#banner90
 	{
 		float:left;
-		margin: 30px 10px 30px 10px;
+		margin: 1px 10px 30px 10px; /**30 10 30 10*/
+		/** margin-top: 50em; **/
 		width:100%;
 		border-top: 1px solid rgba(0,0,0,0.08);
 	}
@@ -627,8 +640,8 @@
 	{
 		overflow: hidden;
 		float: right;
-		width: 72%; /* 800 */
-		padding: 3em 50px 5em 50px;
+		width: 80%; /* 800 */
+		padding: 3em 0px 5em 0px;
 		background: #FFF;
 		border-top: 6px solid #2980b9;
 		text-align: center;
