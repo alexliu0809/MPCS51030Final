@@ -385,13 +385,16 @@ class HeroIntroController: UITableViewController {
         {
             //if not in wifi connection, pop a reminder
             if currentReachability != .reachableViaWiFi {
-                
-                let alert = UIAlertController(title: "This page contains video", message: "Better to watch under Wi-Fi connection", preferredStyle: .alert)
+                let message = (currentReachability == .reachableViaWWAN ? "Internet connection" : "Better to watch under Wi-Fi connection")
+                let alert = UIAlertController(title: "This page contains video", message: message, preferredStyle: .alert)
                 
                 let action = UIAlertAction(title: "OK", style: .default, handler: {
                     action in
                 })
                 alert.addAction(action)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: {})
+                }
             }
             
 //            print(self.tableView.)
