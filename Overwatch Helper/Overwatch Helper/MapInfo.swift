@@ -57,12 +57,36 @@ class MapDetailDetailInfo : UITableViewCell
     
 }
 
-class MapVideoInfo : UITableViewCell
+class MapVideoInfo : UITableViewCell, YouTubePlayerDelegate
 {
     
     @IBOutlet weak var video: YouTubePlayerView!
+    var loadingView: UIActivityIndicatorView?
+
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        self.video.delegate = self
+        loadingView = UIActivityIndicatorView(frame: CGRect(x: 25 , y: 25, width: 50, height: 50))
+        
+        loadingView?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        loadingView?.backgroundColor = UIColor.clear
+        loadingView?.tintColor = UIColor(hexString: "F89E19")
+        loadingView?.startAnimating()
+        loadingView?.center = self.center
+        
+        self.addSubview(loadingView!)
+    }
+    func playerReady(_ videoPlayer: YouTubePlayerView) {
+        self.loadingView?.stopAnimating()
+    }
     
+    func playerQualityChanged(_ videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality) {
+        
+    }
+    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
+        
+    }
 }
 class MapIntroInfo
 {

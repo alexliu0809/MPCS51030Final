@@ -17,12 +17,14 @@ class ThemeManager{
         UINavigationBar.appearance().barTintColor = bgColor //back ground color
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : titleColor] //title color
         UINavigationBar.appearance().tintColor = tintColor //set font color of edit/+/detail
+        
     }
     
     func setToolBar(bgColor:UIColor, tintColor:UIColor)
     {
         UITabBar.appearance().barTintColor = bgColor
         UITabBar.appearance().tintColor = tintColor
+    
     }
 
 }

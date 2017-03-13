@@ -82,6 +82,7 @@ class HeroDetailController:UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "HeroBasicCell", for: indexPath) as! HeroDetailBasicInfo
             //print("2")
             //cell.backgroundColor = UIColor.gray
+            cell.youtubePlayer.delegate = cell
             cell.youtubePlayer.loadVideoID(detailItem!.videoUrl)
             return cell
         }

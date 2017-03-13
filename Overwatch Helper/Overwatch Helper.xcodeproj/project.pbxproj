@@ -40,6 +40,7 @@
 		C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C97C1E749B5D009AA7BF /* Extensions.swift */; };
 		C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */; };
 		C1B2C9871E762B4F009AA7BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B2C9861E762B4F009AA7BF /* Assets.xcassets */; };
+		C1B2C9891E76F9FB009AA7BF /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B2C9881E76F9FB009AA7BF /* Reachability.swift */; };
 		C33508E11E6DFB6000181A7C /* CareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E01E6DFB6000181A7C /* CareerViewController.swift */; };
 		C33508E31E6DFBA400181A7C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */; };
 		C33508E51E6DFEFB00181A7C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */; };
@@ -107,6 +108,7 @@
 		C1B2C97C1E749B5D009AA7BF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MapIntroData.plist; sourceTree = "<group>"; };
 		C1B2C9861E762B4F009AA7BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1B2C9881E76F9FB009AA7BF /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C33508E01E6DFB6000181A7C /* CareerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerViewController.swift; sourceTree = "<group>"; };
 		C33508E21E6DFBA400181A7C /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		C33508E41E6DFEFB00181A7C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,11 +224,11 @@
 		C10C4F821E6C6F3100B0F67E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */,
 				C17A5D341E73146A005A40C7 /* LFGCell.swift */,
 				C17A5D301E7304B5005A40C7 /* DrawRandomHero.swift */,
 				C17A5D2A1E7212ED005A40C7 /* HeroRecommendationSurvey.swift */,
 				C1873CA71E709481008F6130 /* MapCell.swift */,
-				C376A5AD1E71C2E200764617 /* PlayerStatsCellProto.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 				C17A86B71E6D197000310B9A /* NetworkService.swift */,
 				BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */,
 				C1B2C97C1E749B5D009AA7BF /* Extensions.swift */,
+				C1B2C9881E76F9FB009AA7BF /* Reachability.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */,
 				C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */,
 				C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */,
+				C1B2C9891E76F9FB009AA7BF /* Reachability.swift in Sources */,
 				C10C4F851E6C6FAB00B0F67E /* MapIntroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

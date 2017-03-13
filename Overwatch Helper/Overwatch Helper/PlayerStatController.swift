@@ -18,6 +18,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     
     var playerData:PlayerStatatistic = PlayerStatatistic()
     var tempPlayerData:PlayerStatatistic = PlayerStatatistic()
+    var loadingView: UIActivityIndicatorView?
     
     var playerAccount:String?{
         didSet{
@@ -25,20 +26,49 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         }
     }
     
+    func presentAlert(title:String,Msg:String)
+    {
+        let alert = UIAlertController(title: title, message: Msg, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            action in
+            //self.dismi
+        })
+        alert.addAction(action)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
+    
     func loadBasicInfo()
     {
         
         let str = "https://ow-api.herokuapp.com/profile/pc/us/\(playerAccount!)"
         //let str = "https://ow-api.herokuapp.com/profile/pc/us/dfas"
+        
+        loadingView?.startAnimating()
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
             //print(profile)
+            self.loadingView?.stopAnimating()
             
+            
+            
+            if (profile == nil)
+            {
+                self.presentAlert(title: "Connection Failed", Msg: "Please check your network and your input:Id#Number")
+                return
+            }
             
             var json = JSON(data:profile!)
             if (json.count == 0)
             {
+                self.presentAlert(title: "No Data Retreived", Msg: "Oops...Something wrong")
                 return
             }
+            
+            self.tableView.isHidden = false
             self.tempPlayerData = PlayerStatatistic()
             
             //json[0]["fasfd"].string
@@ -250,9 +280,21 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.isHidden = true
+        self.view.backgroundColor = UIColor.black
         
         self.tableView.contentInset = UIEdgeInsets(top: -45, left: 0, bottom: 0, right: 0) //to hide the header
         
+        
+    
+            loadingView = UIActivityIndicatorView(frame: CGRect(x: 25 , y: 25, width: 50, height: 50))
+            
+            loadingView?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+            loadingView?.backgroundColor = UIColor.clear
+            loadingView?.tintColor = UIColor(hexString: "F89E19")
+            loadingView?.startAnimating()
+            loadingView?.center = self.view.center
+        self.view.addSubview(loadingView!)
     }
     
     
@@ -440,7 +482,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             barWidth: 10,
             horizontal: true
         )
-
+        
         //chart.view.color
  
         
