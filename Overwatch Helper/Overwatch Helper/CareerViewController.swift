@@ -21,6 +21,7 @@ class CareerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Verdana-BoldItalic", size: 20)!]
         
         // Do any additional setup after loading the view.
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Career-Bg")!)

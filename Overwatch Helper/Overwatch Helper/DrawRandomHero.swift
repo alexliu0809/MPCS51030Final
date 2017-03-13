@@ -69,17 +69,17 @@ class DrawRandomHero: UIView {
         stopButton.layer.cornerRadius = 5
         
         stopButton.setTitle("Let's Rock!", for: .normal)
-        stopButton.setTitleColor(UIColor.white, for: .normal)
+        stopButton.setTitleColor(UIColor.black, for: .normal)
         
         detailButton.backgroundColor = UIColor(hexString: "F89E19")
-        detailButton.setTitleColor(UIColor.white, for: .normal)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
         detailButton.isEnabled = false
         detailButton.alpha = 0
         
         detailButton.setTitle("See Profile", for: .normal)
-        detailButton.setTitleColor(UIColor.white, for: .normal)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.layer.cornerRadius = 5
         
         

@@ -107,18 +107,15 @@ class HeroRecommendationSurvey: UIView {
         stopButton.layer.cornerRadius = 5
         
         stopButton.setTitle("Try again", for: .normal)
-        stopButton.setTitleColor(UIColor.white, for: .normal)
-        stopButton.isEnabled = true
+        stopButton.setTitleColor(UIColor.black, for: .normal)
         
         detailButton.backgroundColor = UIColor(hexString: "F89E19")
-        detailButton.setTitleColor(UIColor.white, for: .normal)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         detailButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
-        detailButton.isEnabled = true
-        
         
         detailButton.setTitle("See Profile", for: .normal)
-        detailButton.setTitleColor(UIColor.white, for: .normal)
+        detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.layer.cornerRadius = 5
 
         
@@ -217,7 +214,7 @@ class HeroRecommendationSurvey: UIView {
                 self.question.text = self.Questions[self.nextQuestionIndex].question
                 self.question.frame.size.width = 375
                 self.question.sizeToFit()
-//                self.question.center.x = 187.5
+                self.question.center.x = 187.5
                 
                 self.option1.setTitle("   " + self.Questions[self.nextQuestionIndex].options[0], for: .normal)
                 self.option2.setTitle("   " + self.Questions[self.nextQuestionIndex].options[1], for: .normal)

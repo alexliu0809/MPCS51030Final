@@ -96,10 +96,8 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             self.view.addSubview((survey?.option2)!)
             self.view.addSubview((survey?.option3)!)
             self.view.addSubview((survey?.option4)!)
-                    survey?.question.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-                    survey?.question.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-                    survey?.question.translatesAutoresizingMaskIntoConstraints = true
-            survey?.question.clipsToBounds = true
+            self.view.addSubview((survey?.stopButton)!)
+            self.view.addSubview((survey?.detailButton)!)
             survey?.delegate = self
             survey?.surveyStart()
         case .lookingForGroup:
