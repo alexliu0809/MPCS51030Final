@@ -150,7 +150,7 @@
                                 <color key="backgroundColor" red="0.12155052274465561" green="0.12157905846834183" blue="0.12154868990182877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Font" translatesAutoresizingMaskIntoConstraints="NO" id="Mmc-i2-mYb">
-                                <rect key="frame" x="0.0" y="108" width="375" height="54"/>
+                                <rect key="frame" x="-21" y="109" width="418" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

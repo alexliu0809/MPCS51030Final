@@ -31,7 +31,7 @@ class SplashScreenController: UIViewController {
                 self.overwatch.alpha = 0
                 self.overwatch.center.y -= 123
                 self.companion.alpha = 1
-                self.companion.center.y -= 123
+                self.companion.center.y -= 128
                 
                 
             }, completion: {
