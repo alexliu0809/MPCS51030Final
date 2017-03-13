@@ -80,10 +80,16 @@
 	{
 		display: block;
 		width: 100%;
-		height: 800px;
+		height: 80%;
 		margin: 0 0 2em 0;
 	}
-	
+	.image-onethird
+	{
+		display: block;
+		width: 100%;
+		height: 60%;
+		margin: 0 0 2em 0;
+	}
 	.image-left
 	{
 		float: left;
@@ -526,15 +532,29 @@
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
-
-	#banner
+	
+	#banner30
 	{
 		margin-bottom: 4em;
 		float:left;
 		margin: 10px;
 		width:30%;
 	}
-	#bigbanner
+	#banner20
+	{
+		margin-bottom: 4em;
+		float:left;
+		margin: 10px;
+		width:20%;
+	}
+	#banner50
+	{
+		margin-bottom: 4em;
+		float:left;
+		margin: 10px;
+		width:50%;
+	}
+	#banner100
 	{
 		margin-bottom: 4em;
 	}
