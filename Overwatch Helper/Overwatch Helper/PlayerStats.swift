@@ -21,11 +21,19 @@ class PlayerStatatistic {
 
     var typeDetails:[typeDetail] = []
     
-    var topHerosName:[String] = []
-    var topHeroTime:[Double] = []
+    var topHeros:[topInfo] = []
     
     init() {
         
+    }
+}
+
+class topInfo{
+    var topHerosName:String
+    var topHeroTime:Double
+    init(name:String,time:Double) {
+        self.topHeroTime = time
+        self.topHerosName = name
     }
 }
 
