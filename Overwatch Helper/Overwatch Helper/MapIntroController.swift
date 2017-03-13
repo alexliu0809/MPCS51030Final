@@ -93,7 +93,16 @@ class MapIntroController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMapDetail" {
-            let dest = (segue.destination as! MapDetailController)
+            if currentReachability != .reachableViaWiFi {
+            
+            let alert = UIAlertController(title: "Connection Failed", message: "Oops...Something wrong", preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "OK", style: .default, handler: {
+                action in
+            })
+            alert.addAction(action)
+            }
+            let dest = (segue.destination as! MapDetailCßontroller)
             dest.currentMap = selectedMap!
             
             

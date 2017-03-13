@@ -68,7 +68,6 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 return
             }
             
-            self.tableView.isHidden = false
             self.tempPlayerData = PlayerStatatistic()
             
             //json[0]["fasfd"].string
@@ -270,6 +269,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 self.tempPlayerData.typeDetails.append(temp)
             }
             self.playerData = self.tempPlayerData
+            
+            self.tableView.isHidden = false
+
             self.tableView.reloadData()
         })
     }
