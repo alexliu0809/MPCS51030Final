@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRq-67-k4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="354"/>
+            <point key="canvasLocation" x="-554" y="161"/>
         </scene>
         <!--NewsDetail-->
         <scene sceneID="Geq-9R-NrU">
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAK-a2-ZZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="354"/>
+            <point key="canvasLocation" x="234" y="161"/>
         </scene>
         <!--My Career-->
         <scene sceneID="K4a-be-1Yf">
@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5C-H6-Z6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="803"/>
+            <point key="canvasLocation" x="-1359" y="835"/>
         </scene>
         <!--Discover-->
         <scene sceneID="2j7-Z9-2m7">
@@ -182,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx3-D4-reZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="1290"/>
+            <point key="canvasLocation" x="-1314" y="-1854"/>
         </scene>
         <!--Player Stat Controller-->
         <scene sceneID="jXt-W6-s9C">
@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7O-H0-bvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1097" y="1758"/>
+            <point key="canvasLocation" x="-554" y="834"/>
         </scene>
         <!--Discover-->
         <scene sceneID="HIq-EY-WMY">
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="1096"/>
+            <point key="canvasLocation" x="-554" y="-1854"/>
         </scene>
         <!--Discover Function Controller-->
         <scene sceneID="VEo-Th-14T">
@@ -479,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-9R-8qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1430" y="2000"/>
+            <point key="canvasLocation" x="278" y="-1854"/>
         </scene>
         <!--Splash Screen Controller-->
         <scene sceneID="f0Q-pz-CAM">
@@ -720,7 +720,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGZ-US-TIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="-543"/>
+            <point key="canvasLocation" x="-554" y="-518"/>
         </scene>
         <!--Hero Detail Controller-->
         <scene sceneID="fzf-Qj-NYp">
@@ -826,7 +826,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3D-ii-K2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="-543"/>
+            <point key="canvasLocation" x="279" y="-518"/>
         </scene>
         <!--Media-->
         <scene sceneID="3Dv-Sd-L8q">
@@ -848,7 +848,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPx-NI-iAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="652"/>
+            <point key="canvasLocation" x="-1359" y="161"/>
         </scene>
         <!--Maps-->
         <scene sceneID="DEv-0D-DcW">
@@ -870,7 +870,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ste-ej-X2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1358" y="-1358"/>
+            <point key="canvasLocation" x="-1359" y="-1178"/>
         </scene>
         <!--Maps-->
         <scene sceneID="H8z-dd-Fg1">
@@ -905,7 +905,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYk-Dy-ABD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="-1359"/>
+            <point key="canvasLocation" x="-591" y="-1179"/>
         </scene>
         <!--Map Detail Controller-->
         <scene sceneID="KqA-Cp-evS">
@@ -1086,7 +1086,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97q-Vj-J5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="-1359"/>
+            <point key="canvasLocation" x="278" y="-1179"/>
         </scene>
         <!--Hero-->
         <scene sceneID="wuk-J7-vEL">
@@ -1108,7 +1108,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUr-fV-0WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1359" y="-542"/>
+            <point key="canvasLocation" x="-1359" y="-517"/>
         </scene>
         <!--Career-->
         <scene sceneID="bUy-KX-ros">
@@ -1127,7 +1127,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEX-FQ-djY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1722" y="947"/>
+            <point key="canvasLocation" x="-2367" y="484"/>
         </scene>
     </scenes>
     <resources>
@@ -1143,6 +1143,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p2O-ey-rm6"/>
-        <segue reference="BXB-Yw-bIW"/>
+        <segue reference="Jj8-9M-R2D"/>
     </inferredMetricsTieBreakers>
 </document>
