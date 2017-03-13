@@ -95,14 +95,14 @@ class MapIntroController: UIViewController{
         if segue.identifier == "showMapDetail" {
             if currentReachability != .reachableViaWiFi {
             
-            let alert = UIAlertController(title: "Connection Failed", message: "Oops...Something wrong", preferredStyle: .alert)
+            let alert = UIAlertController(title: "This page contains video", message: "Better to watch under Wi-Fi connection", preferredStyle: .alert)
             
             let action = UIAlertAction(title: "OK", style: .default, handler: {
                 action in
             })
             alert.addAction(action)
             }
-            let dest = (segue.destination as! MapDetailCßontroller)
+            let dest = (segue.destination as! MapDetailController)
             dest.currentMap = selectedMap!
             
             

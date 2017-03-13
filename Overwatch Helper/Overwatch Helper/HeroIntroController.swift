@@ -383,6 +383,17 @@ class HeroIntroController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueHeroDetail"
         {
+            //if not in wifi connection, pop a reminder
+            if currentReachability != .reachableViaWiFi {
+                
+                let alert = UIAlertController(title: "This page contains video", message: "Better to watch under Wi-Fi connection", preferredStyle: .alert)
+                
+                let action = UIAlertAction(title: "OK", style: .default, handler: {
+                    action in
+                })
+                alert.addAction(action)
+            }
+            
 //            print(self.tableView.)
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 
