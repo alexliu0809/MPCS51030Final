@@ -16,6 +16,15 @@ class DiscoverController: UIViewController {
     
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bgImageView: UIImageView!
+    
+    @IBOutlet weak var btn1: UIButton!
+    
+    @IBOutlet weak var btn2: UIButton!
+    
+    @IBOutlet weak var btn3: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageInitialize()
@@ -25,6 +34,13 @@ class DiscoverController: UIViewController {
 //        UIGraphicsEndImageContext()
 //        self.view.backgroundColor = UIColor(patternImage: image)
         // Do any additional setup after loading the view.
+        
+        btn3.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        btn2.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        btn1.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
+        btn3.layer.cornerRadius = 5
+        btn2.layer.cornerRadius = 5
+        btn1.layer.cornerRadius = 5
         
         self.bgImageView.image = #imageLiteral(resourceName: "discoverBG1")
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(changeBG), userInfo: nil, repeats: true)

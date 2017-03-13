@@ -115,8 +115,9 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
             LFG?.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
             LFG?.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
             LFG?.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-            LFG?.separatorStyle = .none
-            LFG?.backgroundColor = UIColor(netHex: 0x363636)
+            LFG?.separatorColor = UIColor(hexString: "242424")
+            LFG?.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+            
             LFG?.tableFooterView = UIView(frame: .zero)
             
 //            posts = fetchLFGData()
@@ -197,8 +198,11 @@ extension DiscoverFunctionController: UITableViewDelegate, UITableViewDataSource
         cell.battleID.clipsToBounds = true
         cell.descrip.clipsToBounds = true
         cell.avatar.layer.cornerRadius = cell.avatar.frame.height / 2
-        cell.descrip.backgroundColor = UIColor(netHex: 0x363636)
-        cell.backgroundColor = UIColor(netHex: 0x363636)
+        cell.descrip.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.2)
+        cell.descrip.layer.cornerRadius = 5
+//        cell.alpha = 0
+//        cell.contentView.alpha = 0
+        cell.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         
         cell.avatar.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
         cell.avatar.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
@@ -217,6 +221,7 @@ extension DiscoverFunctionController: UITableViewDelegate, UITableViewDataSource
         cell.avatar.image = posts[indexPath.item].avatar
         cell.battleID.text = posts[indexPath.item].battleID
         cell.descrip.text = posts[indexPath.item].descrip
+        cell.descrip.sizeToFit()
         
         return cell
     }

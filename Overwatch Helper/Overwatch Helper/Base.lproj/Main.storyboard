@@ -411,7 +411,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97217541933059692" green="0.61851024627685547" blue="0.099836356937885284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="26"/>
-                                <state key="normal" title="Looking For Group">
+                                <state key="normal" title="LFG">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -451,6 +451,9 @@
                     <connections>
                         <outlet property="bgImageView" destination="jtX-xM-9ED" id="r2G-y8-Cwa"/>
                         <outlet property="bottomView" destination="fZi-iA-8qh" id="w8X-3i-TkT"/>
+                        <outlet property="btn1" destination="jAx-qj-cTE" id="0XW-ex-Q9U"/>
+                        <outlet property="btn2" destination="ag3-h6-2cw" id="q1b-fR-KzD"/>
+                        <outlet property="btn3" destination="uQe-MI-dsL" id="Fgu-Eb-exC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -872,9 +875,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jN-j4-6UD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Media" image="Bar-Maps" id="J9T-3l-CGi" userLabel="Media"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1x-CX-fq9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="c1x-CX-fq9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1107,9 +1113,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10w-0U-8uL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Hero" image="Bar-Heros" id="ED8-TF-IFs"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nQ-rz-tmv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5nQ-rz-tmv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1152,7 +1161,7 @@
         <image name="splashIcon" width="450" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BXB-Yw-bIW"/>
         <segue reference="p2O-ey-rm6"/>
-        <segue reference="Jj8-9M-R2D"/>
     </inferredMetricsTieBreakers>
 </document>
