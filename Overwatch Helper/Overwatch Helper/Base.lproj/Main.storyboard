@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRq-67-k4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="292.80359820089956"/>
+            <point key="canvasLocation" x="1635" y="354"/>
         </scene>
         <!--NewsDetail-->
         <scene sceneID="Geq-9R-NrU">
@@ -106,12 +106,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAK-a2-ZZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2982" y="293"/>
+            <point key="canvasLocation" x="2830" y="354"/>
         </scene>
         <!--My Career-->
         <scene sceneID="K4a-be-1Yf">
             <objects>
-                <viewController id="f8p-zQ-pte" customClass="CareerViewController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="career" id="f8p-zQ-pte" customClass="CareerViewController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2LD-Do-7sZ"/>
                         <viewControllerLayoutGuide type="bottom" id="uHR-oO-jsV"/>
@@ -165,14 +165,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5C-H6-Z6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922.39999999999998" y="868.51574212893559"/>
+            <point key="canvasLocation" x="-574" y="803"/>
         </scene>
         <!--Discover-->
         <scene sceneID="2j7-Z9-2m7">
             <objects>
                 <navigationController id="hMw-dM-5jF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Discover" image="Bar-Discover" id="Ae8-KP-Znc"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EQD-RT-afY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQD-RT-afY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -182,12 +182,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gx3-D4-reZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="94" y="1058"/>
+            <point key="canvasLocation" x="150" y="1290"/>
         </scene>
         <!--Player Stat Controller-->
         <scene sceneID="jXt-W6-s9C">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aJZ-Ub-csO" customClass="PlayerStatController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="careerDetail" automaticallyAdjustsScrollViewInsets="NO" id="aJZ-Ub-csO" customClass="PlayerStatController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khG-vE-cQH"/>
                         <viewControllerLayoutGuide type="bottom" id="sHv-Iq-fgj"/>
@@ -232,7 +232,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="Career-Mercy" translatesAutoresizingMaskIntoConstraints="NO" id="FiR-cW-WBP">
-                                                    <rect key="frame" x="168" y="0.0" width="205" height="140"/>
+                                                    <rect key="frame" x="168" y="0.0" width="205" height="139"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DARK Mother" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS5-gc-jsQ">
                                                     <rect key="frame" x="47" y="19" width="121" height="28"/>
@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7O-H0-bvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-922.39999999999998" y="1670.9145427286358"/>
+            <point key="canvasLocation" x="-1097" y="1758"/>
         </scene>
         <!--Discover-->
         <scene sceneID="HIq-EY-WMY">
@@ -458,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfX-8b-4Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.2" y="1059.2203898050975"/>
+            <point key="canvasLocation" x="1358" y="1096"/>
         </scene>
         <!--Discover Function Controller-->
         <scene sceneID="VEo-Th-14T">
@@ -479,25 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdB-9R-8qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="1907"/>
-        </scene>
-        <!--Map Detail Controller-->
-        <scene sceneID="rqY-2z-yIN">
-            <objects>
-                <viewController id="WyW-zw-Ct0" customClass="MapDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nL6-BS-zNk"/>
-                        <viewControllerLayoutGuide type="bottom" id="eBs-nn-lvO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fJj-nc-UoD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LX7-J8-gap" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4642.3999999999996" y="-1032.2338830584708"/>
+            <point key="canvasLocation" x="1430" y="2000"/>
         </scene>
         <!--Splash Screen Controller-->
         <scene sceneID="f0Q-pz-CAM">
@@ -545,7 +527,7 @@
         <!--Base Tab Bar Controller-->
         <scene sceneID="3Xd-D1-7kx">
             <objects>
-                <tabBarController id="md9-6N-XEo" customClass="BaseTabBarController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="md9-6N-XEo" customClass="BaseTabBarController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="39U-NG-ifz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -566,7 +548,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ds2-BI-MCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-788" y="-36"/>
+            <point key="canvasLocation" x="-866" y="-298"/>
         </scene>
         <!--Heros-->
         <scene sceneID="LXC-Lh-Oin">
@@ -724,7 +706,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGZ-US-TIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952.79999999999995" y="-388.15592203898052"/>
+            <point key="canvasLocation" x="937" y="-246"/>
         </scene>
         <!--Hero Detail Controller-->
         <scene sceneID="fzf-Qj-NYp">
@@ -830,7 +812,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3D-ii-K2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.8" y="-397.15142428785612"/>
+            <point key="canvasLocation" x="2562" y="-412"/>
         </scene>
         <!--Media-->
         <scene sceneID="3Dv-Sd-L8q">
@@ -838,9 +820,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TiH-dO-230" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Media" image="Bar-News" id="HD5-SZ-3d7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hIJ-UU-RoS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIJ-UU-RoS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -849,12 +834,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPx-NI-iAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="292.80359820089956"/>
+            <point key="canvasLocation" x="502" y="652"/>
         </scene>
         <!--Maps-->
         <scene sceneID="DEv-0D-DcW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jN-j4-6UD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mapNavi" automaticallyAdjustsScrollViewInsets="NO" id="1jN-j4-6UD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Maps" image="Bar-Maps" id="J9T-3l-CGi" userLabel="Media"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c1x-CX-fq9">
@@ -871,12 +856,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ste-ej-X2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="-1047"/>
+            <point key="canvasLocation" x="-430" y="-1152"/>
         </scene>
         <!--Maps-->
         <scene sceneID="H8z-dd-Fg1">
             <objects>
-                <viewController id="p2X-Uc-yfb" customClass="MapIntroController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapIntro" id="p2X-Uc-yfb" customClass="MapIntroController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5zS-zl-bdU"/>
                         <viewControllerLayoutGuide type="bottom" id="0qn-nf-eW0"/>
@@ -906,12 +891,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYk-Dy-ABD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="-1048"/>
+            <point key="canvasLocation" x="641" y="-1242"/>
         </scene>
         <!--Map Detail Controller-->
         <scene sceneID="KqA-Cp-evS">
             <objects>
-                <tableViewController id="0WQ-6o-SdM" customClass="MapDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MOtherFucker" id="0WQ-6o-SdM" customClass="MapDetailController" customModule="Overwatch_Helper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YST-cJ-xEK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1087,12 +1072,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97q-Vj-J5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="-1055.6221889055473"/>
+            <point key="canvasLocation" x="1775" y="-1078"/>
         </scene>
         <!--Hero-->
         <scene sceneID="wuk-J7-vEL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10w-0U-8uL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="heroNavi" automaticallyAdjustsScrollViewInsets="NO" id="10w-0U-8uL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Hero" image="Bar-Heros" id="ED8-TF-IFs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5nQ-rz-tmv">
@@ -1109,12 +1094,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUr-fV-0WY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="-245"/>
+            <point key="canvasLocation" x="150" y="-245"/>
         </scene>
         <!--Career-->
         <scene sceneID="bUy-KX-ros">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="spo-H8-2qJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="careerNavi" automaticallyAdjustsScrollViewInsets="NO" id="spo-H8-2qJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Career" id="rn1-UL-lJA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7vB-C7-oPW">
@@ -1128,7 +1113,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEX-FQ-djY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1721" y="869"/>
+            <point key="canvasLocation" x="-1722" y="947"/>
         </scene>
     </scenes>
     <resources>
@@ -1139,11 +1124,11 @@
         <image name="Career-Mercy" width="423" height="224"/>
         <image name="Font" width="1025" height="92"/>
         <image name="Icon" width="334" height="343"/>
-        <image name="discoverBG3" width="16" height="16"/>
+        <image name="discoverBG3" width="532" height="310"/>
         <image name="splashIcon" width="450" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BXB-Yw-bIW"/>
         <segue reference="p2O-ey-rm6"/>
+        <segue reference="BXB-Yw-bIW"/>
     </inferredMetricsTieBreakers>
 </document>

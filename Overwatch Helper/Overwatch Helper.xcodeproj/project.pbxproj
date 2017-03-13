@@ -20,7 +20,6 @@
 		C10C4F871E6C70AB00B0F67E /* MapDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F861E6C70AB00B0F67E /* MapDetailController.swift */; };
 		C10C4F891E6C748E00B0F67E /* NewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F881E6C748E00B0F67E /* NewsDetailController.swift */; };
 		C10C4F8B1E6C74EE00B0F67E /* PlayerStatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F8A1E6C74EE00B0F67E /* PlayerStatController.swift */; };
-		C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F8C1E6C753000B0F67E /* DataAnalysisController.swift */; };
 		C10C4F901E6C761400B0F67E /* HeroDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F8F1E6C761400B0F67E /* HeroDetailController.swift */; };
 		C10C4F921E6C7A0500B0F67E /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F911E6C7A0500B0F67E /* NewsController.swift */; };
 		C10C4F941E6C80C400B0F67E /* MapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F931E6C80C400B0F67E /* MapInfo.swift */; };
@@ -88,7 +87,6 @@
 		C10C4F861E6C70AB00B0F67E /* MapDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailController.swift; sourceTree = "<group>"; };
 		C10C4F881E6C748E00B0F67E /* NewsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailController.swift; sourceTree = "<group>"; };
 		C10C4F8A1E6C74EE00B0F67E /* PlayerStatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatController.swift; sourceTree = "<group>"; };
-		C10C4F8C1E6C753000B0F67E /* DataAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAnalysisController.swift; sourceTree = "<group>"; };
 		C10C4F8F1E6C761400B0F67E /* HeroDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailController.swift; sourceTree = "<group>"; };
 		C10C4F911E6C7A0500B0F67E /* NewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		C10C4F931E6C80C400B0F67E /* MapInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInfo.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				C10C4F911E6C7A0500B0F67E /* NewsController.swift */,
 				C33508E01E6DFB6000181A7C /* CareerViewController.swift */,
 				C10C4F8A1E6C74EE00B0F67E /* PlayerStatController.swift */,
-				C10C4F8C1E6C753000B0F67E /* DataAnalysisController.swift */,
 				C17CB6F71E71ECD50009E090 /* DiscoverController.swift */,
 				C17CB6F91E71FD6B0009E090 /* DiscoverFunctionController.swift */,
 				C17A5D381E734DF0005A40C7 /* SplashScreenController.swift */,
@@ -495,7 +492,6 @@
 				C17A5D2D1E7212F9005A40C7 /* HeroList.swift in Sources */,
 				BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */,
 				C1B2C97D1E749B5D009AA7BF /* Extensions.swift in Sources */,
-				C10C4F8D1E6C753000B0F67E /* DataAnalysisController.swift in Sources */,
 				C1B2C9891E76F9FB009AA7BF /* Reachability.swift in Sources */,
 				C10C4F851E6C6FAB00B0F67E /* MapIntroController.swift in Sources */,
 			);
