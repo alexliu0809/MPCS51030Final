@@ -69,7 +69,10 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //print(self.newsArray[1].newsTitle)
             //print(self.newsArray[2].newsTitle)
             self.newsTable.reloadData()
+            
+            
         })
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
