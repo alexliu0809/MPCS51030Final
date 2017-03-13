@@ -95,6 +95,21 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
         self.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if currentReachability != .reachableViaWiFi {
+            let message = (currentReachability == .reachableViaWWAN ? "Better to watch under Wi-Fi connection" : "Internet connection required")
+            let alert = UIAlertController(title: "This page contains video", message: message, preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "OK", style: .default, handler: {
+                action in
+            })
+            alert.addAction(action)
+            DispatchQueue.main.async {
+                self.present(alert, animated: true, completion: {})
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
