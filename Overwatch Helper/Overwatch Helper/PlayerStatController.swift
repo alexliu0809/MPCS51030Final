@@ -185,14 +185,16 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             /*** Load Top Hero Data ***/
             for i in 0..<json["stats"]["top_heroes"]["quickplay"].count{
-                self.tempPlayerData.topHerosName.append(json["stats"]["top_heroes"]["quickplay"][i]["hero"].string!)
+            
+                let name = json["stats"]["top_heroes"]["quickplay"][i]["hero"].string!
+                //self.tempPlayerData.topHerosName.append()
                 let hours = json["stats"]["top_heroes"]["quickplay"][i]["played"].string!
                 if (hours == "--") // no data
                 {
                     continue
                 }
                 var time = Double(hours.components(separatedBy: " ")[0])!
-                let type = hours.components(separatedBy: " ")[0]
+                let type = hours.components(separatedBy: " ")[1]
                 if (type == "seconds")
                 {
                     time = 1.0/60.0
@@ -201,9 +203,24 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 {
                     time = time / 60.0
                 }
-                self.tempPlayerData.topHeroTime.append(time)
+                print(name)
+                print(time)
+                
+                self.tempPlayerData.topHeros.append(topInfo.init(name: name, time: time))
             }
-            
+            /*
+            for i in 0..<self.tempPlayerData.topHeros.count
+            {
+                print(self.tempPlayerData.topHeros[i].topHerosName)
+                print(self.tempPlayerData.topHeros[i].topHeroTime)
+            }
+            */
+            self.tempPlayerData.topHeros = self.tempPlayerData.topHeros.sorted(by:{$0.topHeroTime > $1.topHeroTime})
+            for i in 0..<self.tempPlayerData.topHeros.count
+            {
+                print(self.tempPlayerData.topHeros[i].topHerosName)
+                print(self.tempPlayerData.topHeros[i].topHeroTime)
+            }
             /*** Load Career Stats Data ***/
             
             //self.loadStats(data: [[String : AnyObject]], key: "combat")
@@ -282,7 +299,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         }
         else if (section == 2)
         {
-            if (playerData.topHeroTime.count == 0)
+            if (playerData.topHeros.count == 0)
             {
                 return 0
             }
@@ -375,18 +392,44 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     func generateChart(cell:PlayerTopHero)
     {
         
-        let chartConfig = BarsChartConfig(
-            valsAxisConfig: ChartAxisConfig(from: 0, to: 1.0, by: 0.5)
+        /*
+        lvalsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2)
+            //valsAxisConfig: ChartAxisConfig(from: 0, to: 1.0, by: 0.5),
+        xAxisLabelSettings: ChartLabelSettings(font: UIFont.systemFont(ofSize: 17), fontColor: UIColor.blue)
         )
- 
+         */
         
         var bars : [(String, Double)] = []
-        for i in 0..<5{
-            bars.append((playerData.topHerosName[i],playerData.topHeroTime[i]/playerData.topHeroTime.max()!))
+        
+        var count = 0
+        if playerData.topHeros.count >= 5
+        {
+            count = 5
+        }
+        else
+        {
+            count = playerData.topHeros.count
         }
         
-        print(cell.frame.width)
-        print(cell.frame.height)
+        
+        for i in (0..<count).reversed(){
+            bars.append((playerData.topHeros[i].topHerosName,playerData.topHeros[i].topHeroTime))
+        
+        }
+        
+        let charSet = ChartSettings()
+        charSet.leading = 10
+        charSet.trailing = 10
+        charSet.top = 10
+        charSet.bottom = 10
+        let chartConfig = BarsChartConfig(
+            chartSettings: charSet,
+            valsAxisConfig: ChartAxisConfig(from: 0, to: playerData.topHeros[0].topHeroTime, by: playerData.topHeros[0].topHeroTime/3.0),
+            xAxisLabelSettings: ChartLabelSettings(font: UIFont.systemFont(ofSize: 17), fontColor: UIColor.blue)
+            
+        )
+    
+
         let chart = BarsChart(
             frame: CGRect.init(x:0, y:0, width:cell.frame.width, height:cell.frame.height),
             chartConfig: chartConfig,
@@ -394,9 +437,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             yTitle: "Hero Name",
             bars: bars,
             color: UIColor.red,
-            barWidth: 20,
+            barWidth: 10,
             horizontal: true
         )
+
+        //chart.view.color
  
         
      
