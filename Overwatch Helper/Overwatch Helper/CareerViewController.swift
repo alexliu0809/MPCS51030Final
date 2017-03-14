@@ -28,6 +28,8 @@ class CareerViewController: UIViewController {
     }
     
 
+    /// User Default Reference
+    var userPref = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,25 @@ class CareerViewController: UIViewController {
         instruView.text = "Media: Latest Overwatch news\n\nDiscover: More functions\n\nCareer: Search player data\n\nHero: Overwatch heros profile\n\nMaps: Overwatch Maps profile"
         instruView.sizeToFit()
         instruView.alpha = 0
+        
+        
+        let formatter = DateFormatter() //for formating date
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        
+        let currentDate = Date() //get now
+        
+        let currentDateStr = formatter.string(from: currentDate)//to string
+        
+        //Set User Default When First Lauched
+        if (userPref.value(forKey: "FirstLaunched") == nil)
+        {
+            NSLog("First Launch!, Saved Date: \(currentDateStr)")
+            userPref.set(currentDateStr, forKey: "FirstLaunched")
+        }
+        else//Not first launch
+        {
+            NSLog("Not First Launch, First Launch Date:\(userPref.value(forKey: "FirstLaunched")!)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
