@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE631990D2EF6D1DFD612AB0 /* Pods_Overwatch_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */; };
 		BBA4B9F41E705AFC00B824D3 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */; };
+		BBD841A41E78AF8B009D808F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBD841A31E78AF8A009D808F /* Settings.bundle */; };
 		BBE5EB271E73855F007A2146 /* HeroIntroData.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBE5EB261E73855F007A2146 /* HeroIntroData.plist */; };
 		C10C4F541E6C630300B0F67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F531E6C630300B0F67E /* AppDelegate.swift */; };
 		C10C4F561E6C630300B0F67E /* HeroIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10C4F551E6C630300B0F67E /* HeroIntroController.swift */; };
@@ -69,6 +70,7 @@
 		3411396464F0FF27252F3BF2 /* Pods-Overwatch Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.release.xcconfig"; sourceTree = "<group>"; };
 		3A538F23C2098C94A7B4ADE4 /* Pods_Overwatch_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overwatch_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA4B9F31E705AFC00B824D3 /* ThemeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		BBD841A31E78AF8A009D808F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BBE5EB261E73855F007A2146 /* HeroIntroData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HeroIntroData.plist; sourceTree = "<group>"; };
 		C015C09CE15FBA61064DB7E4 /* Pods-Overwatch Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overwatch Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Overwatch Helper/Pods-Overwatch Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		C10C4F501E6C630300B0F67E /* Overwatch Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Overwatch Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 				C1B2C97E1E74E707009AA7BF /* MapIntroData.plist */,
 				C10C4F5F1E6C630300B0F67E /* Info.plist */,
 				BBE5EB261E73855F007A2146 /* HeroIntroData.plist */,
+				BBD841A31E78AF8A009D808F /* Settings.bundle */,
 			);
 			path = "Overwatch Helper";
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				C1B2C97F1E74E707009AA7BF /* MapIntroData.plist in Resources */,
 				BBE5EB271E73855F007A2146 /* HeroIntroData.plist in Resources */,
 				C10C4F591E6C630300B0F67E /* Main.storyboard in Resources */,
+				BBD841A41E78AF8B009D808F /* Settings.bundle in Resources */,
 				C1B2C9871E762B4F009AA7BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
