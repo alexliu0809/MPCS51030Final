@@ -24,14 +24,14 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         let tempImageView = UIImageView(image: UIImage(named: "News-Bg"))
-        tempImageView.frame = self.newsTable.frame
+        tempImageView.frame = self.view.frame
         tempImageView.contentMode = .scaleToFill
         tempImageView.alpha = 1.0
         //self.newsTable.backgroundView = tempImageView;
         self.view.addSubview(tempImageView)
         
 
-        let tempView = UIView(frame: self.newsTable.frame)
+        let tempView = UIView(frame: self.view.frame)
         tempView.backgroundColor = UIColor.black
         tempView.alpha = 0.6
         self.view.addSubview(tempView)

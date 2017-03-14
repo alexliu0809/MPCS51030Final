@@ -27,7 +27,7 @@ class MapIntroController: UIViewController{
         for i in 0...6 {
             
             let width1 = i % 2 == 0 ? 275 : 200
-            let width2 = 475 - width1
+            let width2 = Int(self.view.frame.width) + 100 - width1
             let newMap1 = MapCell(frame: CGRect(x: -50, y: -50 + i*120, width: width1, height: 100), mapArray[2*i], true, 2*i)
             
             let ges1 = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
@@ -60,7 +60,7 @@ class MapIntroController: UIViewController{
                 })
             }else{
                 UIView.animate(withDuration: 0.7, animations: {
-                    self.mapList[i].center.x = 435 - self.mapList[i].frame.width / 2
+                    self.mapList[i].center.x = self.view.frame.width+60 - self.mapList[i].frame.width / 2
                 })
             }
         }
