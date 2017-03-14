@@ -9,24 +9,31 @@
 import UIKit
 import GLKit
 
+
+let NoOfGlasses = 8 //A circle divided to 8 pieces
+
+let π:CGFloat = CGFloat(M_PI) // Define pai
+
 class SplashScreenController: UIViewController {
 
+    
+    /// Overwatch label
     @IBOutlet weak var overwatch: UILabel!
     
+    // Companion Label
     @IBOutlet weak var companion: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        companion.alpha = 0
+        companion.alpha = 0 // hide the companion for animation
         
         
         
         DispatchQueue.main.async {
             sleep(2)
-            self.addCircleView(1.0) //C
+            self.addCircleView(1.0) //Display the C
+            //In the mean time, show companion
             UIView.animate(withDuration: 0.7, animations: {
                 self.overwatch.alpha = 0
                 self.overwatch.center.y -= 123
@@ -36,18 +43,19 @@ class SplashScreenController: UIViewController {
                 
             }, completion: {
                 finish in
-//                self.addWhiteCircleView(0.3)//White
+//              
+                //After companion and C show up
 
                 sleep(1)
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.addWhiteCircleView(0.3)
+                    self.addWhiteCircleView(0.3) // Add the missing whitie part
                 }, completion: {
                     finish in
                     sleep(1)
-                    self.performSegue(withIdentifier: "showMain", sender: self)
+                    self.performSegue(withIdentifier: "showMain", sender: self) //perform segue to main view
                 })
                 
-                            })
+            })
         }
         
     }
@@ -57,13 +65,13 @@ class SplashScreenController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    /// Add a circle C to view
+    ///
+    /// - Parameter duration: Animation time
     func addCircleView(_ duration:Double) {
         
-        //let circleWidth = CGFloat(200)
-        //let circleHeight = circleWidth
-        
-        // Create a new CircleView
-        //7,283,100,100
+        //Set C Circle View
         let circleView = Arch(frame: CGRect(x: 7+25, y:283+25, width: 50, height: 50))
         //let test = CircleView(frame: CGRect(x: diceRoll, y: 0, width: circleWidth, height: circleHeight))
         
@@ -71,39 +79,26 @@ class SplashScreenController: UIViewController {
         circleView.animateCircle(duration: duration)
     }
     
+    
+    /// add the missing white part
+    ///
+    /// - Parameter duration: Animation  time
     func addWhiteCircleView(_ duration: Double)
     {
+        //Set white part circle view
         let circleView = WhiteArch(frame: CGRect(x: 7+25, y:283+25, width: 50, height: 50))
-        //let test = CircleView(frame: CGRect(x: diceRoll, y: 0, width: circleWidth, height: circleHeight))
         
         view.addSubview(circleView)
         circleView.animateCircle(duration: duration)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
 
-let NoOfGlasses = 8
-let π:CGFloat = CGFloat(M_PI)
 
+
+/// Draw the C
 @IBDesignable class Arch: UIView {
-    
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
     
     var circleLayer: CAShapeLayer!
     override init(frame: CGRect) {
@@ -158,15 +153,9 @@ let π:CGFloat = CGFloat(M_PI)
     
 }
 
+
+/// Draw the missing white part
 @IBDesignable class WhiteArch: UIView {
-    
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
     
     
     var circleLayer: CAShapeLayer!

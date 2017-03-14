@@ -9,5 +9,7 @@
 import Foundation
 
 class HeroList {
+    
+    /// Not Used
     let heroList: [HeroIntroInfo] = []
 }

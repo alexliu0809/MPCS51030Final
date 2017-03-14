@@ -195,7 +195,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     {
         let str = "https://ow-api.herokuapp.com/stats/pc/us/\(playerAccount!)"
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
-            print(profile!)
+            NSLog("User Profile Retreived: \(profile!)")
             var json = JSON(data:profile!)
             if (json.count == 0)
             {
@@ -232,8 +232,8 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 {
                     time = time / 60.0
                 }
-                print(name)
-                print(time)
+                //NSLog("\(name)")
+                //NSLog("\(time)")
                 
                 self.tempPlayerData.topHeros.append(topInfo.init(name: name, time: time))
             }
@@ -245,11 +245,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             }
             */
             self.tempPlayerData.topHeros = self.tempPlayerData.topHeros.sorted(by:{$0.topHeroTime > $1.topHeroTime})
-            for i in 0..<self.tempPlayerData.topHeros.count
-            {
-                print(self.tempPlayerData.topHeros[i].topHerosName)
-                print(self.tempPlayerData.topHeros[i].topHeroTime)
-            }
+            //for i in 0..<self.tempPlayerData.topHeros.count
+            //{
+            //    print(self.tempPlayerData.topHeros[i].topHerosName)
+            //    print(self.tempPlayerData.topHeros[i].topHeroTime)
+            //}
             /*** Load Career Stats Data ***/
             
             //self.loadStats(data: [[String : AnyObject]], key: "combat")

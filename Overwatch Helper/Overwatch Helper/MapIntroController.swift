@@ -9,15 +9,34 @@
 import Foundation
 import UIKit
 
+
+/// <#Description#>
 var mapArray: [MapIntroInfo] = []
 
 class MapIntroController: UIViewController{
     
+    
+    /// <#Description#>
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    /// <#Description#>
     var mapList : [MapCell] = []
+    
+    
+    /// <#Description#>
     var mapNameList : [String] = ["map_volskayaindustry","map_nepal","map_antarctica","map_dorado","map_templeofanubis","map_oasis","map_numbani","map_route66","map_gibraltar","map_hanamura","map_hollywood","map_eichenwalde","map_lijiangtower","map_Ilios"]
+    
+    
+    /// <#Description#>
     var mapNames : [String] = ["VOLSKAYA INDUSTRY","NEPAL","ANTARCTICA","DORADO","TEMPLE OF ANUBIS","OASIS","NUMBANI","ROUTE 66","GIBRALTAR","HANAMURA","HOLLYWOOD","EICHENWALDE","LIJIANG TOWER","ILIOS"]
+    
+    
+    /// <#Description#>
     var gestures : [UITapGestureRecognizer] = []
+    
+    
+    /// <#Description#>
     var selectedMap : MapIntroInfo?
     
     override func viewDidLoad() {
@@ -67,8 +86,13 @@ class MapIntroController: UIViewController{
         
     }
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameter recognizer: <#recognizer description#>
     func handleTap(_ recognizer : UITapGestureRecognizer){
         
+        NSLog("Tapped Gesture Triggered in Map Intro Controller")
         if let selectedCell = (recognizer.view as! MapCell?) {
             selectedMap = mapArray[selectedCell.number]
         }else{
@@ -92,9 +116,16 @@ class MapIntroController: UIViewController{
         })
     }
     
+    
+    /// Prepare Segue for Map Detail View
+    ///
+    /// - Parameters:
+    ///   - segue: <#segue description#>
+    ///   - sender: <#sender description#>
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showMapDetail" {
-            print(currentReachability)
+            NSLog("Current Reachbility: \(currentReachability)")
+            
             if currentReachability != .reachableViaWiFi {
             let message = (currentReachability == .reachableViaWWAN ? "Better to watch under Wi-Fi connection" : "Internet connection required")
             let alert = UIAlertController(title: "This page contains video", message: message, preferredStyle: .alert)
@@ -106,6 +137,7 @@ class MapIntroController: UIViewController{
                     self.present(alert, animated: true, completion: {})
                 }
             }
+            
             let dest = (segue.destination as! MapDetailController)
             dest.currentMap = selectedMap!
             
@@ -131,10 +163,14 @@ class MapIntroController: UIViewController{
         
     }
     
+    
+    /// <#Description#>
     func goDetail(){
         self.performSegue(withIdentifier: "showMapDetail", sender: self)
     }
     
+    
+    /// <#Description#>
     static func initializeMaps()
     {
         let path = Bundle.main.path(forResource: "MapIntroData", ofType: "plist")

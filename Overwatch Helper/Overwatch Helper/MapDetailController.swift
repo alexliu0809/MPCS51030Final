@@ -12,6 +12,7 @@ import UIKit
 class MapDetailController: UITableViewController{
     
     
+    /// The Object taht contains map info
     var currentMap: MapIntroInfo?
     
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class MapDetailController: UITableViewController{
         for i in self.tableView.subviews{
             i.alpha = 0
         }
+        
         DispatchQueue.main.async {
             
             for i in self.tableView.subviews{
@@ -107,6 +109,7 @@ class MapDetailController: UITableViewController{
             return cell
         }
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.item {
         case 0:

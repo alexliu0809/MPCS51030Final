@@ -146,7 +146,7 @@ class DiscoverFunctionController: UIViewController, SurveyDelegate, DrawHeroDele
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("will despe")
+        NSLog("Discover function will disappear")
         if functionType == .whatsToday{
             draw!.stop()
         }

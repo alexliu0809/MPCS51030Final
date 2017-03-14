@@ -9,9 +9,19 @@
 import Foundation
 import UIKit
 
+/// Theme Manager
 class ThemeManager{
+    
+    /// Shared Theme manager
     static let Shared = ThemeManager()
     
+    
+    /// Set Navigation Bar Color using UIAppearance
+    ///
+    /// - Parameters:
+    ///   - bgColor: backgound color
+    ///   - tintColor: tint color
+    ///   - titleColor: title color
     func setNavigationBar(bgColor:UIColor,tintColor:UIColor,titleColor:UIColor)
     {
         UINavigationBar.appearance().barTintColor = bgColor //back ground color
@@ -20,6 +30,12 @@ class ThemeManager{
         
     }
     
+    
+    /// Set Tool Bar color using UIAppearance
+    ///
+    /// - Parameters:
+    ///   - bgColor: background color
+    ///   - tintColor: tint color
     func setToolBar(bgColor:UIColor, tintColor:UIColor)
     {
         UITabBar.appearance().barTintColor = bgColor

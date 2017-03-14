@@ -7,20 +7,43 @@
 //
 
 import Foundation
+
+/// Saving Player Stats
 class PlayerStatatistic {
+    
+    /// Player Level
     var playerLevel : Int?
+    
+    /// Player icon
     var iconImageURL : String?
+    
+    /// Player Name
     var playerName : String?
+    
+    /// Games Won
     var gamesWon : String?
+    
+    /// Player Rank Icon
     var rankIconURL : String?
+    
+    /// Player Rank point
     var rankPoints : String?
     //var featureImageURL = "https://blzgdapipro-a.akamaihd.net/hero/mercy/career-portrait.png"
+    
+    
+    /// Player Feature Data Vals
     var featureNumbers:[String] = []
+    
+    
+    /// Player Feature Data Description
     var featureDescription:[String] = []
     
-
+    
+    /// Player Other Infomartion Array
     var typeDetails:[typeDetail] = []
     
+    
+    /// Player top hero info array
     var topHeros:[topInfo] = []
     
     init() {
@@ -28,9 +51,17 @@ class PlayerStatatistic {
     }
 }
 
+
+/// The top heros that the player plays
 class topInfo{
-    var topHerosName:String
-    var topHeroTime:Double
+    var topHerosName:String //HERO NAME
+    var topHeroTime:Double //hero time
+    
+    /// Init a top hero info
+    ///
+    /// - Parameters:
+    ///   - name: hero name
+    ///   - time: hero time
     init(name:String,time:Double) {
         self.topHeroTime = time
         self.topHerosName = name

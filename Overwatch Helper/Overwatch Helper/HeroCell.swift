@@ -9,6 +9,8 @@
 import UIKit
 import FoldingCell
 
+
+/// A Cell that displays hero introduction information, 3rd party lib
 class HeroCell: FoldingCell {
 
     
@@ -16,17 +18,32 @@ class HeroCell: FoldingCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        //configure hero cell apperance
         foregroundView.layer.cornerRadius = 10
         foregroundView.layer.masksToBounds = true
         
     }
 
+    
+    /// Set Selected
+    ///
+    /// - Parameters:
+    ///   - selected: selected or not
+    ///   - animated: animated or not
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    
+    /// get animation time for different type
+    ///
+    /// - Parameters:
+    ///   - itemIndex: item to animate
+    ///   - type: animation type
+    /// - Returns: animation time
     override func animationDuration(_ itemIndex:NSInteger, type:AnimationType)-> TimeInterval {
         
         // durations count equal it itemCount

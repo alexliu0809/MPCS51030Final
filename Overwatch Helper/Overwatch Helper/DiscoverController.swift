@@ -10,17 +10,34 @@ import UIKit
 
 class DiscoverController: UIViewController {
 
+    /// <#Description#>
     var bgIndex = 2
+    
+    
+    /// <#Description#>
     var maxBgIndex = 7
+    
+    
+    /// <#Description#>
     var timer: Timer?
     
+    /// <#Description#>
     @IBOutlet weak var bottomView: UIView!
+    
+    
+    /// <#Description#>
     @IBOutlet weak var bgImageView: UIImageView!
     
+    
+    /// <#Description#>
     @IBOutlet weak var btn1: UIButton!
     
+    
+    /// <#Description#>
     @IBOutlet weak var btn2: UIButton!
     
+    
+    /// <#Description#>
     @IBOutlet weak var btn3: UIButton!
     
     
@@ -47,6 +64,8 @@ class DiscoverController: UIViewController {
     
                 }
     
+    
+    /// <#Description#>
     func changeBG(){
         self.bgIndex += 1
         if self.bgIndex > self.maxBgIndex{
@@ -91,6 +110,8 @@ class DiscoverController: UIViewController {
         }
     }
     
+    
+    /// <#Description#>
     func messageInitialize(){
         LFGMessage.Messages = [LFGMessage(ID: "McRee", avatar: #imageLiteral(resourceName: "mcgree1"), saying: "Looking for a support GTG. IT'S HIGH NOON!"),LFGMessage(ID: "Winston", avatar: #imageLiteral(resourceName: "winsdom1"), saying: "It was not the plane, but the beauty killed the beast."), LFGMessage(ID: "D.Va", avatar: #imageLiteral(resourceName: "dva1"), saying: "123123123213213213"),LFGMessage(ID: "Reaper", avatar: #imageLiteral(resourceName: "reaper1"), saying: "Die Die Die")]
     }

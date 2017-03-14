@@ -10,10 +10,26 @@ import Foundation
 struct NewsDigest {
     
 }
+
+/// All the info for a news
 class NewsData {
+    /// title
     var newsTitle:String
+    
+    /// News url
     var url:String
+    
+    
+    /// News Image
     var imageUrl:String
+    
+    
+    /// Init a news
+    ///
+    /// - Parameters:
+    ///   - title: title
+    ///   - url: url
+    ///   - imageUrl: news image url
     init(title:String,url:String,imageUrl:String) {
         self.newsTitle = title
         self.url = url

@@ -10,10 +10,21 @@ import UIKit
 
 class LFGCell: UITableViewCell {
 
+    /// <#Description#>
     var avatar: UIImageView
+    
+    /// <#Description#>
     var battleID: UILabel
+    
+    /// <#Description#>
     var descrip: UITextView
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - style: <#style description#>
+    ///   - reuseIdentifier: <#reuseIdentifier description#>
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         
@@ -47,6 +58,12 @@ class LFGCell: UITableViewCell {
         // Initialization code
     }
 
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - selected: <#selected description#>
+    ///   - animated: <#animated description#>
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

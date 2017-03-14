@@ -8,13 +8,30 @@
 
 import UIKit
 
+
+/// <#Description#>
 class MapCell: UIView {
 
+    /// <#Description#>
     var img: UIImageView
+    
+    /// <#Description#>
     var lbl: UILabel
+    
+    /// <#Description#>
     var name: String
+    
+    /// <#Description#>
     var number: Int
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - frame: <#frame description#>
+    ///   - map: <#map description#>
+    ///   - left: <#left description#>
+    ///   - num: <#num description#>
     init(frame: CGRect, _ map: MapIntroInfo,_ left: Bool, _ num: Int) {
         self.name = map.name
         img = UIImageView(frame: CGRect(x: left ? 50 : 0, y: 0, width: frame.width - 50, height: frame.height))

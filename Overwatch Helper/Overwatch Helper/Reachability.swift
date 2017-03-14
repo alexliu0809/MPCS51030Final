@@ -7,17 +7,28 @@
 //
 import Foundation
 import SystemConfiguration
+
 protocol Utilities{
     
 }
+
 extension NSObject: Utilities{
+    
+    /// Network ReachabilityStatus
+    ///
+    /// - notReachable: No Network
+    /// - reachableViaWWAN: 4G/3G/2G
+    /// - reachableViaWiFi: Wifi
     enum ReachabilityStatus {
         case notReachable
         case reachableViaWWAN
         case reachableViaWiFi
     }
     
+    
+    /// Current Network Reachablitiy
     var currentReachability:ReachabilityStatus{
+        
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
         zeroAddress.sin_family = sa_family_t(AF_INET)
