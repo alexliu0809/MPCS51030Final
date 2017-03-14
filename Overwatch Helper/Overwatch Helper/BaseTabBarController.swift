@@ -19,7 +19,7 @@ class BaseTabBarController: UITabBarController {
     
         setupMiddleButton()
         
-        ThemeManager.Shared.setNavigationBar(bgColor: UIColor.black, tintColor: UIColor.orange, titleColor: UIColor.white)
+        ThemeManager.Shared.setNavigationBar(bgColor: UIColor.black, tintColor: UIColor(hexString: "F89E19"), titleColor: UIColor(hexString: "F89E19"))
         ThemeManager.Shared.setToolBar(bgColor: UIColor.black, tintColor: UIColor.white)
     }
 

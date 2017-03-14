@@ -13,6 +13,9 @@ class CareerViewController: UIViewController {
     @IBOutlet weak var careerUsername: UITextField!
     @IBOutlet weak var careerBtn: UIButton!
     
+    @IBOutlet weak var instruView: UITextView!
+    
+    
     @IBAction func careerSubmitBtnPressed(_ sender: Any){
         performSegue(withIdentifier: "SeguePlayerStats", sender: sender)
     }
@@ -28,7 +31,11 @@ class CareerViewController: UIViewController {
         
         //initialize Heros
         HeroIntroController.initializeHeros()
-        MapIntroController.initializeMaps() 
+        MapIntroController.initializeMaps()
+        instruView.layer.cornerRadius = 10
+        instruView.text = "Media: Latest Overwatch news\n\nDiscover: More functions\n\nCareer: Search player data\n\nHero: Overwatch heros profile\n\nMaps: Overwatch Maps profile"
+        instruView.sizeToFit()
+        instruView.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +50,16 @@ class CareerViewController: UIViewController {
             let controller = segue.destination as! PlayerStatController
             controller.playerAccount = account
         }
+    }
+    @IBAction func instruBtnTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, animations: {
+            if self.instruView.alpha == 0{
+                self.instruView.alpha = 1
+            }else{
+                self.instruView.alpha = 0
+            }
+        })
+        
     }
 
     /*

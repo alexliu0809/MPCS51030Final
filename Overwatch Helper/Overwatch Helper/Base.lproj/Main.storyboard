@@ -132,6 +132,20 @@
                                     <constraint firstAttribute="width" secondItem="C55-hG-qxs" secondAttribute="height" multiplier="1:1" id="lHi-r0-g4m"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-OQ-mxg">
+                                <rect key="frame" x="52" y="405" width="272" height="30"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.61960784313725492" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L1a-zg-bZb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="careerSubmitBtnPressed:" destination="f8p-zQ-pte" eventType="touchUpInside" id="46H-FH-ldA"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Your Battle.net ID Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-D4-K4I">
                                 <rect key="frame" x="50" y="318" width="274" height="30"/>
                                 <nil key="textColor"/>
@@ -148,20 +162,13 @@
                                     <constraint firstAttribute="height" constant="54" id="x5Z-qg-9qY"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-OQ-mxg">
-                                <rect key="frame" x="52" y="405" width="272" height="30"/>
-                                <color key="backgroundColor" red="0.97254901960784312" green="0.61960784313725492" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L1a-zg-bZb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="22"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="careerSubmitBtnPressed:" destination="f8p-zQ-pte" eventType="touchUpInside" id="46H-FH-ldA"/>
-                                </connections>
-                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93P-Wj-hQ7">
+                                <rect key="frame" x="37" y="183" width="303" height="325"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.97217541933059692" green="0.61851024627685547" blue="0.099836356937885284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.019603012129664421" green="0.019610624760389328" blue="0.019602533429861069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -174,19 +181,31 @@
                             <constraint firstItem="Mmc-i2-mYb" firstAttribute="centerX" secondItem="JOF-OQ-mxg" secondAttribute="centerX" id="LKA-AP-aTb"/>
                             <constraint firstItem="JOF-OQ-mxg" firstAttribute="top" secondItem="gfw-D4-K4I" secondAttribute="bottom" constant="59" id="OPQ-Zx-iYE"/>
                             <constraint firstItem="gfw-D4-K4I" firstAttribute="width" secondItem="JOF-OQ-mxg" secondAttribute="width" id="R4m-h9-8hf"/>
+                            <constraint firstItem="Zzj-Zw-DqO" firstAttribute="top" secondItem="93P-Wj-hQ7" secondAttribute="bottom" constant="66" id="TWo-vx-4A8"/>
                             <constraint firstItem="Mmc-i2-mYb" firstAttribute="centerX" secondItem="C55-hG-qxs" secondAttribute="centerX" id="U5r-ac-Hhn"/>
+                            <constraint firstItem="93P-Wj-hQ7" firstAttribute="leading" secondItem="dto-Qk-REA" secondAttribute="leadingMargin" constant="21" id="cAM-3X-wmS"/>
                             <constraint firstAttribute="trailing" secondItem="C55-hG-qxs" secondAttribute="trailing" id="crh-lO-NPr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="93P-Wj-hQ7" secondAttribute="trailing" constant="21" id="dY4-Nt-oLz"/>
                             <constraint firstItem="uHR-oO-jsV" firstAttribute="top" secondItem="Zzj-Zw-DqO" secondAttribute="bottom" id="kFE-E9-a5g"/>
                             <constraint firstItem="C55-hG-qxs" firstAttribute="leading" secondItem="dto-Qk-REA" secondAttribute="leading" id="n7J-lr-SsG"/>
                             <constraint firstAttribute="bottom" secondItem="JOF-OQ-mxg" secondAttribute="bottom" constant="230" id="nHo-Wn-7A4"/>
+                            <constraint firstItem="93P-Wj-hQ7" firstAttribute="top" secondItem="C55-hG-qxs" secondAttribute="top" id="wAP-HT-sAY"/>
                             <constraint firstItem="JOF-OQ-mxg" firstAttribute="trailing" secondItem="gfw-D4-K4I" secondAttribute="trailing" id="wAh-Nb-c9i"/>
                             <constraint firstAttribute="trailing" secondItem="Zzj-Zw-DqO" secondAttribute="trailing" id="yYq-BZ-0ap"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Career" id="Cy4-v6-cym"/>
+                    <navigationItem key="navigationItem" title="My Career" id="Cy4-v6-cym">
+                        <barButtonItem key="rightBarButtonItem" image="instruction_mark" id="eBw-Ju-ERx">
+                            <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <connections>
+                                <action selector="instruBtnTapped:" destination="f8p-zQ-pte" id="J9q-R2-gMS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="careerBtn" destination="JOF-OQ-mxg" id="vRD-Yd-gyL"/>
                         <outlet property="careerUsername" destination="gfw-D4-K4I" id="9YK-nW-Kq4"/>
+                        <outlet property="instruView" destination="93P-Wj-hQ7" id="0P9-16-ghP"/>
                         <segue destination="aJZ-Ub-csO" kind="show" identifier="SeguePlayerStats" id="Tci-eh-bTB"/>
                     </connections>
                 </viewController>
@@ -1192,6 +1211,7 @@
         <image name="Font" width="1025" height="92"/>
         <image name="Icon" width="334" height="343"/>
         <image name="discoverBG3" width="532" height="310"/>
+        <image name="instruction_mark" width="50" height="50"/>
         <image name="splashIcon" width="450" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
