@@ -24,6 +24,7 @@ class CareerViewController: UIViewController {
     /// - Parameter sender: the search button
     @IBAction func careerSubmitBtnPressed(_ sender: Any){
         NSLog("Career Search Button Pressed!")
+        
         performSegue(withIdentifier: "SeguePlayerStats", sender: sender) //perform segue
     }
     
@@ -89,6 +90,8 @@ class CareerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SeguePlayerStats")
         {
+            NSlog("Segue Triggered, entering playing stats")
+            
             let account = careerUsername.text?.replacingOccurrences(of: "#", with: "-") //Replay Battle ID with - for api
             let controller = segue.destination as! PlayerStatController
             controller.playerAccount = account //set account for grabbing data
@@ -100,6 +103,8 @@ class CareerViewController: UIViewController {
     ///
     /// - Parameter sender: instruct button
     @IBAction func instruBtnTapped(_ sender: Any) {
+        NSlog("App Instruction Button Clicked")
+        
         UIView.animate(withDuration: 0.5, animations: {
             NSLog("Instruction button pressed")
             if self.instruView.alpha == 0{

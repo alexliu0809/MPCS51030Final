@@ -96,6 +96,8 @@ class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SegueNewsDetail")
         {
+            NSLog("Segue Triggered, to News Detail")
+            
             if let indexPath = self.newsTable.indexPathForSelectedRow {
                 //pass the data to detail
                 let info = newsArray[indexPath.row]

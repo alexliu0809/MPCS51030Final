@@ -17,7 +17,7 @@ class HeroDetailController:UITableViewController{
     var detailItem: HeroIntroInfo? {
         didSet {
             // Update the view.
-            NSLog("Dis set Detail Item in Hero Detail Controller")
+            NSLog("Did set Detail Item in Hero Detail Controller")
             self.tableView.reloadData()
         }
         

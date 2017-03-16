@@ -22,6 +22,8 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
     /// The News Data to display
     var detailItem : NewsData?{
         didSet{
+            NSlog("Did Set News Detail Data")
+            
             self.reloadData()
         }
     }
@@ -57,6 +59,8 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
     ///
     /// - Parameter webView: the web view
     func webViewDidStartLoad(_ webView: UIWebView) {
+        NSLog("WebView Started Loading")
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true //activate the indicator
         self.loadingView?.startAnimating() //start showing loading screen
     }
@@ -65,6 +69,8 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
     ///
     /// - Parameter webView: the web view
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        NSLog("Web View Finished Loading")
         
         UIView.animate(withDuration: 1, animations: {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false //deactivate the indicator
@@ -80,6 +86,9 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
     ///   - webView: the webview
     ///   - error: the error
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        
+        NSLog("Web View Failed Loading")
+        
         let alert = UIAlertController(title: "Connection Failed", message: "Oops...Something wrong", preferredStyle: .alert)
         //create alert
         

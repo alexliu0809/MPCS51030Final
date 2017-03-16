@@ -68,6 +68,8 @@ class HeroIntroController: UITableViewController {
     /// Initialize Hero in the very beginning of the program. Used for once only
     static func initializeHeros()
     {
+        NSLog("Initializing Hero Data, Reading From HeroIntroData.plist")
+        
         let path = Bundle.main.path(forResource: "HeroIntroData", ofType: "plist")
         let dataWithPath =  NSDictionary(contentsOfFile: path!)
         guard let data = dataWithPath
@@ -243,6 +245,7 @@ class HeroIntroController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueHeroDetail"
         {
+            NSLog("Segue Triggered, to Hero Detail")
             
             if currentReachability != .reachableViaWiFi {
                 //If not reachable via wifi, perform alert

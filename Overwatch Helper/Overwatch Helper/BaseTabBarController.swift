@@ -34,6 +34,8 @@ class BaseTabBarController: UITabBarController {
     // MARK: - Setups
     /// Set up the customized button that appears in the middle (mcree).
     func setupMiddleButton() {
+        NSLog("Special Middle Button Clicked")
+        
         let menuButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75, height: 75))
         
         //Create a button
@@ -59,6 +61,8 @@ class BaseTabBarController: UITabBarController {
     ///
     /// - Parameter sender: The Middle Button
     @objc private func menuButtonAction(sender: UIButton) {
+        NSLog("Change Selected Button to 2")
+        
         selectedIndex = 2
     }
     
