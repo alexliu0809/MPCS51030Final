@@ -10,26 +10,57 @@ import Foundation
 import UIKit
 
 class HeroRecommendationSurvey: UIView {
+    
+    /// <#Description#>
     weak var delegate: SurveyDelegate?
     
+    
+    /// <#Description#>
     var HeroLeft: [HeroIntroInfo] = heroArray
+    
+    /// <#Description#>
     var Questions: [RQ] = RQ.questions
+    
+    /// <#Description#>
     var nextQuestionIndex = -1
     
+    /// <#Description#>
     var question: UILabel
+    
+    /// <#Description#>
     var option1: UIButton
+    
+    /// <#Description#>
     var option2: UIButton
+    
+    /// <#Description#>
     var option3: UIButton
+    
+    /// <#Description#>
     var option4: UIButton
     
+    /// <#Description#>
     var stopButton: UIButton//try again
+    
+    /// <#Description#>
     var detailButton: UIButton
     
+    /// <#Description#>
     var heroImg: UIImageView
+    
+    /// <#Description#>
     var heroName: UILabel
+    
+    /// <#Description#>
     var backView: UIView
+    
+    /// <#Description#>
     var result: HeroIntroInfo?
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameter frame: <#frame description#>
     override init(frame: CGRect){
         question = UILabel(frame: (CGRect(x: 0, y: 350, width: 375, height:100)))
         option1 = UIButton(frame: CGRect(x: 575, y: 400, width: 250, height: 30))
@@ -137,6 +168,9 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(stopButton)
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameter option1: <#option1 description#>
     func initOption(_ option1: UIButton){
         option1.backgroundColor = UIColor(hexString: "F89E19")
         option1.titleLabel?.font = UIFont(name: "Verdana-BoldItalic", size: 20)
@@ -148,10 +182,14 @@ class HeroRecommendationSurvey: UIView {
         option1.alpha = 0
     }
     
+    
+    /// <#Description#>
     func surveyStart(){
         nextQuestion()
     }
     
+    
+    /// <#Description#>
     func restart(){
         nextQuestionIndex = -1
         initOption(option1)
@@ -275,7 +313,7 @@ class HeroRecommendationSurvey: UIView {
             delegate?.heroNotFound()
             return
         }
-        HeroLeft.shuffle()
+        HeroLeft = HeroLeft.shuffle()
         result = HeroLeft[0]
         heroImg.image = HeroLeft[0].topImage
         heroName.text = HeroLeft[0].heroName

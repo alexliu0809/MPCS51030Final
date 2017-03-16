@@ -10,19 +10,36 @@ import UIKit
 
 class LFGCell: UITableViewCell {
 
+    /// <#Description#>
     var avatar: UIImageView
+    
+    /// <#Description#>
     var battleID: UILabel
+    
+    /// <#Description#>
     var descrip: UITextView
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - style: <#style description#>
+    ///   - reuseIdentifier: <#reuseIdentifier description#>
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         
         avatar = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         
-        battleID = UILabel(frame: CGRect(x: 110, y: 0, width: 100, height: 30))
+        battleID = UILabel(frame: CGRect(x: 110, y: 0, width: 265, height: 30))
         
-        descrip = UITextView(frame: CGRect(x: 110, y: 50, width: 255, height: 200))
+        descrip = UITextView(frame: CGRect(x: 110, y: 30, width: 255, height: 100))
         
+        
+        battleID.font = UIFont(name: "Verdana-BoldItalic", size: 27)
+        battleID.textColor = UIColor.white
+        descrip.font = UIFont(name: "Verdana", size: 17)
+        descrip.textColor = UIColor.white
+        descrip.backgroundColor = UIColor.green//UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -41,6 +58,12 @@ class LFGCell: UITableViewCell {
         // Initialization code
     }
 
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - selected: <#selected description#>
+    ///   - animated: <#animated description#>
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

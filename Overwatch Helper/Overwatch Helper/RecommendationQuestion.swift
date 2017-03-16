@@ -10,24 +10,46 @@ import Foundation
 
 //recommendation questions
 class RQ {
+    
+    /// <#Description#>
     var options: [String] = []
+    
+    /// <#Description#>
     let question: String
     
+    /// <#Description#>
     static let questions: [RQ] = [RQ_Dfct("Experienced FPS Player?",["Brand New", "Little Experience","Hardcore",""]), RQ_Type("Which role you want to play?",["Defence", "Offense","Support","Tank"])]
     
     init(_ question: String, _ options: [String]){
+        
         self.question = question
         for i in options {
             self.options.append(i)
 
         }
     }
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - list: <#list description#>
+    ///   - choice: <#choice description#>
+    /// - Returns: <#return value description#>
     func getResult(_ list : [HeroIntroInfo], _ choice : Int) -> ([HeroIntroInfo]){
         return []
     }
 }
 
+
+/// <#Description#>
 class RQ_Dfct: RQ{
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - list: <#list description#>
+    ///   - choice: <#choice description#>
+    /// - Returns: <#return value description#>
     override func getResult(_ list : [HeroIntroInfo], _ choice: Int) -> ([HeroIntroInfo]) {
         var result: [HeroIntroInfo] = []
         let diff = choice+1
@@ -40,7 +62,16 @@ class RQ_Dfct: RQ{
     }
 }
 
+
+/// <#Description#>
 class RQ_Type: RQ {
+    
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - list: <#list description#>
+    ///   - choice: <#choice description#>
+    /// - Returns: <#return value description#>
     override func getResult(_ list : [HeroIntroInfo], _ choice: Int) -> ([HeroIntroInfo]) {
         var result: [HeroIntroInfo] = []
         var diff: HeroType

@@ -14,34 +14,87 @@ import SwiftCharts
 import SwiftSVG
 
 class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
+    /// Table View
     @IBOutlet weak var tableView: UITableView!
     
+    
+    /// real player data
     var playerData:PlayerStatatistic = PlayerStatatistic()
+    
+    
+    /// temp Data for retreiving data from json
     var tempPlayerData:PlayerStatatistic = PlayerStatatistic()
     
+    
+    /// Loading view
+    var loadingView: UIActivityIndicatorView?
+    
+    
+    /// Play Account Info
     var playerAccount:String?{
         didSet{
+            NSLog("Did Set Player Account")
+            
             self.loadBasicInfo()
         }
     }
     
+    
+    /// Present an alert
+    ///
+    /// - Parameters:
+    ///   - title: alert title
+    ///   - Msg: alert msg
+    func presentAlert(title:String,Msg:String)
+    {
+        let alert = UIAlertController(title: title, message: Msg, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            action in
+            //self.dismi
+        })
+        alert.addAction(action)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+
+    }
+    
+    
+    /// Load Player Basic Info from JSON
     func loadBasicInfo()
     {
         
         let str = "https://ow-api.herokuapp.com/profile/pc/us/\(playerAccount!)"
         //let str = "https://ow-api.herokuapp.com/profile/pc/us/dfas"
+        
+        loadingView?.startAnimating()
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
             //print(profile)
+            self.loadingView?.stopAnimating()
+            
+            //Player Data Not retrived
+            if (profile == nil)
+            {
+                self.presentAlert(title: "Connection Failed", Msg: "Please check your network and your input:Id#Number")
+                return
+            }
             
             
+            //Player Data Not retrived
             var json = JSON(data:profile!)
             if (json.count == 0)
             {
+                self.presentAlert(title: "No Data Retreived", Msg: "Oops...Something wrong")
                 return
             }
+            
             self.tempPlayerData = PlayerStatatistic()
             
             //json[0]["fasfd"].string
+            //Parse The Json
             self.tempPlayerData.playerName = json["username"].string?.uppercased()
             self.tempPlayerData.iconImageURL = json["portrait"].string
             self.tempPlayerData.playerLevel = json["level"].int
@@ -56,9 +109,10 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             self.tempPlayerData.rankPoints = json["competitive"]["rank"].string
             self.tempPlayerData.rankIconURL = json["competitive"]["rank_img"].string
             
-            
+            //reload tableview
             self.loadDetailInfo()
             
+            //autosize tableview
             self.tableView.rowHeight = UITableViewAutomaticDimension
             self.tableView.estimatedRowHeight = 80
             
@@ -74,13 +128,15 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        
-        let view = UIView()
+        //Redefine Sectjion Header
+        let view = UIView() //Background Color View
         view.backgroundColor = UIColor.init(red: 63.0/255.0, green: 96.0/255.0, blue: 159.0/255.0, alpha: 1.0)
         
-        let imageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 35, height: 35))
+        let imageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 35, height: 35)) //Section Header Image
         
-        let label = UILabel()
+        let label = UILabel() //Section Header Title
+        
+        //Based on section set everything.
         if (section == 0)
         {
             view.backgroundColor = UIColor.white
@@ -102,10 +158,14 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             imageView.image = UIImage(named: "SVG-\(label.text!)")
             view.backgroundColor = UIColor.init(red: 185.0/255.0, green: 192.0/255.0, blue: 214.0/255.0, alpha: 1.0)
         }
+        
+        //Set up label
         label.frame = CGRect(x: 55, y: 5, width: 250, height: 35)
         label.font = UIFont.systemFont(ofSize: 30)
         label.font = label.font.bolditalic()
         label.textColor = UIColor.white
+        
+        //Add All
         view.addSubview(label)
         view.addSubview(imageView)
         //self.tableView.tableHeaderView = view
@@ -113,26 +173,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         
     }
     
-    /*
-     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-     if (section == 0)
-     {
-     return "Overwatch"
-     }
-     else if (section == 1)
-     {
-     return "FEATURED STATS"
-     }
-     else if (section == 2)
-     {
-     return "TOP HEROS"
-     }
-     else
-     {
-     return playerData.typeDetails[section-3].typeName!
-     }
-     }
-     */
+    
+    /// If the Data Contains the following keywords, extract it from json
+    ///
+    /// - Parameter str: the data string
+    /// - Returns: whether to extract it
     func ifContains(str:String) -> Bool{
         //return false
         if (str.contains("Objective Time"))
@@ -162,11 +207,13 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         return true
     }
     
+    
+    /// Load Player Detail Info
     func loadDetailInfo()
     {
         let str = "https://ow-api.herokuapp.com/stats/pc/us/\(playerAccount!)"
         SharedNetworking.Shared.fetchData(URLString: str, completion: {(profile) in
-            print(profile!)
+            NSLog("User Profile Retreived: \(profile!)")
             var json = JSON(data:profile!)
             if (json.count == 0)
             {
@@ -203,27 +250,16 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 {
                     time = time / 60.0
                 }
-                print(name)
-                print(time)
+                //NSLog("\(name)")
+                //NSLog("\(time)")
                 
                 self.tempPlayerData.topHeros.append(topInfo.init(name: name, time: time))
             }
-            /*
-            for i in 0..<self.tempPlayerData.topHeros.count
-            {
-                print(self.tempPlayerData.topHeros[i].topHerosName)
-                print(self.tempPlayerData.topHeros[i].topHeroTime)
-            }
-            */
+
             self.tempPlayerData.topHeros = self.tempPlayerData.topHeros.sorted(by:{$0.topHeroTime > $1.topHeroTime})
-            for i in 0..<self.tempPlayerData.topHeros.count
-            {
-                print(self.tempPlayerData.topHeros[i].topHerosName)
-                print(self.tempPlayerData.topHeros[i].topHeroTime)
-            }
-            /*** Load Career Stats Data ***/
+
             
-            //self.loadStats(data: [[String : AnyObject]], key: "combat")
+            /*** Load Career Stats Data ***/
             
             let keys = ["combat","deaths","assists","best"]
             
@@ -240,6 +276,9 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
                 self.tempPlayerData.typeDetails.append(temp)
             }
             self.playerData = self.tempPlayerData
+            
+            self.tableView.isHidden = false
+
             self.tableView.reloadData()
         })
     }
@@ -250,9 +289,21 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.isHidden = true
+        self.view.backgroundColor = UIColor.black
         
         self.tableView.contentInset = UIEdgeInsets(top: -45, left: 0, bottom: 0, right: 0) //to hide the header
         
+        
+    
+            loadingView = UIActivityIndicatorView(frame: CGRect(x: 25 , y: 25, width: 50, height: 50))
+            
+            loadingView?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+            loadingView?.backgroundColor = UIColor.clear
+            loadingView?.tintColor = UIColor(hexString: "F89E19")
+            loadingView?.startAnimating()
+            loadingView?.center = self.view.center
+        self.view.addSubview(loadingView!)
     }
     
     
@@ -273,8 +324,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return 1
         
-        
-        
+        //Baased on section return rows
         if (section == 0)
         {
             if (playerData.playerName != nil)
@@ -333,6 +383,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             cell.rankIcon.contentMode = .scaleToFill
             
             //could be nil
+            //Set Rank Info
             if (playerData.rankIconURL != nil)
             {
                 cell.rankIcon.kf.setImage(with: URL(string:playerData.rankIconURL!))
@@ -357,50 +408,48 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerFeatureCell", for: indexPath) as! PlayerFeature
             //print("2")
+            
+            //Set Feature Info
             cell.backgroundColor = UIColor.gray
             cell.featureDescription.text = playerData.featureDescription[indexPath.row]
             cell.featureNumber.text = "\(playerData.featureNumbers[indexPath.row])"
-            //cell.youtubePlayer.loadVideoID(detailItem!.videoUrl)
             cell.featureImg.image = UIImage(named: "SVG-\(indexPath.row)")
+            
             return cell
         }
         else if (indexPath.section == 2)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerTopHeroCell", for: indexPath) as! PlayerTopHero
-            //print("3+")
-            //cell.backgroundColor = UIColor.green
-            //cell.detailInfo.text = detailItem?.heroAbilityDescription[indexPath.row-2] //change3
-            //cell.detailInfoTitle.text = detailItem?.heroAbilityName[indexPath.row-2]
-            //cell.detailInfoImage.image = detailItem?.//heroAbilityImage[indexPath.row-2]
-            generateChart(cell:cell)
+
+            generateChart(cell:cell) //Generate a chart
             
             return cell
         }
         else
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerStatsCell", for: indexPath) as! PlayerStats
-            //cell.typeName.text = playerData.
+            
+            //Set Other Type Info
             cell.typeDetail.text = playerData.typeDetails[indexPath.section-3].subVal[indexPath.row]
             cell.typeName.text = playerData.typeDetails[indexPath.section-3].subTitle[indexPath.row]
             cell.typeName.sizeToFit()
-            //cell.typeDetail.sizeToFit()
             
             return cell
         }
         
     }
+    
+    
+    /// Generate a CHART based on data
+    ///
+    /// - Parameter cell: cell to display the chart
     func generateChart(cell:PlayerTopHero)
     {
         
-        /*
-        lvalsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2)
-            //valsAxisConfig: ChartAxisConfig(from: 0, to: 1.0, by: 0.5),
-        xAxisLabelSettings: ChartLabelSettings(font: UIFont.systemFont(ofSize: 17), fontColor: UIColor.blue)
-        )
-         */
         
-        var bars : [(String, Double)] = []
+        var bars : [(String, Double)] = [] //date
         
+        //5 bars
         var count = 0
         if playerData.topHeros.count >= 5
         {
@@ -411,12 +460,13 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             count = playerData.topHeros.count
         }
         
-        
+        //add data
         for i in (0..<count).reversed(){
             bars.append((playerData.topHeros[i].topHerosName,playerData.topHeros[i].topHeroTime))
         
         }
         
+        //initialize dataset
         let charSet = ChartSettings()
         charSet.leading = 10
         charSet.trailing = 10
@@ -429,7 +479,7 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             
         )
     
-
+        //create chart
         let chart = BarsChart(
             frame: CGRect.init(x:0, y:0, width:cell.frame.width, height:cell.frame.height),
             chartConfig: chartConfig,
@@ -440,11 +490,11 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
             barWidth: 10,
             horizontal: true
         )
-
+        
         //chart.view.color
  
         
-     
+        //add and show
         cell.addSubview(chart.view)
         cell.chart = chart
     }
@@ -470,17 +520,23 @@ class PlayerStatController: UIViewController,UITableViewDelegate,UITableViewData
     }
 }
 
+
+// MARK: - Externsion
 extension UIFont {
     
+    /*Extent UI Font*/
+    //With TRAITS
     func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
         let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits))
         return UIFont(descriptor: descriptor!, size: 0)
     }
     
+    //bold
     func bold() -> UIFont {
         return withTraits(traits: .traitBold)
     }
     
+    //bolditalic
     func bolditalic() -> UIFont {
         return withTraits(traits: .traitItalic, .traitBold)
     }

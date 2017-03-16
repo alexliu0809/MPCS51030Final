@@ -11,13 +11,8 @@ import UIKit
 
 class MapDetailController: UITableViewController{
     
-//    var currentMapName: String = ""
-//    var icon: UIImage = UIImage()
-//    var detail: String = ""
-//    var loc: String = ""
-//    var terrain: String = ""
-//    var type: String = ""
-//    
+    
+    /// The Object taht contains map info
     var currentMap: MapIntroInfo?
     
     override func viewDidLoad() {
@@ -39,6 +34,7 @@ class MapDetailController: UITableViewController{
         for i in self.tableView.subviews{
             i.alpha = 0
         }
+        
         DispatchQueue.main.async {
             
             for i in self.tableView.subviews{
@@ -107,10 +103,13 @@ class MapDetailController: UITableViewController{
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapVideoInfo", for: indexPath) as! MapVideoInfo
+            
+            cell.video.delegate = cell
             cell.video.loadVideoID((currentMap?.videoURL)!)
             return cell
         }
     }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.item {
         case 0:

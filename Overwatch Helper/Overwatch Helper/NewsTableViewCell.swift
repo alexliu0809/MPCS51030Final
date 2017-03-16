@@ -8,9 +8,15 @@
 
 import UIKit
 
+
+/// News Table Cell
 class NewsTableViewCell: UITableViewCell {
 
+    
+    /// News image
     @IBOutlet weak var newsImage: UIImageView!
     
+    
+    /// News content
     @IBOutlet weak var newsContent: UITextView!
 }

@@ -18,17 +18,39 @@ class DrawRandomHero: UIView {
     }
     */
     
+    
+    /// <#Description#>
     var heroImg: UIImageView
+    
+    /// <#Description#>
     var heroName: UILabel
+    
+    /// <#Description#>
     var stopButton: UIButton
+    
+    /// <#Description#>
     var detailButton: UIButton
+    
+    /// <#Description#>
     var backView: UIView
+    
+    /// <#Description#>
     var drawTimer: Timer?
+    
+    /// <#Description#>
     var Heros: [HeroIntroInfo] = []
+    
+    /// <#Description#>
     var heroIndex = 0
     
+    
+    /// <#Description#>
     weak var delegate: DrawHeroDelegate?
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameter frame: <#frame description#>
     override init(frame: CGRect) {
         heroImg = UIImageView(frame: CGRect(x: 82, y: 130, width: 210, height: 210))
         heroName = UILabel(frame: CGRect(x: 0, y: 150, width: 210, height: 60))
@@ -91,9 +113,11 @@ class DrawRandomHero: UIView {
         self.addSubview(detailButton)
         self.addSubview(stopButton)
         
-        print(stopButton.allTargets)
+        NSLog("Stop Button Targets:\(stopButton.allTargets)")
     }
     
+    
+    /// <#Description#>
     func start(){
         guard Heros.count > 0 else {
             return
@@ -101,19 +125,23 @@ class DrawRandomHero: UIView {
         drawTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(changeHero), userInfo: nil, repeats: true)
     }
     
+    
+    /// <#Description#>
     func changeHero(){
         heroIndex += 1
         if heroIndex >= Heros.count{
             heroIndex = 0
         }
-        print(heroIndex)
-                self.heroImg.image = self.Heros[self.heroIndex].topImage
-                self.heroName.text = self.Heros[self.heroIndex].heroName
+        NSLog("Hero Index:\(heroIndex)")
+        
+        self.heroImg.image = self.Heros[self.heroIndex].topImage
+        self.heroName.text = self.Heros[self.heroIndex].heroName
 
         
     }
     
     
+    /// <#Description#>
     func stopButtonTapped(){
         if (drawTimer == nil) {
             start()
@@ -128,6 +156,8 @@ class DrawRandomHero: UIView {
         }
     }
     
+    
+    /// <#Description#>
     func stop(){
         if (drawTimer == nil) {
             return
@@ -137,6 +167,10 @@ class DrawRandomHero: UIView {
         }
     }
     
+    
+    /// <#Description#>
+    ///
+    /// - Parameter toStop: <#toStop description#>
     func setBtn(_ toStop: Bool){
         if toStop{
             stopButton.setTitle("Stop", for: .normal)
@@ -149,10 +183,13 @@ class DrawRandomHero: UIView {
         }
     }
     
+    
+    /// <#Description#>
     func selectionHandler(){
-        print(Heros[heroIndex].heroName)
+        NSLog("Selected Hero Name: \(Heros[heroIndex].heroName)")
         delegate?.getDrawResult(Heros[heroIndex])
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -160,6 +197,8 @@ class DrawRandomHero: UIView {
     
 }
 
+
+/// <#Description#>
 protocol DrawHeroDelegate: class {
     func getDrawResult(_ hero : HeroIntroInfo)
 }
