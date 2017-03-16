@@ -33,3 +33,13 @@ https://www.youtube.com/watch?v=XERu83zAaHM
 http://stackoverflow.com/questions/38031137/how-to-program-a-delay-in-swift-3
 ### Animation:
 https://www.raywenderlich.com/146603/ios-animation-tutorial-getting-started-2 
+### map video from Overwatch Central
+https://www.youtube.com/channel/UCZmz0RdI6LvX_rRmrlwx0Eg
+### app icon 
+https://icons8.com
+### selfsizing tutorial
+https://medium.com/@satindersingh71self-sizing-table-view-cells-programmatically-b0e82a20f264#.watb3p8i1
+### discover function controller 
+http://www.gamersky.com/ent/201606/763443_13.shtml?_t_t_t=0.1242284846957773 
+### maps images
+https://images.google.com
