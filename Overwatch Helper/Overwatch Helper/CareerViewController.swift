@@ -64,6 +64,15 @@ class CareerViewController: UIViewController {
         {
             NSLog("Not First Launch, First Launch Date:\(userPref.value(forKey: "FirstLaunched")!)")
         }
+        
+        //get save BNID
+        let battleID = userPref.string(forKey: "appBNID")
+        if (battleID?.trim() != "")
+        {
+            self.careerUsername.text = battleID!
+            NSLog("Loading Default ID:\(battleID!)")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

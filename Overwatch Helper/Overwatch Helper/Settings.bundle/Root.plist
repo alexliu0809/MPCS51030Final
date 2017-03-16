@@ -32,6 +32,16 @@
 			<key>DefaultValue</key>
 			<string>1.0</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>BattleNetID</string>
+			<key>Key</key>
+			<string>appBNID</string>
+			<key>DefaultValue</key>
+			<string>ID#Number</string>
+		</dict>
 	</array>
 </dict>
 </plist>

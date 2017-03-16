@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Register Default Vals
+        let userDefaults = UserDefaults.standard
+        let defautls = ["authorName":"Alex & Ben","appVersion":"1.0","appBNID":"ID#Number"]
+        
+        userDefaults.register(defaults: defautls)
+        userDefaults.synchronize()
+        NSLog("Registered User Defaults")
+        
         UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
