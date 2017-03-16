@@ -52,6 +52,7 @@ class SplashScreenController: UIViewController {
                 }, completion: {
                     finish in
                     sleep(1)
+                    NSLog("Entering Main Screen")
                     self.performSegue(withIdentifier: "showMain", sender: self) //perform segue to main view
                 })
                 

@@ -22,7 +22,7 @@ class NewsDetailController: UIViewController, UIWebViewDelegate{
     /// The News Data to display
     var detailItem : NewsData?{
         didSet{
-            NSlog("Did Set News Detail Data")
+            NSLog("Did Set News Detail Data")
             
             self.reloadData()
         }

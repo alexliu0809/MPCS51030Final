@@ -90,7 +90,7 @@ class CareerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SeguePlayerStats")
         {
-            NSlog("Segue Triggered, entering playing stats")
+            NSLog("Segue Triggered, entering playing stats")
             
             let account = careerUsername.text?.replacingOccurrences(of: "#", with: "-") //Replay Battle ID with - for api
             let controller = segue.destination as! PlayerStatController
@@ -103,7 +103,7 @@ class CareerViewController: UIViewController {
     ///
     /// - Parameter sender: instruct button
     @IBAction func instruBtnTapped(_ sender: Any) {
-        NSlog("App Instruction Button Clicked")
+        NSLog("App Instruction Button Clicked")
         
         UIView.animate(withDuration: 0.5, animations: {
             NSLog("Instruction button pressed")
