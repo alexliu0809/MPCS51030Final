@@ -11,56 +11,29 @@ import UIKit
 
 class HeroRecommendationSurvey: UIView {
     
-    /// <#Description#>
     weak var delegate: SurveyDelegate?
-    
-    
-    /// <#Description#>
+    /// heros left as survey forwarding
     var HeroLeft: [HeroIntroInfo] = heroArray
     
-    /// <#Description#>
+    /// question list
     var Questions: [RQ] = RQ.questions
     
-    /// <#Description#>
+    /// initial question index
     var nextQuestionIndex = -1
     
-    /// <#Description#>
     var question: UILabel
-    
-    /// <#Description#>
     var option1: UIButton
-    
-    /// <#Description#>
     var option2: UIButton
-    
-    /// <#Description#>
     var option3: UIButton
-    
-    /// <#Description#>
     var option4: UIButton
-    
-    /// <#Description#>
     var stopButton: UIButton//try again
-    
-    /// <#Description#>
     var detailButton: UIButton
-    
-    /// <#Description#>
     var heroImg: UIImageView
-    
-    /// <#Description#>
     var heroName: UILabel
-    
-    /// <#Description#>
     var backView: UIView
-    
-    /// <#Description#>
     var result: HeroIntroInfo?
     
     
-    /// <#Description#>
-    ///
-    /// - Parameter frame: <#frame description#>
     override init(frame: CGRect){
         question = UILabel(frame: (CGRect(x: 0, y: 350, width: 375, height:100)))
         option1 = UIButton(frame: CGRect(x: 575, y: 400, width: 250, height: 30))
@@ -78,7 +51,6 @@ class HeroRecommendationSurvey: UIView {
         
         heroImg.layer.cornerRadius = heroImg.frame.height/2
         heroImg.clipsToBounds = true
-//        heroImg.contentMode = .scaleToFill
         heroImg.addSubview(heroName)
         heroImg.backgroundColor = UIColor(netHex: 0x484848)
         heroImg.image = #imageLiteral(resourceName: "questionMark")
@@ -95,11 +67,7 @@ class HeroRecommendationSurvey: UIView {
         heroName.textColor = UIColor.white
         heroName.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         
-        
-        
         super.init(frame: frame)
-        
-        
         
         question.backgroundColor = UIColor(hexString: "F89E19")
         question.font = UIFont(name: "Verdana-BoldItalic", size: 27)
@@ -112,26 +80,16 @@ class HeroRecommendationSurvey: UIView {
         question.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         question.textAlignment = .left
 
-//        
-        
         initOption(option1)
         initOption(option2)
         initOption(option3)
         initOption(option4)
         
-        
-        
-        
-        
-        
         option1.addTarget(self, action: #selector(self.choose1), for: .touchUpInside)
         option2.addTarget(self, action: #selector(self.choose2), for: .touchUpInside)
         option3.addTarget(self, action: #selector(self.choose3), for: .touchUpInside)
         option4.addTarget(self, action: #selector(self.choose4), for: .touchUpInside)
-        
-        
-        
-        
+
         stopButton.backgroundColor = UIColor(hexString: "F89E19")
         stopButton.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         stopButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 30)
@@ -156,21 +114,18 @@ class HeroRecommendationSurvey: UIView {
         self.addSubview(option3)
         self.addSubview(option4)
         self.addSubview(backView)
-        heroImg.addSubview(heroName)
         self.addSubview(heroImg)
         
+        heroImg.addSubview(heroName)
         
         stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside)
         detailButton.addTarget(self, action: #selector(self.selectionHandler), for: .touchUpInside)
-        
         
         self.addSubview(detailButton)
         self.addSubview(stopButton)
     }
     
-    /// <#Description#>
-    ///
-    /// - Parameter option1: <#option1 description#>
+    /// - initialize option button
     func initOption(_ option1: UIButton){
         option1.backgroundColor = UIColor(hexString: "F89E19")
         option1.titleLabel?.font = UIFont(name: "Verdana-BoldItalic", size: 20)
@@ -182,14 +137,12 @@ class HeroRecommendationSurvey: UIView {
         option1.alpha = 0
     }
     
-    
-    /// <#Description#>
+    /// survey start
     func surveyStart(){
         nextQuestion()
     }
     
-    
-    /// <#Description#>
+    /// survey reset and restart
     func restart(){
         nextQuestionIndex = -1
         initOption(option1)
@@ -206,11 +159,12 @@ class HeroRecommendationSurvey: UIView {
         nextQuestion()
     }
     
+    /// when cursor move on button, depleted
     func cursurOn(button: UIButton) {
-        
         button.backgroundColor = UIColor.black
     }
     
+    /// make choice handler 1234
     func choose1(){
         UIView.animate(withDuration: 0.1, animations: {
             self.option1.alpha = 0
@@ -241,12 +195,14 @@ class HeroRecommendationSurvey: UIView {
         })
     }
     
+    //step to next question
     func nextQuestion() {
         nextQuestionIndex += 1
         if nextQuestionIndex >= Questions.count{
             settle()
             return
         }
+        //animation of question and option button changing
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3, animations: {
                 self.question.text = self.Questions[self.nextQuestionIndex].question
@@ -274,20 +230,20 @@ class HeroRecommendationSurvey: UIView {
                     self.option4.center.x = 187
                     self.option4.alpha = 1
                 }
-                
-                
-                
             })
         }
     }
     
+    //make a choice
     func makeChoice(_ choice : Int){
         guard !HeroLeft.isEmpty else {
             return
         }
         
+        //get result from this question
         HeroLeft = Questions[nextQuestionIndex].getResult(HeroLeft,choice)
         
+        //move options to one side, ready for next one
         UIView.animate(withDuration: 0.5, animations: {
             self.option2.center.x = -200
             self.option1.center.x = -200
@@ -300,10 +256,9 @@ class HeroRecommendationSurvey: UIView {
             self.option3.center.x = 575
             self.option4.center.x = 575
         })
-//        nextQuestion()
-        
     }
     
+    //settle the survey
     func settle(){
         option1.isEnabled = false
         option2.isEnabled = false
@@ -313,6 +268,7 @@ class HeroRecommendationSurvey: UIView {
             delegate?.heroNotFound()
             return
         }
+        //if more than 1 result, pick a random one
         HeroLeft = HeroLeft.shuffle()
         result = HeroLeft[0]
         heroImg.image = HeroLeft[0].topImage
@@ -320,30 +276,29 @@ class HeroRecommendationSurvey: UIView {
         question.frame.size.width = 375
         question.sizeToFit()
         question.text = "Your best choice is: \(HeroLeft[0].heroName)"
-        
-        
+    
         UIView.animate(withDuration: 0.5, animations: {
             self.detailButton.center.x = 187.5
             self.stopButton.center.x = 187.5
         })
-        
-        
     }
     
+    //get result
     func selectionHandler(){
         delegate?.getSurveyResult(result!)
     }
     
+    //stop button handler
     func stopButtonTapped(){
         restart()
     }
 
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+//for discover controller to navi to hero info
 protocol SurveyDelegate: class {
  
     func getSurveyResult(_ hero: HeroIntroInfo)

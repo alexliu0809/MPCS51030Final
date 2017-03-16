@@ -8,50 +8,38 @@
 
 import UIKit
 
+//Whats today page
 class DrawRandomHero: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
-    
-    /// <#Description#>
+    /// hero Portrait
     var heroImg: UIImageView
     
-    /// <#Description#>
+    /// hero name tag
     var heroName: UILabel
     
-    /// <#Description#>
+    /// stop
     var stopButton: UIButton
     
-    /// <#Description#>
+    /// show detail
     var detailButton: UIButton
     
-    /// <#Description#>
+    /// background image
     var backView: UIView
     
-    /// <#Description#>
+    /// timer for drawing hero
     var drawTimer: Timer?
     
-    /// <#Description#>
+    /// all hero list
     var Heros: [HeroIntroInfo] = []
     
-    /// <#Description#>
+    /// current showing hero index
     var heroIndex = 0
     
-    
-    /// <#Description#>
     weak var delegate: DrawHeroDelegate?
     
-    
-    /// <#Description#>
-    ///
-    /// - Parameter frame: <#frame description#>
     override init(frame: CGRect) {
+        
+        //-------------------------view intialization--------------------------------
         heroImg = UIImageView(frame: CGRect(x: 82, y: 130, width: 210, height: 210))
         heroName = UILabel(frame: CGRect(x: 0, y: 150, width: 210, height: 60))
         stopButton = UIButton(frame: CGRect(x: 87, y: 435, width: 200, height: 50))
@@ -61,16 +49,12 @@ class DrawRandomHero: UIView {
         backView.layer.cornerRadius = 125
         backView.clipsToBounds = true
         
-        
-        
-        
-        
         Heros = heroArray
-        super.init(frame: frame)
-        self.addSubview(backView)
         
+        super.init(frame: frame)
+        
+        self.addSubview(backView)
         self.addSubview(heroImg)
-//        self.addSubview(heroName)
         
         heroImg.layer.cornerRadius = heroImg.frame.height/2
         heroImg.clipsToBounds = true
@@ -104,8 +88,6 @@ class DrawRandomHero: UIView {
         detailButton.setTitleColor(UIColor.black, for: .normal)
         detailButton.layer.cornerRadius = 5
         
-        
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(stopButtonTapped(_:)))
         stopButton.addTarget(self, action: #selector(self.stopButtonTapped), for: .touchUpInside)
         detailButton.addTarget(self, action: #selector(self.selectionHandler), for: .touchUpInside)
 
@@ -114,10 +96,11 @@ class DrawRandomHero: UIView {
         self.addSubview(stopButton)
         
         NSLog("Stop Button Targets:\(stopButton.allTargets)")
+        //---------------------------------------------------
     }
     
     
-    /// <#Description#>
+    /// start drawing
     func start(){
         guard Heros.count > 0 else {
             return
@@ -126,7 +109,7 @@ class DrawRandomHero: UIView {
     }
     
     
-    /// <#Description#>
+    /// change hero
     func changeHero(){
         heroIndex += 1
         if heroIndex >= Heros.count{
@@ -141,7 +124,7 @@ class DrawRandomHero: UIView {
     }
     
     
-    /// <#Description#>
+    /// stop button handler
     func stopButtonTapped(){
         if (drawTimer == nil) {
             start()
@@ -157,7 +140,7 @@ class DrawRandomHero: UIView {
     }
     
     
-    /// <#Description#>
+    /// stop drawing
     func stop(){
         if (drawTimer == nil) {
             return
@@ -168,9 +151,7 @@ class DrawRandomHero: UIView {
     }
     
     
-    /// <#Description#>
-    ///
-    /// - Parameter toStop: <#toStop description#>
+    /// set stopButton title
     func setBtn(_ toStop: Bool){
         if toStop{
             stopButton.setTitle("Stop", for: .normal)
@@ -184,7 +165,7 @@ class DrawRandomHero: UIView {
     }
     
     
-    /// <#Description#>
+    /// hero selected, get result
     func selectionHandler(){
         NSLog("Selected Hero Name: \(Heros[heroIndex].heroName)")
         delegate?.getDrawResult(Heros[heroIndex])
@@ -198,7 +179,7 @@ class DrawRandomHero: UIView {
 }
 
 
-/// <#Description#>
+/// delegate for discover controller trigger segue
 protocol DrawHeroDelegate: class {
     func getDrawResult(_ hero : HeroIntroInfo)
 }

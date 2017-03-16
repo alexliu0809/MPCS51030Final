@@ -8,32 +8,19 @@
 
 import UIKit
 
+
+//LFG page table cell
 class LFGCell: UITableViewCell {
 
-    /// <#Description#>
     var avatar: UIImageView
-    
-    /// <#Description#>
     var battleID: UILabel
-    
-    /// <#Description#>
     var descrip: UITextView
     
-    
-    /// <#Description#>
-    ///
-    /// - Parameters:
-    ///   - style: <#style description#>
-    ///   - reuseIdentifier: <#reuseIdentifier description#>
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
-        
         avatar = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        
         battleID = UILabel(frame: CGRect(x: 110, y: 0, width: 265, height: 30))
-        
         descrip = UITextView(frame: CGRect(x: 110, y: 30, width: 255, height: 100))
-        
         
         battleID.font = UIFont(name: "Verdana-BoldItalic", size: 27)
         battleID.textColor = UIColor.white
@@ -55,19 +42,12 @@ class LFGCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     
-    /// <#Description#>
-    ///
-    /// - Parameters:
-    ///   - selected: <#selected description#>
-    ///   - animated: <#animated description#>
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
