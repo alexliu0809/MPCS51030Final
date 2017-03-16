@@ -9,9 +9,9 @@ Alex Enze Liu (alexliu0809@uchicago.edu)</br>
 https://alexliu0809.github.io/MPCS51030Final/
 
 ## 3rd Party Librarys
-Alamorfire
-FoldingCell
-KingFisher (With Caching Image to NSCache Built-in)
-SwiftCharts
-SwiftyJSON
-YoutubePlayer
+Alamorfire </br>
+FoldingCell </br>
+KingFisher (With Caching Image to NSCache Built-in) </br>
+SwiftCharts </br>
+SwiftyJSON </br>
+YoutubePlayer </br>
