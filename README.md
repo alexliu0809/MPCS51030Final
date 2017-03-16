@@ -8,6 +8,8 @@ Alex Enze Liu (alexliu0809@uchicago.edu)</br>
 ## Project Website:
 https://alexliu0809.github.io/MPCS51030Final/
 
+## For "Career", you can use "Alf-1608" for test.
+
 ## 3rd Party Librarys
 Alamorfire </br>
 FoldingCell </br>
