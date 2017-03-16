@@ -12,7 +12,7 @@ import UIKit
 class MapDetailController: UITableViewController{
     
     
-    /// The Object taht contains map info
+    /// The Object that contains map info
     var currentMap: MapIntroInfo?
     
     override func viewDidLoad() {
@@ -30,11 +30,10 @@ class MapDetailController: UITableViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
+        //fade in animation
         for i in self.tableView.subviews{
             i.alpha = 0
         }
-        
         DispatchQueue.main.async {
             
             for i in self.tableView.subviews{
@@ -57,11 +56,11 @@ class MapDetailController: UITableViewController{
         {
             return 1
         }
-        
         return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //map image cell
         if (indexPath.row == 0)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapIcon", for: indexPath) as! MapDetailMapIcon
@@ -70,6 +69,7 @@ class MapDetailController: UITableViewController{
             cell.mapName.text = currentMap?.name
             return cell
         }
+        //map information cell
         else if (indexPath.row == 1) //change2
         {
             
@@ -93,14 +93,14 @@ class MapDetailController: UITableViewController{
 
             return cell
         }
+        //map description cell
         else if (indexPath.row == 3)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapDetailInfo", for: indexPath) as! MapDetailDetailInfo
-            //print("3+")
-//            cell.backgroundColor = UIColor.green
             cell.mapBrief.text = currentMap?.description
             return cell
         }
+        //map video cell
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "mapVideoInfo", for: indexPath) as! MapVideoInfo
             

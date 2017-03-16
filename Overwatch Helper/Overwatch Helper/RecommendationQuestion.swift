@@ -11,13 +11,13 @@ import Foundation
 //recommendation questions
 class RQ {
     
-    /// <#Description#>
+    /// question option
     var options: [String] = []
     
-    /// <#Description#>
+    /// question body
     let question: String
     
-    /// <#Description#>
+    /// static question lists, hardcoded so far
     static let questions: [RQ] = [RQ_Dfct("Experienced FPS Player?",["Brand New", "Little Experience","Hardcore",""]), RQ_Type("Which role you want to play?",["Defence", "Offense","Support","Tank"])]
     
     init(_ question: String, _ options: [String]){
@@ -29,27 +29,22 @@ class RQ {
         }
     }
     
-    /// <#Description#>
+    /// get question result prototype
     ///
     /// - Parameters:
-    ///   - list: <#list description#>
-    ///   - choice: <#choice description#>
-    /// - Returns: <#return value description#>
+    ///   - list
+    ///   - choice
+    /// - Returns: List of heros left
     func getResult(_ list : [HeroIntroInfo], _ choice : Int) -> ([HeroIntroInfo]){
         return []
     }
 }
 
 
-/// <#Description#>
+/// Difficulty question
 class RQ_Dfct: RQ{
     
-    /// <#Description#>
-    ///
-    /// - Parameters:
-    ///   - list: <#list description#>
-    ///   - choice: <#choice description#>
-    /// - Returns: <#return value description#>
+
     override func getResult(_ list : [HeroIntroInfo], _ choice: Int) -> ([HeroIntroInfo]) {
         var result: [HeroIntroInfo] = []
         let diff = choice+1
@@ -63,15 +58,9 @@ class RQ_Dfct: RQ{
 }
 
 
-/// <#Description#>
+/// Type preference question
 class RQ_Type: RQ {
     
-    /// <#Description#>
-    ///
-    /// - Parameters:
-    ///   - list: <#list description#>
-    ///   - choice: <#choice description#>
-    /// - Returns: <#return value description#>
     override func getResult(_ list : [HeroIntroInfo], _ choice: Int) -> ([HeroIntroInfo]) {
         var result: [HeroIntroInfo] = []
         var diff: HeroType

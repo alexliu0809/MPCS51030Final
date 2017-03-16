@@ -11,26 +11,24 @@ import UIKit
 
 struct LFGMessage {
     
-    /// <#Description#>
+    /// User s BattleNet ID
     var battleID: String
     
-    /// <#Description#>
+    /// User's avatar
     var avatar: UIImage
     
-    /// <#Description#>
+    /// message content
     var descrip: String
     
     
-    /// <#Description#>
+    /// message list
     static var Messages: [LFGMessage] = []
     
     
-    /// <#Description#>
-    ///
     /// - Parameters:
-    ///   - ID: <#ID description#>
-    ///   - avatar: <#avatar description#>
-    ///   - saying: <#saying description#>
+    ///   - ID
+    ///   - avatar
+    ///   - saying
     init(ID: String, avatar: UIImage, saying: String) {
         self.battleID = ID
         self.avatar = avatar

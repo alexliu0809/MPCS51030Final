@@ -8,36 +8,37 @@
 
 import UIKit
 
-class DiscoverController: UIViewController {
 
-    /// <#Description#>
+class DiscoverController: UIViewController {
+    
+    ///This controller change background image every 10s
+    /// background image index
     var bgIndex = 2
     
     
-    /// <#Description#>
+    /// maximum background image index
     var maxBgIndex = 7
     
-    
-    /// <#Description#>
+    /// change background timer
     var timer: Timer?
     
-    /// <#Description#>
+    /// padding view
     @IBOutlet weak var bottomView: UIView!
     
     
-    /// <#Description#>
+    /// background image
     @IBOutlet weak var bgImageView: UIImageView!
     
     
-    /// <#Description#>
+    /// function "whats today"
     @IBOutlet weak var btn1: UIButton!
     
     
-    /// <#Description#>
+    /// function "survey"
     @IBOutlet weak var btn2: UIButton!
     
     
-    /// <#Description#>
+    /// function "LFG"
     @IBOutlet weak var btn3: UIButton!
     
     
@@ -45,13 +46,8 @@ class DiscoverController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageInitialize()
-//        UIGraphicsBeginImageContext(self.view.frame.size)
-//        UIImage(named: "discover-bg")?.draw(in: self.view.bounds)
-//        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-//        UIGraphicsEndImageContext()
-//        self.view.backgroundColor = UIColor(patternImage: image)
-        // Do any additional setup after loading the view.
         
+        //make parallelogram
         btn3.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         btn2.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
         btn1.transform = CGAffineTransform(a: 1, b: 0, c: -0.1, d: 1, tx: 0, ty: 0)
@@ -59,20 +55,22 @@ class DiscoverController: UIViewController {
         btn2.layer.cornerRadius = 5
         btn1.layer.cornerRadius = 5
         
+        //change background start
         self.bgImageView.image = #imageLiteral(resourceName: "discoverBG1")
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(changeBG), userInfo: nil, repeats: true)
     
                 }
     
     
-    /// <#Description#>
+    /// change background
     func changeBG(){
         self.bgIndex += 1
+        //loop back
         if self.bgIndex > self.maxBgIndex{
             self.bgIndex = 1
         }
+        //fade in/out animation
         DispatchQueue.main.async {
-            
             UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCrossDissolve, animations: {
                 self.bgImageView.alpha = 0
                 self.bottomView.alpha = 0
@@ -95,9 +93,8 @@ class DiscoverController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! DiscoverFunctionController
-//        controller.modalPresentationStyle = UIModalPresentationStyle.popover
-//        controller.popoverPresentationController!.delegate = self
         
+        //tell which function user want, set target controller then segue
         controller.triggeredBySegue = true
         if segue.identifier == "whatsToday" {
             controller.functionType = .whatsToday
@@ -111,7 +108,7 @@ class DiscoverController: UIViewController {
     }
     
     
-    /// <#Description#>
+    /// initialize LFG messages
     func messageInitialize(){
         LFGMessage.Messages = [LFGMessage(ID: "McRee", avatar: #imageLiteral(resourceName: "mcgree1"), saying: "Looking for a support GTG. IT'S HIGH NOON!"),LFGMessage(ID: "Winston", avatar: #imageLiteral(resourceName: "winsdom1"), saying: "It was not the plane, but the beauty killed the beast."), LFGMessage(ID: "D.Va", avatar: #imageLiteral(resourceName: "dva1"), saying: "123123123213213213"),LFGMessage(ID: "Reaper", avatar: #imageLiteral(resourceName: "reaper1"), saying: "Die Die Die")]
     }
